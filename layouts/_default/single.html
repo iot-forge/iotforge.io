@@ -15,7 +15,9 @@
       {{ with .Params.sources }}
         {{ $src := . }}
         {{ with $.Resources.GetMatch $src }}
-          {{ .Content }}
+          {{ $content := .Content | markdownify }}
+          {{ $content = $content | replaceRE "<a href=" " <a target=\"_blank\" href=" }}
+          {{ $content | safeHTML }}
         {{ end }}
       {{ end }}
 

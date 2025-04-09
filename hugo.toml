@@ -2,3 +2,7 @@ baseURL = 'https://iotforge.io/'
 languageCode = 'en-us'
 title = 'IoT Forge'
 theme = 'PaperMod'
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
