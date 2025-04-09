@@ -1,0 +1,4 @@
+baseURL = 'https://iotforge.io/'
+languageCode = 'en-us'
+title = 'IoT Forge'
+theme = 'PaperMod'
