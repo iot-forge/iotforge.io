@@ -1,3 +1,6 @@
+---
+title: "IoT Evolves: Smarter Hardware, Smarter Networks, Smarter Future"
+---
 **IoT Forge Unplugged - Episode 5**
 **March 4, 2025**
 

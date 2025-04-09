@@ -1,0 +1,41 @@
+{{ define "main" }}
+  {{- if eq .Section "podcasts" }}
+    <article class="post-content">
+      <h1>{{ .Title }}</h1>
+      <h3>{{ .Date.Format "Jan 2, 2006" }}</h3>
+      <p>{{ .Description }}</p>
+
+      {{ with .Params.audio }}
+        <audio controls style="width: 100%; margin-top: 1em;">
+          <source src="{{ . }}" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      {{ end }}
+
+      {{ with .Params.sources }}
+        {{ $src := . }}
+        {{ with $.Resources.GetMatch $src }}
+          {{ .Content }}
+        {{ end }}
+      {{ end }}
+
+      {{ with .Params.script }}
+        {{ $scr := . }}
+        {{ with $.Resources.GetMatch $scr }}
+          <details style="font-family: monospace; font-size: 0.85rem; line-height: 1.5; margin-top: 1em;">
+            <summary><strong>Show Script</strong></summary>
+            {{ .Content }}
+          </details>
+        {{ end }}
+      {{ end }}
+
+      {{ with .Params.image }}
+        <img src="{{ . }}" alt="{{ $.Title }}" class="featured-image">
+      {{ end }}
+
+    </article>
+  {{ else }}
+    {{/* fallback to default PaperMod layout */}}
+    {{ partial "single.html" . }}
+  {{ end }}
+{{ end }}

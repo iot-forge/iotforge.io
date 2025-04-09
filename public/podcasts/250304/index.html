@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>IoT Evolves: Smarter Hardware, Smarter Networks, Smarter Future | IoT Forge</title>
+<meta name="keywords" content="podcast, episode">
+<meta name="description" content="In this episode of IoT Forge Unplugged, we dive into the upgraded ESP32-C2 and where it fits in real-world applications, the latest ESPHome update with expanded audio support, and whether I³C really improves on I²C’s distance limitations. Plus, we explore EdgeAI for predictive maintenance, energy harvesting for Ambient IoT, and how Arduino and Silicon Labs are making Matter and machine learning more accessible. Finally, we break down concurrent multiprotocols — why they matter and who should explore them.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/podcasts/250304/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/podcasts/250304/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="IoT Forge (Alt + H)">IoT Forge</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+    <article class="post-content">
+      <h1>IoT Evolves: Smarter Hardware, Smarter Networks, Smarter Future</h1>
+      <h3>Mar 4, 2025</h3>
+      <p>In this episode of IoT Forge Unplugged, we dive into the upgraded ESP32-C2 and where it fits in real-world applications, the latest ESPHome update with expanded audio support, and whether I³C really improves on I²C’s distance limitations. Plus, we explore EdgeAI for predictive maintenance, energy harvesting for Ambient IoT, and how Arduino and Silicon Labs are making Matter and machine learning more accessible. Finally, we break down concurrent multiprotocols — why they matter and who should explore them.</p>
+
+      
+        <audio controls style="width: 100%; margin-top: 1em;">
+          <source src="iotforge_unplugged_250304.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      
+
+      
+        
+        
+          <ul>
+<li><a href="https://www.espressif.com/en/news/ESP32_C2_Upgrade">ESP32-C2 (ESP8684) Upgrade: More Memory, Storage, and Performance</a></li>
+<li><a href="https://esphome.io/changelog/2025.2.0.html">ESPHome 2025.2.0 - 19th February 2025</a></li>
+<li><a href="https://www.dfrobot.com/blog-17282.html">What is I3C: The Next Generation of I2C</a></li>
+<li><a href="https://www.hackster.io/tiny-prism-labs/edgeai-for-predictive-maintenance-in-tormach-cnc-30e9e0">EdgeAI for predictive maintenance in Tormach CNC</a></li>
+<li><a href="https://www.silabs.com/blog/simplifying-ambient-iot-with-xg22e">Simplifying Ambient IoT with xG22E Energy Harvesting Explorer Kit</a></li>
+<li><a href="https://www.silabs.com/blog/arduino-nano-matter-makes-matter-accessible-with-edge-al-ml">Next-Gen IoT: Arduino and Silicon Labs Make Matter More Accessible with Edge AI and ML</a></li>
+<li><a href="https://www.silabs.com/blog/concurrent-multiprotocol-an-in-depth-exploration">Understanding Concurrent Multiprotocol: An In-Depth Exploration</a></li>
+</ul>
+
+        
+      
+
+      
+        
+        
+          <details style="font-family: monospace; font-size: 0.85rem; line-height: 1.5; margin-top: 1em;">
+            <summary><strong>Show Script</strong></summary>
+            <p><strong>IoT Forge Unplugged - Episode 5</strong>
+<strong>March 4, 2025</strong></p>
+<p>Hi everyone, and welcome to <em>IoT Forge Unplugged</em>! Every two weeks, we bring you the most exciting news from the world of IoT in this short podcast, where I break down the latest updates and trends.</p>
+<p>I’d love for you to be part of the conversation—whether it’s sharing feedback, suggesting stories I might’ve missed (because, let’s be honest, my interests sometimes reflect my own hobbies), or just discussing these developments with the community.</p>
+<p>So, let’s get started! Today is March 4th, and this is our fifth episode of 2025.</p>
+<hr>
+<h3 id="esp32-c2-esp8684-upgrade-more-memory-storage-and-performance"><strong>ESP32-C2 (ESP8684) Upgrade: More Memory, Storage, and Performance</strong></h3>
+<p>Espressif has rolled out an upgrade to the ESP32-C2, also known as the ESP8684. This update brings improvements in memory, storage, and overall performance, making it a more capable choice for compact and cost-sensitive IoT applications.</p>
+<p>The ESP32-C2 is designed for scenarios where low power consumption and affordability matter. It’s commonly used in smart home devices, simple automation controllers, Wi-Fi-enabled sensors, and basic industrial IoT applications. If you’re looking for an entry-level chip that balances cost and functionality, this is one to consider. And with this upgrade, it just got better.</p>
+<hr>
+<h3 id="esphome-202520---smarter-diy-automation"><strong>ESPHome 2025.2.0 - Smarter DIY Automation</strong></h3>
+<p>ESPHome continues to evolve, with the latest version, 2025.2.0, bringing new integrations, bug fixes, and optimizations. If you&rsquo;re running ESP-based home automation, this update introduces better support for devices and more customization options.</p>
+<p>I have to say—I’m a big fan of ESPHome. It’s one of my favorite tools for home automation, and I always look forward to testing new features. This update expands support for audio components, enhancing voice assistant applications. Specifically, new speaker components have been introduced to provide more advanced functionality when using the Voice Assistant. These components extend ESPHome&rsquo;s capabilities, helping you create the ultimate personal voice assistant hardware. If you’re into DIY smart home projects, you’ll definitely want to check this out.</p>
+<hr>
+<h3 id="now-lets-talk-about-the-one-of-the-most-common-serial-bus-in-iot-world-i2c-or-more-precisely-about-its-next-generation----i3c"><strong>Now lets talk about the one of the most common serial bus in IoT world I2c, or more precisely about its Next Generation &ndash; I3C</strong></h3>
+<p>If you&rsquo;re familiar with I²C, you know it’s been a core protocol for connecting sensors and peripherals in embedded systems. But now, we have I³C, a next-gen alternative designed for faster speeds, lower power consumption, and enhanced multi-device communication.</p>
+<p>Recently, I started exploring Smart Farming and tested various I²C sensors for monitoring soil, temperature, and humidity. However, I encountered a significant limitation—traditional I²C communication struggles with distance due to bus capacitance and signal integrity issues. Typically, I²C is best suited for short-range communication, with practical distances often limited to a few meters, especially at higher speeds. ]</p>
+<p>I originally hoped I³C would solve this, but after digging deeper, it turns out that I³C’s improvements focus on speed, power efficiency, and multi-device communication—not necessarily extending the physical range. While I³C allows higher data rates and better bus efficiency, its effective communication distance remains similar to I²C.</p>
+<p>For applications requiring longer communication distances, alternative protocols are worth considering:</p>
+<ul>
+<li><strong>RS-485</strong> can reach up to 1,200 meters and is widely used in industrial environments for its noise resistance.</li>
+<li><strong>CAN Bus</strong> is another robust option, offering reliable communication up to 40 meters at 1 Mbps, with longer ranges at lower speeds.</li>
+<li><strong>Ethernet</strong> can cover up to 100 meters with twisted-pair cables, providing high-speed, stable data transmission.</li>
+</ul>
+<p>For Smart Farming or other long-distance sensor networks, choosing the right protocol can make all the difference. If you&rsquo;ve experimented with extending I²C or using alternatives, I’d love to hear what worked for you!</p>
+<hr>
+<h3 id="the-next-topic-i-choose-for-todays-episode-is-edge-ai-for-predictive-maintenance-in-cnc-machines"><strong>The next topic I choose for today&rsquo;s episode is Edge AI for Predictive Maintenance in CNC Machines</strong></h3>
+<p>Tormach CNC machines are getting a boost from Edge AI, helping detect issues before they cause failures. This is an exciting step for industrial IoT—bringing intelligence to the edge for real-time monitoring and predictive maintenance.</p>
+<p>This is something I’ve been dreaming of implementing on my own DIY CNC. Imagine running a machine with built-in intelligence that warns you about potential failures before they happen. It could save time, materials, and even prevent catastrophic failures. I’m currently exploring ways to integrate similar predictive maintenance into my setup, and I’d love to share my progress with the community in the near future.</p>
+<hr>
+<h3 id="simplifying-ambient-iot-with-energy-harvesting"><strong>Simplifying Ambient IoT with Energy Harvesting</strong></h3>
+<p>Energy harvesting is a game-changer for IoT, and Silicon Labs’ xG22E Energy Harvesting Explorer Kit makes it easier to build battery-free IoT devices. This technology captures energy from light, temperature differences, or RF waves, reducing the need for traditional power sources.</p>
+<p>The kit itself includes an energy-harvesting Power Management IC (PMIC), ultra-low-power Bluetooth SoCs, and multiple harvesting options—including solar, thermal, and RF energy sources. This opens up possibilities for applications where replacing or recharging batteries is impractical, like environmental sensors, industrial monitoring, and wearables.</p>
+<p>Are we heading toward a future where IoT devices run indefinitely without batteries? This is a trend worth watching.</p>
+<hr>
+<h3 id="next-gen-iot-arduino--silicon-labs-make-matter-more-accessible"><strong>Next-Gen IoT: Arduino &amp; Silicon Labs Make Matter More Accessible</strong></h3>
+<p>The Matter protocol is gaining traction, and now, Arduino and Silicon Labs are making it even more accessible with Edge AI and machine learning. This collaboration aims to simplify smart home device development while ensuring seamless interoperability across platforms.</p>
+<p>What’s exciting is that this isn’t just for large-scale manufacturers—hobbyists and makers can also leverage these technologies in their own projects. Whether it’s a custom smart home sensor, an intelligent pet feeder, or an AI-powered security device, the potential applications are huge. If you’ve been looking for an excuse to dive into Matter, this might be the perfect opportunity to start a new pet project.</p>
+<p>No doubt &ndash; every product gets better if marketing team put a mentioning of AI into announcment.</p>
+<hr>
+<h3 id="understanding-concurrent-multiprotocol-in-iot"><strong>Understanding Concurrent Multiprotocol in IoT</strong></h3>
+<p>Finally, let’s talk about concurrent multiprotocol—a crucial technology for devices that need to communicate over multiple wireless standards like Bluetooth, Zigbee, and Thread.</p>
+<p>Why does this matter? Imagine a device that seamlessly interacts with a Bluetooth-enabled smartphone while also communicating with a Zigbee smart home hub. Instead of switching manually between protocols, concurrent multiprotocol support allows devices to operate across multiple standards at the same time—without conflicts or delays.</p>
+<p>Silicon Labs has published an in-depth guide on this, and if you’re interested in wireless communication, I highly recommend checking out their blog. It’s a goldmine of knowledge, but be prepared—it’s pretty technical. If you&rsquo;re an engineer working with IoT networking, or if you&rsquo;re curious about how multi-protocol IoT devices can work in real-world applications, it&rsquo;s definitely worth a read.</p>
+<hr>
+<p>That’s it for today! We explored the ESP32-C2 upgrade and where it fits in real-world applications, the latest ESPHome update with expanded audio support, and how I³C compares to I²C—along with better alternatives for long-distance communication. We also looked at EdgeAI for predictive maintenance, energy harvesting for Ambient IoT, and how Arduino and Silicon Labs are making Matter more accessible. Finally, we touched on concurrent multiprotocols and why they’re worth exploring.</p>
+<p>What are your thoughts? Which of these developments excites you the most? Do you see potential applications for your own projects? Let’s discuss!</p>
+<p>If you enjoyed this episode, hit like and share it with your colleagues. Join <em>IoT Forge</em>, stay curious, and have an amazing day! See you next time—bye!</p>
+
+          </details>
+        
+      
+
+      
+        <img src="cover.png" alt="IoT Evolves: Smarter Hardware, Smarter Networks, Smarter Future" class="featured-image">
+      
+
+    </article>
+  
+
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">IoT Forge</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
