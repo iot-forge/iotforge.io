@@ -8,5 +8,4 @@ sources: "sources.md"
 description: "Dive into this episode of IoT Forge Unplugged, where we explore exciting IoT developments! We discuss Apple’s move into Wi-Fi and Bluetooth chips, NVIDIA’s Jetson Orin Nano and its edge computing potential, and groundbreaking satellite NB-IoT trials by Mavenir and Terrestar. Plus, a DIY project idea to control Raspberry Pi GPIOs via Arduino Cloud."
 tags: ["podcast", "episode"]
 categories: ["Podcasts"]
-ShowToc: false
 ---

@@ -38,6 +38,6 @@
     </article>
   {{ else }}
     {{/* fallback to default PaperMod layout */}}
-    {{ partial "single.html" . }}
+    {{ .Content }}
   {{ end }}
 {{ end }}

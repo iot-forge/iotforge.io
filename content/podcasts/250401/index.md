@@ -7,6 +7,5 @@ sources: "sources.md"
 description: "In this episode, we talk about random news."
 tags: ["podcast", "episode"]
 categories: ["Podcasts"]
-ShowToc: false
 draft: true
 ---
