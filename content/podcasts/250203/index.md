@@ -1,7 +1,7 @@
 ---
 title: "Robotics and medical, manufacturing and food industries"
-date: 2025-02-03
-audio: "iotforge_unplugged_250203.mp3"
+date: 2025-02-04
+audio: "iotforge_unplugged_250204.mp3"
 image: "cover.png"
 script: "script.md"
 sources: "sources.md"
