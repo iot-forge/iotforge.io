@@ -1,21 +1,10 @@
-# qwe
-## 01/01/2001
-[Video Portal]()
-Participants: 
+Hi everyone, and welcome to the IoT Forge Unplugged podcast!
+Every two weeks, we pick the most exciting news from the world of IoT and share them with you in this short podcast, where I break down the latest updates and trends. I'd love for you to get involved---whether it's sharing feedback, suggesting news stories I might have missed (because, let's be honest, my interests sometimes reflect my own hobbies), or joining the conversation about these updates.
+So, let's get started! Today is February 4th, and this is our third episode of 2025.
+And I will be completely honest with you: these past two weeks have not been very rich in news in the IoT world---most of the news was shared at CES, and it's kind of a calm period now.
+For this episode, I want to focus on something more specific in one area, as opposed to covering a wide variety of news. Recently, I came across a couple of news stories and articles about robotics and their role in different areas. I want to highlight three particular cases: medical, manufacturing, and food. And to start a new tradition, every odd episode I will include a few observations from the personal projects I'm working on---stay tuned to learn how to use fewer microcontrollers to make life easier.
 
-# Hi everyone, and welcome to the IoT Forge Unplugged podcast!
-
-# Every two weeks, we pick the most exciting news from the world of IoT and share them with you in this short podcast, where I break down the latest updates and trends. I'd love for you to get involved---whether it's sharing feedback, suggesting news stories I might have missed (because, let's be honest, my interests sometimes reflect my own hobbies), or joining the conversation about these updates.
-
-# So, let's get started! Today is February 4th, and this is our third episode of 2025.
-
-# And I will be completely honest with you: these past two weeks have not been very rich in news in the IoT world---most of the news was shared at CES, and it's kind of a calm period now.
-
-# For this episode, I want to focus on something more specific in one area, as opposed to covering a wide variety of news. Recently, I came across a couple of news stories and articles about robotics and their role in different areas. I want to highlight three particular cases: medical, manufacturing, and food. And to start a new tradition, every odd episode I will include a few observations from the personal projects I'm working on---stay tuned to learn how to use fewer microcontrollers to make life easier.
-
-# 
-
-# Ok, here we go: first topic---robotics in medicine, particularly---surgical robots:
+Ok, here we go: first topic -- robotics in medicine, particularly -- surgical robots:
 
 # Surgeon
 
