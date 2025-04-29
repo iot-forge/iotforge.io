@@ -34,7 +34,7 @@
     background-size: contain;
     opacity: 0.1;
     transform: rotate(20deg);
-    z-index: -1;
+    z-index: 0;
 }
 
 .decorated.podcasts::before {
