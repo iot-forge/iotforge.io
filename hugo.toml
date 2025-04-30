@@ -11,3 +11,12 @@ sectionPagesMenu = 'main'
 [params]
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
+
+# Add external menu entries
+[menu]
+  [[menu.main]]
+  name = "YouTube"
+  url = "https://www.youtube.com/@IoTForge"
+  weight = 50
+  pre = "<i class='fab fa-youtube'></i>"  # optional, for icon if your theme supports it
+  identifier = "youtube"
