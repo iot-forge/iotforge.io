@@ -18,5 +18,12 @@ sectionPagesMenu = 'main'
   name = "YouTube"
   url = "https://www.youtube.com/@IoTForge"
   weight = 50
-  pre = "<i class='fab fa-youtube'></i>"  # optional, for icon if your theme supports it
+  pre = "<i class='fab fa-youtube'></i>"
   identifier = "youtube"
+
+  [[menu.main]]
+  name = "Podcast platforms"
+  url = "https://creators.spotify.com/pod/profile/iot-forge/"
+  weight = 60
+  pre = "<i class='fab fa-spotify'></i>"
+  identifier = "spotify"
