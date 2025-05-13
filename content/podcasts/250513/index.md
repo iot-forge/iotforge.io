@@ -1,7 +1,7 @@
 ---
 title: "Touchy Robots and Tricky Prompts"
 date: 2025-05-13
-audio: "iotforge_unplugged_250513.mp3"
+audio: "iot_forge_unplugged_250513.mp3"
 image: "cover.webp"
 script: "script.md"
 sources: "sources.md"
