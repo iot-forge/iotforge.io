@@ -1,3 +1,7 @@
+---
+Title: Sources
+---
+
 - [ESPHome 2025.5.0 - 21st May 2025](https://esphome.io/changelog/2025.5.0.html)
 - [Packet Transport Component](https://esphome.io/components/packet_transport/#packet-transport)
 - [Raspberry Pi Pico, LoRa & Home Assistant remote soil monitoring](https://www.briandorey.com/post/pi-pico-lora-remote-soil-monitor)
