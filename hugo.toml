@@ -15,6 +15,12 @@ sectionPagesMenu = 'main'
 # Add external menu entries
 [menu]
   [[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 10
+
+  [[menu.main]]
   name = "YouTube"
   url = "https://www.youtube.com/@IoTForge"
   weight = 50
