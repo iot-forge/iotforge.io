@@ -26,9 +26,6 @@ The Internet of Things can significantly enhance client relationships by enablin
 ### Increased Capital Allocation
 The integration of the Internet of Things can have a positive impact on capital allocation within businesses and organizations. By optimizing operations, improving efficiency, and reducing costs, IoT can free up capital that can be strategically allocated to other areas. Here's how IoT can contribute to increased capital allocation: Cost Reduction, Improved Asset Utilization, Smarter Inventory Management, Strategic Investments, Customer-Centric Initiatives, Innovation and Research etc.
 
-## Have Questions About IoT Forge Community?
-We’re here to help! Drop us a line and we’ll get back to you right away OrgIoTForge@epam.com
-
 # Core Team:
 
 - [Konstantin Barabanoff](https://www.linkedin.com/in/konstantinbarabanoff/)
