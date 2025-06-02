@@ -12,8 +12,7 @@ We are IoT Forge Community. We serve as a nexus for collaboration, knowledge sha
 
 ## Our Mission
 
-We want to increase IoT awareness and expertise at EPAM and beyond. We support initiatives to design and develop working prototypes/MVPs for various use-cases in IoT area. We accept any level of engineering 'craziness' and strongly encourage fun!
-event image
+We want to increase IoT awareness and expertise. We support initiatives to design and develop working prototypes/MVPs for various use-cases in IoT area. We accept any level of engineering ‘craziness’ and strongly encourage fun!
 
 ## The Advantages of Applying the Internet of Things
 
