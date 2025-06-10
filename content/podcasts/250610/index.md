@@ -1,7 +1,7 @@
 ---
 title: "Smarter Machines, Simpler Tools"
 date: 2025-06-10
-audio: "iot_forge_unplugged_250610.mp3"
+audio: "iotforge_unplugged_250610.mp3"
 image: "cover.png"
 script: "script.md"
 sources: "sources.md"
