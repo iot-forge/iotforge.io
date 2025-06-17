@@ -1,0 +1,118 @@
+{{ define "main" }}
+    <h1 style="font-size: 1.8em; margin-bottom: 1em;">Recommended YouTube Channels</h1>
+
+    <!-- Tag Filter Buttons -->
+    <div id="tag-buttons" class="tag-bar">
+        <button onclick="filterByTag('')" class="tag-button selected">Show All</button>
+        {{- $allTags := slice -}}
+        {{- range .Site.Data.channels.channels }}
+            {{- range .tags }}
+                {{- $allTags = $allTags | append . }}
+            {{- end }}
+        {{- end }}
+        {{ range (uniq $allTags | sort) }}
+            <button onclick="filterByTag('{{ . }}')" class="tag-button">{{ . }}</button>
+        {{ end }}
+    </div>
+
+    <!-- Channel List -->
+    <div id="channelsList">
+        {{ range .Site.Data.channels.channels }}
+            <div class="channel" data-tags="{{ delimit .tags "," }}">
+                <h2><a href="{{ .link }}" target="_blank">{{ .name }}</a></h2>
+                {{ if .description }}<p>{{ .description }}</p>{{ end }}
+                {{ if .tags }}
+                    <p class="tags"><strong>Tags:</strong> {{ delimit .tags ", " }}</p>
+                {{ end }}
+                {{ if .notable_videos }}
+                    <ul class="videos">
+                        {{ range .notable_videos }}
+                            <li><a href="{{ .url }}" target="_blank">{{ .title }}</a></li>
+                        {{ end }}
+                    </ul>
+                {{ end }}
+            </div>
+        {{ end }}
+    </div>
+
+    <!-- JavaScript Filtering -->
+    <script>
+        let selectedTag = "";
+
+        function filterByTag(tag) {
+            selectedTag = tag.toLowerCase();
+            const channels = document.querySelectorAll('.channel');
+            channels.forEach(channel => {
+                const tags = channel.getAttribute('data-tags').toLowerCase();
+                channel.style.display = (!selectedTag || tags.includes(selectedTag)) ? "block" : "none";
+            });
+
+            document.querySelectorAll('.tag-button').forEach(btn => {
+                btn.classList.remove('selected');
+                if (btn.textContent.toLowerCase() === tag.toLowerCase()) {
+                    btn.classList.add('selected');
+                }
+            });
+        }
+    </script>
+
+    <!-- Pure CSS Styling -->
+    <style>
+        .channel {
+            border: 1px solid #ddd;
+            padding: 1em;
+            margin-bottom: 1em;
+            border-radius: 6px;
+            background-color: #fdfdfd;
+        }
+
+        .channel h2 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .channel p {
+            margin: 0.5em 0;
+        }
+
+        .tag-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5em;
+            margin-bottom: 1.5em;
+        }
+
+        .tag-button {
+            background-color: #eee;
+            border: none;
+            padding: 6px 12px;
+            font-size: 0.9em;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .tag-button:hover {
+            background-color: #ddd;
+        }
+
+        .tag-button.selected {
+            background-color: #007acc;
+            color: white;
+        }
+
+        .tags {
+            font-size: 0.85em;
+            color: #555;
+        }
+
+        .videos {
+            margin-top: 0.5em;
+            padding-left: 1.2em;
+        }
+
+        .videos li {
+            margin-bottom: 0.3em;
+        }
+    </style>
+{{ end }}
