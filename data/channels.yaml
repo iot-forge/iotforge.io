@@ -411,7 +411,7 @@ channels:
   description: Slant 3D is a Mass Production 3D Printing company. We make thousands
     of 3D printed parts and the machines that make the parts. Follow us to see how
     additive manufacturing is scaling up.
-  tags: []
+  tags: ["3D Printing]
   notable_videos: []
 - name: Aaed Musa
   link: https://www.youtube.com/@aaedmusa
@@ -424,7 +424,7 @@ channels:
   description: I'm Brian Haidet - PhD in Materials Science, but I'd also describe
     myself as artist, maker, and Hawaiian shirt enthusiast. On this channel, You'll
     find my side projects and favorite physics demos - I hope you enjoy!
-  tags: []
+  tags: ["Theory", "Geek"]
   notable_videos: []
 - name: Applied Science
   link: https://www.youtube.com/@AppliedScience
@@ -432,14 +432,14 @@ channels:
     You'll see how an electron microscope was built in a home shop, how an X-ray backscatter
     system works, how to make aerogel, and many other hi-tech projects.  Topics usually
     include electromechanical systems, chemistry, and electronics. Hosted by Ben Krasnow.
-  tags: []
+  tags: ["Theory", "Geek"]
   notable_videos: []
 - name: Austin Shaner
   link: https://www.youtube.com/@austinshaner
   description: Just a nerd forging a path through life with his own two hands. This
     channel is focused around helping people work through interesting and complex
     problems in CAD.
-  tags: []
+  tags: ["CAD", "Fusion 360"]
   notable_videos: []
 - name: Autodesk Fusion
   link: https://www.youtube.com/@adskFusion
@@ -448,7 +448,7 @@ channels:
     engineer, simulate, and manufacture their products. This channel is all about
     teaching you actionable tips on how to use the fully integrated multi-disciplinary
     Fusion workspaces, intuitive workflows, and powerful features to grow your business.
-  tags: []
+  tags: ["CAD", "Fusion 360"]
   notable_videos: []
 - name: Fusion 360 School
   link: https://www.youtube.com/@Fusion360School
@@ -456,5 +456,5 @@ channels:
     Autodesk Fusion 360 videos. We avoid long introductions or any extraneous information
     not relevant to the focus of the video. Our videos are carefully edited and adopt
     a non-conversational tone to ensure that our viewers' time is respected.
-  tags: []
+  tags: ["CAD", "Fusion 360"]
   notable_videos: []
