@@ -202,28 +202,38 @@ resources:
     printing, Raspberry Pi, Arduino, ESP32, M5Stack, STM32, microcontrollers, Raspberry
     Pi Pico, IoT, electronics, robotics, AI, Linux, open-source, and sometimes gadget
     reviews!
-  tags: []
+  tags: ["IoT", "Electronics"]
   notable_links: []
 - name: maker.moekoe
   link: https://www.youtube.com/@makermoekoe
   description: Electrifying Maker
-  tags: []
+  tags: ["IoT", "Electronics", "Robotics", "DIY"]
   notable_links: []
 - name: Marco Reps
   link: https://www.youtube.com/@reps
   description: Impressum
-  tags: []
-  notable_links: []
+  tags: ["CNC", "Electronics"]
+  notable_links:
+    - title: "CNC Finale: Automatic Toolchanger Spindle Install & Testing"
+      url: "https://www.youtube.com/watch?v=vB_FvkllLPc"
+    - title: "CNC Motion Control with LinuxCNC + Mesa FPGA Card"
+      url: "https://www.youtube.com/watch?v=1dy8Dgzcgq4"
 - name: Mark Rober
   link: https://www.youtube.com/@MarkRober
   description: Former NASA engineer. Current CrunchLabs founder and friend of science.
-  tags: []
-  notable_links: []
+  tags: ["Inspiration", "DIY"]
+  notable_links:
+    - title: "My Puzzle Robot is 200x Faster Than a Human"
+      url: "https://www.youtube.com/watch?v=Sqr-PdVYhY4"
+    - title: "Amazing Invention- This Drone Will Change Everything"
+      url: "https://www.youtube.com/watch?v=DOWDNBu9DkU"
 - name: Massachusetts Institute of Technology (MIT)
   link: https://www.youtube.com/@mit
   description: Videos from the Massachusetts Institute of Technology.
-  tags: []
-  notable_links: []
+  tags: ["Theory", "Robotics", "Inspiration"]
+  notable_links:
+    - title: "Tiny hopping robots"
+      url: "https://www.youtube.com/watch?v=UlxQz8F59Hk"
 - name: Mishin Machine
   link: https://www.youtube.com/@MishinMachine
   description: Sergei Mishin
