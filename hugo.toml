@@ -2,7 +2,7 @@ baseURL = 'https://iotforge.io/'
 languageCode = 'en-us'
 title = 'IoT Forge'
 theme = 'PaperMod'
-mainSections = ['podcasts', 'articles']
+mainSections = ['podcasts', 'articles', 'resources']
 sectionPagesMenu = 'main'
 [markup]
   [markup.goldmark]

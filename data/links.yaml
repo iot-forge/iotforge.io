@@ -1,0 +1,21 @@
+resources:
+- name: Instructables
+  link: https://www.instructables.com/
+  description: Instructables is a community for people who like to make things. Come explore, share, and make your next project with us!
+  tags: ["IoT", "DIY"]
+  notable_links: []
+- name: Hackaday
+  link: https://hackaday.com/
+  description: Fresh hacks every day
+  tags: ["DIY", "Electronics"]
+  notable_links: []
+- name: Electronic Cats
+  link: https://electroniccats.com
+  description: Mexican company dedicated to the design and manufacture of embedded systems for the general public and the private companies, characterized by always working with passion for the development of electronic devices, looking to contribute to the well-being of our consumers by offering quality products suitable for your needs.
+  tags: [ "DIY", "Electronics" ]
+  notable_links: []
+- name: Thingiverse
+  link: https://www.thingiverse.com/
+  description: Digital Designs for Physical Objects. Download millions of 3D models and files for your 3D printer, laser cutter, or CNC. From custom parts to unique designs
+  tags: [ "3D Printing" ]
+  notable_links: []

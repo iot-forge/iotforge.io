@@ -1,4 +1,4 @@
-channels:
+resources:
 - name: 5V Media
   link: https://www.youtube.com/@5VMedia
   description: “Showcasing the stories of the people who make technology a force for
@@ -12,14 +12,14 @@ channels:
     the boundaries of what’s possible within tech. We tell their stories through our
     leading podcasts, conferences, and video series.
   tags: ["IoT"]
-  notable_videos:
+  notable_links:
     - title: "Is Edge AI Turning Our Homes into Intelligent Spaces or Fragile Ecosystems?"
       utl: "https://www.youtube.com/watch?v=JLFebVUQwN8"
 - name: adam the machinist
   link: https://www.youtube.com/@adamthemachinist
   description: ''
   tags: ["CNC", "Fusion 360"]
-  notable_videos:
+  notable_links:
     - title: "Design Holes for Machinability"
       url: "https://www.youtube.com/watch?v=c1o3ZQY25jI"
     - title: "Fillets make your cnc parts more expensive"
@@ -31,7 +31,7 @@ channels:
     I started to do YouTube full time since August 2017. This way we can create more
     projects and you can enjoy a new video every week.
   tags: ["IoT", "Electronics"]
-  notable_videos:
+  notable_links:
     - title: "Making oddly satisfying LED magnet tiles"
       url: "https://www.youtube.com/watch?v=L2J_eNgjxio"
 - name: Branch Education
@@ -40,15 +40,15 @@ channels:
     does Bluetooth work?  At Branch Education, we dive deep into the science, engineering,
     and technology in our modern world using 3D animation and incredibly detailed
     models.
-  tags: ["Theory", "Basics"]
-  notable_videos:
+  tags: ["Theory", "Beginner"]
+  notable_links:
     - title: "The Engineering Inside Wireless Earbuds"
       -url: "https://www.youtube.com/watch?v=_ZKNOKHpqE4"
 - name: DIY Perks
   link: https://www.youtube.com/@diyperks
   description: I'm Matt, and here on DIY Perks you'll find plenty of interesting projects on a variety of topics!
   tags: ["DIY"]
-  notable_videos:
+  notable_links:
     - title: "DIY Home Security - ON A BUDGET!"
       url: "https://www.youtube.com/watch?v=CouxmNqxO4A"
     - title: "Converting devices to USB Type-C"
@@ -57,21 +57,21 @@ channels:
   link: https://www.youtube.com/@MunroLive
   description: Munro Live is a YouTube channel that features Sandy Munro and other engineers from Munro & Associates. Munro is a world leader in reverse engineering, teardown benchmarking, costing and new product development!
   tags: ["Manufacturing"]
-  notable_videos:
+  notable_links:
     - title: "Machina Labs: The Future of Metal Shaping with AI & Robotics"
       url: "https://www.youtube.com/watch?v=YpdvbRomXG4"
 - name: Factorian Designs
   link: https://www.youtube.com/@factorian_designs
   description: Educational 3D printing
   tags: ["3D Printing"]
-  notable_videos:
+  notable_links:
     - title: "5 Tricks For Incredibly Clean Prints!"
       url: "https://www.youtube.com/watch?v=CxbidoZCw1A"
 - name: Breaking Taps
   link: https://www.youtube.com/@BreakingTaps
   description: Exploring material science and machining
   tags: ["Theory", "Geek"]
-  notable_videos:
+  notable_links:
     - title: "I tried to make a camera sensor"
       url: "https://www.youtube.com/watch?v=O7xH9ZSp_B4"
     - title: "Microscopic Marvel in your Earbuds"
@@ -80,12 +80,12 @@ channels:
   link: https://www.youtube.com/@needitmakeit
   description: 3D printing
   tags: ["3D Printing"]
-  notable_videos: []
+  notable_links: []
 - name: Adam Savage’s Tested
   link: https://www.youtube.com/@tested
   description: Adam Savage’s Tested is a content platform and community playground for makers and curious minds. On Tested.com, the highly- engaged Tested YouTube channel, and at conventions and events, dynamic makers share ideas and inspire each other to build their obsessions. Led by Adam Savage, the Tested team explores the intersection of science, popular culture, and emerging technology, showing how we are all makers. Adam also takes viewers behind the scenes of films, TV shows, theater, and museums, shining a spotlight on the craftspeople and artists who make the magic we all enjoy.
   tags: ["Manufacturing", "Robotics", "Theory"]
-  notable_videos:
+  notable_links:
     - title: "The Coolest Five-Legged Robot Adam Savage Has Ever Seen!"
       url: "https://www.youtube.com/watch?v=IvK2I_ASXLo"
 - name: Christopher Helmke
@@ -93,14 +93,14 @@ channels:
   description: Automatisierung mit unkonventioneller Konstruktionsphilopsophie und
     3D Druck
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Clough42
   link: https://www.youtube.com/@Clough42
   description: 'Welcome to the Clough42 shop.  We get up to all kinds of nonsense
     in here: manual and CNC machining, 3D printing, toolmaking, electronics, PCB design,
     CAD, and sometimes even frickin'' lasers!'
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: CNC HOUSE
   link: https://www.youtube.com/@CNCHOUSE
   description: This is my channel. I live in Slovenia, overlooking the Adriatic Sea.
@@ -109,18 +109,18 @@ channels:
     about my 1325 and 6090 format CNC milling machines, about my accessories for a
     CNC milling machine
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: This Old Tony
   link: https://www.youtube.com/@ThisOldTony
   description: ''
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: CNC Kitchen
   link: https://www.youtube.com/@CNCKitchen
   description: Hi, I'm Stefan and I create educating and entertaining videos for you
     which feature 3D printing, CNC, CAD, Lasers, Arduino and much more tec stuff!
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Design Theory
   link: https://www.youtube.com/@Design.Theory
   description: Design Theory focuses on cultivating curiosity through design. I make
@@ -132,24 +132,24 @@ channels:
     the biggest brands in the world, including Amazon, Logitech, Motorola, Qualcomm,
     Kohler, and dozens of up-and-coming startups.
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: ElectroBOOM
   link: https://www.youtube.com/@ElectroBOOM
   description: Want to subconsciously learn while being entertained? Then subscribe!!
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: GreatScott!
   link: https://www.youtube.com/@greatscottlab
   description: Awesome Electronics Tutorials, Projects and How To´s
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: How To Mechatronics
   link: https://www.youtube.com/@HowToMechatronics
   description: Hey I'm Dejan, a maker, a techie and a mechatronics engineer. I'm making
     electronics and robotics projects for you to learn and make something cool on
     your own.
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: I Like To Make Stuff
   link: https://www.youtube.com/@Iliketomakestuff
   description: We have lots of projects including woodworking, metalworking, electronics,
@@ -158,7 +158,7 @@ channels:
     something here that will inspire you to make something that you're passionate
     about!
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: IoT Forge
   link: https://www.youtube.com/@IoTForge
   description: 'We are IoT Forge Community. In the rapidly evolving landscape of technology,
@@ -175,12 +175,12 @@ channels:
     in IoT area. We accept any level of engineering ''craziness'' and strongly encourage
     fun!'
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Ivan Markov
   link: https://www.youtube.com/@ivanmarkovavia
   description: international robotics champion & aspiring aviation professional
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Jeremy Fielding
   link: https://www.youtube.com/@Jeremy_Fielding
   description: My goal is simple. Draw people to engineering with interesting projects;
@@ -190,12 +190,12 @@ channels:
     to talk about some interesting engineering I saw in a factory tour or walking
     through a store as I am to build something.
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Joop Brokking
   link: https://www.youtube.com/@Joop_Brokking
   description: A passion for rc model helicopters, multicopters and electronics.
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: KOKENSHA TECH
   link: https://www.youtube.com/@KOKENSHATECH
   description: Welcome to my channel, where you can find videos on DIY projects, 3D
@@ -203,38 +203,38 @@ channels:
     Pi Pico, IoT, electronics, robotics, AI, Linux, open-source, and sometimes gadget
     reviews!
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: maker.moekoe
   link: https://www.youtube.com/@makermoekoe
   description: Electrifying Maker
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Marco Reps
   link: https://www.youtube.com/@reps
   description: Impressum
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Mark Rober
   link: https://www.youtube.com/@MarkRober
   description: Former NASA engineer. Current CrunchLabs founder and friend of science.
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Massachusetts Institute of Technology (MIT)
   link: https://www.youtube.com/@mit
   description: Videos from the Massachusetts Institute of Technology.
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Mishin Machine
   link: https://www.youtube.com/@MishinMachine
   description: Sergei Mishin
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Moritz Klein
   link: https://www.youtube.com/@MoritzKlein0
   description: trying to make DIY electronics more accessible – always open for topic
     suggestions!
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: NYC CNC
   link: https://www.youtube.com/@nyccnc
   description: The NYC CNC YouTube channel focuses on all things CNC, including Fusion
@@ -243,12 +243,12 @@ channels:
     and how to always improve our CNC Machining skills as well as striving to be better
     manufacturing entrepreneurs.
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Posy
   link: https://www.youtube.com/@PosyMusic
   description: A channel about anything... But usually something geeky or nerdy.
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: RCLifeOn
   link: https://www.youtube.com/@RcLifeOn
   description: My name is Simon Sörensen and I am the creator of RCLifeOn. I do a
@@ -256,12 +256,12 @@ channels:
     controlled stuff. Yeah, that's pretty much it. If you want to be a part of my
     family here on YouTube, hit the subscribe button and let's hang out!
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: scottbez1
   link: https://www.youtube.com/@scottbez1
   description: Software engineer, hardware hobbyist.
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Shop Nation
   link: https://www.youtube.com/@ShopNation
   description: Do you wish you had a clean, organized shop so you can pursue your
@@ -270,7 +270,7 @@ channels:
     topics spanning from woodworking to 3D Printing there is sure to be something
     here for you.
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Skyentific
   link: https://www.youtube.com/@Skyentific
   description: I specialize in developing robots, robotic arms and legs, with a focus
@@ -279,21 +279,21 @@ channels:
     robots that serve real-world purposes. The mission of this channel is to contribute
     to building a bright, robotic future that benefits everyone! Subscribe!
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: SmarterEveryDay
   link: https://www.youtube.com/@smartereveryday
   description: I explore the world using science.  That's pretty much all there is
     to it.  Watch 2 videos. If you learn something AWESOME, please subscribe if you
     feel like I earned it.
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: StudioBinder
   link: https://www.youtube.com/@StudioBinder
   description: StudioBinder is a production management solution that helps video and
     photo productions create call sheets, shot lists, shooting schedules, breakdowns,
     storyboards, moodboards and more.
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Stuff Made Here
   link: https://www.youtube.com/@StuffMadeHere
   description: I've been building things for as long as I can remember. It all started
@@ -304,12 +304,12 @@ channels:
     of nothing. If I'm lucky a few people may become engineers, which would be great
     for the world. Engineering is awesome.
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Tabletop Machine Shop
   link: https://www.youtube.com/@TabletopMachineShop
   description: ''
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: The FACTs of Mechanical Design
   link: https://www.youtube.com/@TheFACTsofMechanicalDesign
   description: 'Welcome to “The FACTs of Mechanical Design!” I''m Professor Jonathan
@@ -323,32 +323,32 @@ channels:
     like to download part files of the mechanisms that I feature on the channel, you
     can download them here: https://www.thingiverse.com/thefactsofmechanicaldesign/designs'
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: The Leaf Label
   link: https://www.youtube.com/@theleaflabel
   description: NOT SO MUCH LEFT, AS FORWARD.
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: there oughta be
   link: https://www.youtube.com/@ThereOughtaBe
   description: …a blog with awesome projects. A collection of overcomplicated devices
     nobody needs. A sanctum for all the things that did not get living room clearance,
     but oughta be seen by fellow nerds.
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Tiziano Fiorenzani
   link: https://www.youtube.com/@prandtlmayer
   description: 'Open Source is Great and really revolutionized our today''s World.
     It''s nice to contribute and to give back to the community. https://tiziano-school.thinkific.com/
     Github: https://github.com/tizianofiorenzani'
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Tom Stanton
   link: https://www.youtube.com/@TomStantonEngineering
   description: I graduated with a degree in Aerospace engineering and was sidetracked
     by the endless possibilities of 3D printing.
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Travis Mitchell
   link: https://www.youtube.com/@diyfiberlaser
   description: 'I enjoy making videos about my hobby equipment and projects. I have
@@ -357,75 +357,75 @@ channels:
     CNC milling, CNC lathe, 3D printing, injection molding, machine retrofitting,
     prototyping, programming, design, and hobby electronics.'
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Winston Moy
   link: https://www.youtube.com/@WinstonMakes
   description: The projects and adventures of a digital fabrication evangelist. I
     also make videos for Carbide3D.
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: WPI Soft Robotics Laboratory
   link: https://www.youtube.com/@wpisoftroboticslaboratory4064
   description: ''
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Sound Simulator
   link: https://www.youtube.com/@SoundSimulator
   description: Music Tech Contents/Tutorials
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Tech Ingredients
   link: https://www.youtube.com/@TechIngredients
   description: ''
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Technology Connections
   link: https://www.youtube.com/@TechnologyConnections
   description: ''
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Steve Mould
   link: https://www.youtube.com/@SteveMould
   description: I make videos about science.
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Machine Thinking
   link: https://www.youtube.com/@machinethinking
   description: ''
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Engineer Unleashed
   link: https://www.youtube.com/@engineerunleashed
   description: I'm a software engineer with a passion for cutting-edge technology,
     including 3D printers, machine learning, electronics, and drones. I stay up to
     date with emerging technologies through ongoing self-education and exploration.
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Engineezy
   link: https://www.youtube.com/@Engineezy
   description: Engineering with style and ease 🕺
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: Slant 3D
   link: https://www.youtube.com/@slant3d
   description: Slant 3D is a Mass Production 3D Printing company. We make thousands
     of 3D printed parts and the machines that make the parts. Follow us to see how
     additive manufacturing is scaling up.
   tags: ["3D Printing"]
-  notable_videos: []
+  notable_links: []
 - name: Aaed Musa
   link: https://www.youtube.com/@aaedmusa
   description: For as long as I can remember I've been obsessed with building robots
     and gadgets. Now I want to share that passion with the world.
   tags: []
-  notable_videos: []
+  notable_links: []
 - name: AlphaPhoenix
   link: https://www.youtube.com/@AlphaPhoenixChannel
   description: I'm Brian Haidet - PhD in Materials Science, but I'd also describe
     myself as artist, maker, and Hawaiian shirt enthusiast. On this channel, You'll
     find my side projects and favorite physics demos - I hope you enjoy!
   tags: ["Theory", "Geek"]
-  notable_videos: []
+  notable_links: []
 - name: Applied Science
   link: https://www.youtube.com/@AppliedScience
   description: Subscribe to see interesting applications of science and technology.
@@ -433,14 +433,14 @@ channels:
     system works, how to make aerogel, and many other hi-tech projects.  Topics usually
     include electromechanical systems, chemistry, and electronics. Hosted by Ben Krasnow.
   tags: ["Theory", "Geek"]
-  notable_videos: []
+  notable_links: []
 - name: Austin Shaner
   link: https://www.youtube.com/@austinshaner
   description: Just a nerd forging a path through life with his own two hands. This
     channel is focused around helping people work through interesting and complex
     problems in CAD.
   tags: ["CAD", "Fusion 360"]
-  notable_videos: []
+  notable_links: []
 - name: Autodesk Fusion
   link: https://www.youtube.com/@adskFusion
   description: Autodesk Fusion is the 3D CAD/CAM/CAE/PCB/PDM and cloud collaboration
@@ -449,7 +449,7 @@ channels:
     teaching you actionable tips on how to use the fully integrated multi-disciplinary
     Fusion workspaces, intuitive workflows, and powerful features to grow your business.
   tags: ["CAD", "Fusion 360"]
-  notable_videos: []
+  notable_links: []
 - name: Fusion 360 School
   link: https://www.youtube.com/@Fusion360School
   description: This channel produces fully edited, scripted and narrated instructional
@@ -457,4 +457,39 @@ channels:
     not relevant to the focus of the video. Our videos are carefully edited and adopt
     a non-conversational tone to ensure that our viewers' time is respected.
   tags: ["CAD", "Fusion 360"]
-  notable_videos: []
+  notable_links: []
+- name: DrZzs & GrZzs
+  link: https://www.youtube.com/@DrZzs
+  description: LED projects, Home Automation, CAD & 3D Printing
+  tags: ["CAD", "Home Automation", "3D Printing"]
+  notable_links: []
+- name: Concept Bytes
+  link: https://www.youtube.com/@concept_bytes
+  description: Welcome to Concept Bytes! We love building cool things with electronics, robotics, and AI. From fun projects to solving real problems, we show you how to bring ideas to life with engineering.
+  tags: ["Robotics", "Electronics"]
+  notable_links: []
+- name: Thang010146
+  link: https://www.youtube.com/@thang010146
+  description: "Best place to understand how to design mechanisms, and explore what's possible. Inspirational content, especially for hardware enthusiasts."
+  tags: ["Mechanism Design", "Inspiration", "Hardware"]
+  notable_links: []
+- name: Zefar91
+  link: https://www.youtube.com/@Zefar91
+  description: "Self-learning electronics tutorials ideal for beginners. Video quality is modest but the content is excellent. (For English, use AI translator.)"
+  tags: ["Electronics", "Beginner", "DIY"]
+  notable_links: []
+- name: The Construct
+  link: https://www.youtube.com/@TheConstruct
+  description: "Focused ROS tutorials for beginners and beyond."
+  tags: ["ROS", "Robotics", "Tutorials"]
+  notable_links: []
+- name: mrpete222
+  link: https://www.youtube.com/@mrpete222
+  description: "DIY-focused tutorials for enthusiasts with small machine shops."
+  tags: ["Machining", "DIY", "Workshop"]
+  notable_links: []
+- name: The Engineering Mindset
+  link: https://www.youtube.com/@EngineeringMindset
+  description: "Concise and straightforward electrical engineering tutorials."
+  tags: ["Electrical Engineering", "Tutorials", "Education"]
+  notable_links: []

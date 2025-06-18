@@ -1,0 +1,118 @@
+{{- define "main" }}
+        <h1 style="font-size: 1.8em; margin-bottom: 1em;">{{ .Title }}</h1>
+
+        {{ $key := .Params.resourceKey }}
+        {{ $items := index site.Data $key }}
+
+        <!-- Tag Filter Buttons -->
+        <div id="tag-buttons" class="tag-bar">
+            <button onclick="filterByTag('')" class="tag-button selected">Show All</button>
+            {{- $allTags := slice -}}
+            {{- range $items.resources }}
+                {{- range .tags }}
+                    {{- $allTags = $allTags | append . }}
+                {{- end }}
+            {{- end }}
+            {{ range (uniq $allTags | sort) }}
+                <button onclick="filterByTag('{{ . }}')" class="tag-button">{{ . }}</button>
+            {{ end }}
+        </div>
+
+        <div class="resource-list">
+            {{ range $items.resources }}
+                <div class="resource-item" data-tags="{{ delimit .tags "," }}">
+                    <h2><a href="{{ .link }}" target="_blank">{{ .name }}</a></h2>
+                    {{ if .description }}<p>{{ .description }}</p>{{ end }}
+                    {{ if .tags }}
+                        <p class="tags"><strong>Tags:</strong> {{ delimit .tags ", " }}</p>
+                    {{ end }}
+                    {{ if .notable_links }}
+                        <ul class="links">
+                            {{ range .notable_links }}
+                                <li><a href="{{ .url }}" target="_blank">{{ .title }}</a></li>
+                            {{ end }}
+                        </ul>
+                    {{ end }}
+                </div>
+            {{ end }}
+        </div>
+
+    <script>
+        let selectedTag = "";
+
+        function filterByTag(tag) {
+            selectedTag = tag.toLowerCase();
+            const resourceItem = document.querySelectorAll('.resource-item');
+            resourceItem.forEach(resources => {
+                const tags = resources.getAttribute('data-tags').toLowerCase();
+                resources.style.display = (!selectedTag || tags.includes(selectedTag)) ? "block" : "none";
+            });
+
+            document.querySelectorAll('.tag-button').forEach(btn => {
+                btn.classList.remove('selected');
+                if (btn.textContent.toLowerCase() === tag.toLowerCase()) {
+                    btn.classList.add('selected');
+                }
+            });
+        }
+    </script>
+
+    <style>
+         .resource-item {
+             border: 1px solid #ddd;
+             padding: 1em;
+             margin-bottom: 1em;
+             border-radius: 6px;
+             background-color: #fdfdfd;
+         }
+
+        .resource-item h2 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .resource-item p {
+            margin: 0.5em 0;
+        }
+
+        .tag-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5em;
+            margin-bottom: 1.5em;
+        }
+
+        .tag-button {
+            background-color: #eee;
+            border: none;
+            padding: 6px 12px;
+            font-size: 0.9em;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .tag-button:hover {
+            background-color: #ddd;
+        }
+
+        .tag-button.selected {
+            background-color: #007acc;
+            color: white;
+        }
+
+        .tags {
+            font-size: 0.85em;
+            color: #555;
+        }
+
+        .links {
+            margin-top: 0.5em;
+            padding-left: 1.2em;
+        }
+
+        .links li {
+            margin-bottom: 0.3em;
+        }
+    </style>
+{{ end }}
