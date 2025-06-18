@@ -3,7 +3,7 @@ publish = "public"
 command = "hugo"
 
 [context.production.environment]
-HUGO_VERSION = "0.129.0"
+HUGO_VERSION = "0.147.8"
 
 [[redirects]]
 from = "/channels/"
