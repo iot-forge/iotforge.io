@@ -503,3 +503,13 @@ resources:
   description: "Concise and straightforward electrical engineering tutorials."
   tags: ["Electrical Engineering", "Tutorials", "Education"]
   notable_links: []
+- name: Articulated Robotics
+  link: https://www.youtube.com/@ArticulatedRobotics
+  description: "Instructional and entertaining videos on the subject of robotics. Including theory, practice, and using ROS."
+  tags: ["Robotics", "Tutorials", "Education"]
+  notable_links: []
+- name: Jeff Geerling
+  link: https://www.youtube.com/@JeffGeerling
+  description: "Father, author, developer, maker. Sometimes called 'an inflammatory enigma'."
+  tags: ["Electronics", "Tutorials", "Education", "DIY"]
+  notable_links: []
