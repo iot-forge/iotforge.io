@@ -1,6 +1,6 @@
 ## Intro
 
-Hi, you’re listening to the IoT Forge News Digest. I'm your hos, Pavel Korshunov, it is Tuesday, June 24th, 2025 and this is episode 12. Lets get started.
+Hi, you’re listening to the IoT Forge News Digest. I'm your host, Pavel Korshunov, it is Tuesday, June 24th, 2025 and this is episode 12. Lets get started.
 
 ### [Enhancing Positional Accuracy of Mechanically Modified Industrial Robots Using Laser Trackers](https://www.mdpi.com/2218-6581/14/4/42)
 
