@@ -5,6 +5,12 @@
     justify-content: center;
     min-height: 320px;
     margin: var(--gap) 0 calc(var(--gap) * 2) 0;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-left: 4px solid var(--accent);
+    border-radius: 0.5rem;
+    background: var(--entry);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
 }
 
 .first-entry .entry-header {
