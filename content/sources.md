@@ -8,19 +8,25 @@ draft = false
 - https://esphome.io/changelog/
 - https://www.espressif.com/en/company/newsroom/news
 - https://www.home-assistant.io/blog/
-- https://samcurry.net/
+- https://www.zephyrproject.org/announcements/
 
-- https://www.dfrobot.com/blog
+---
+
 - https://news.mit.edu/topic/robotics
 - https://m5stack.com/explore?page=1
 - https://www.raspberrypi.org/blog/
+- https://www.raspberrypi.com/news/
 - https://www.adafruit.com/blog/
+
+---
 
 - https://blog.athom.com/
 - https://blog.hackster.io/
 - https://www.wired.com/tag/robotics/
 - https://www.silabs.com/blog
 - https://blog.smartthings.com/
+
+---
 
 - https://www.allaboutcircuits.com/news
 - https://hackaday.io/discover
@@ -30,6 +36,10 @@ draft = false
 - https://thethings.io/blog/
 - https://blog.tindie.com/
 - https://blog.z-wave.me/
+- https://www.dfrobot.com/blog
+- https://samcurry.net/
+
+
 ---
 - https://www.youtube.com/channel/UCfY5X7vzZ7yV7D8fKcLqkgQ
 - https://www.youtube.com/user/bruhautomation
