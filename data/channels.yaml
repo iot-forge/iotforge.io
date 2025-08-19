@@ -513,3 +513,10 @@ resources:
   description: "Father, author, developer, maker. Sometimes called 'an inflammatory enigma'."
   tags: ["Electronics", "Tutorials", "Education", "DIY"]
   notable_links: []
+- name: Robert Murray-Smith
+  link: https://www.youtube.com/@ThinkingandTinkering
+  description: "Oddly enough the channel is about empowerment. It is my belief that with creativity, experimentation and a get up and go attitude anything can be achieved. Link that with the use of local resources and a reduced need for expensive tools and equipment then you have empowerment and the ability to do anything for yourself if you need to. Don't get me wrong you don't have to do every"
+  tags: ["Electronics", "Tutorials", "Education", "DIY", "3D Printing"]
+  notable_links:
+    - title: "What Is This Channel All About"
+      utl: "https://www.youtube.com/watch?v=3hqOLkkCEFM"
