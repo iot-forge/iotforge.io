@@ -21,15 +21,22 @@ sectionPagesMenu = 'main'
   weight = 10
 
   [[menu.main]]
+  name = "Telegram"
+  url = "https://t.me/IoTForge"
+  weight = 15
+  pre = "<i class='fa-brands fa-telegram'></i>"
+  identifier = "telegram"
+
+  [[menu.main]]
   name = "YouTube"
   url = "https://www.youtube.com/@IoTForge"
   weight = 50
-  pre = "<i class='fab fa-youtube'></i>"
+  pre = "<i class='fa-brands fa-youtube'></i>"
   identifier = "youtube"
 
   [[menu.main]]
   name = "Podcast platforms"
   url = "https://creators.spotify.com/pod/profile/iot-forge/"
   weight = 60
-  pre = "<i class='fab fa-spotify'></i>"
+  pre = "<i class='fa-brands fa-spotify'></i>"
   identifier = "spotify"
