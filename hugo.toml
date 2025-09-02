@@ -24,19 +24,19 @@ weight = 10
 name = "Telegram"
 url = "https://t.me/IoTForge"
 weight = 14
-pre = "<i class='fa-brands fa-telegram'></i>"
+pre = "<i class='fa-brands fa-telegram'></i>&nbsp;"
 identifier = "telegram"
 
 [[menu.main]]
 name = "YouTube"
 url = "https://www.youtube.com/@IoTForge"
 weight = 50
-pre = "<i class='fa-brands fa-youtube'></i>"
+pre = "<i class='fa-brands fa-youtube'></i>&nbsp;"
 identifier = "youtube"
 
 [[menu.main]]
 name = "Podcast platforms"
 url = "https://creators.spotify.com/pod/profile/iot-forge/"
 weight = 60
-pre = "<i class='fa-brands fa-spotify'></i>"
+pre = "<i class='fa-brands fa-spotify'></i>&nbsp;"
 identifier = "spotify"
