@@ -3,6 +3,7 @@
     <article class="post-content">
       <h1>{{ .Title }}</h1>
       <h3>{{ .Date.Format "Jan 2, 2006" }}</h3>
+      <h6>#{{- .Params.season }}.{{- .Params.episode }}</h6>
       <p>{{ .Description }}</p>
 
       {{ with .Params.audio }}
