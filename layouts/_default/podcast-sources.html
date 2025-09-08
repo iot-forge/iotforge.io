@@ -5,7 +5,8 @@
     {{ $episode := . }}
     {{ $src := $episode.Params.sources }}
     {{ with $episode.Resources.GetMatch $src }}
-      <h2>{{ $episode.Date.Format "2006-01-02" }} - Episode {{ $episode.Params.episode }}</h2>
+      <h3>{{ .Date.Format "Jan 2, 2006" }}</h3>
+      <h6>#{{- .Params.season }}.{{- .Params.episode }}</h6>
       {{ $content := .Content | markdownify }}
       {{ $content = $content | replaceRE "<a href=" " <a target=\"_blank\" href=" }}
       {{ $content | safeHTML }}
