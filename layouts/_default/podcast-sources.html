@@ -1,0 +1,15 @@
+{{ define "main" }}
+<article class="post-content">
+  <h1>{{ .Title }}</h1>
+  {{ range sort (where site.RegularPages "Section" "podcasts") "Date" "desc" }}
+    {{ $episode := . }}
+    {{ $src := $episode.Params.sources }}
+    {{ with $episode.Resources.GetMatch $src }}
+      <h2>{{ $episode.Date.Format "2006-01-02" }} - Episode {{ $episode.Params.episode }}</h2>
+      {{ $content := .Content | markdownify }}
+      {{ $content = $content | replaceRE "<a href=" " <a target=\"_blank\" href=" }}
+      {{ $content | safeHTML }}
+    {{ end }}
+  {{ end }}
+</article>
+{{ end }}
