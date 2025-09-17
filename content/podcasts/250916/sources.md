@@ -8,6 +8,6 @@ Title: Sources
 
 - 3:58 [Raspberry Pi Synthesizers – How the Pi is transforming synths](https://www.gearnews.com/raspberry-pi-synthesizers-how-the-pi-is-transforming-synths/)
 
-- 6:08 [https://www.raspberrypi.com/news/embedded-midi-synthesiser-on-raspberry-pi/](https://www.raspberrypi.com/news/embedded-midi-synthesiser-on-raspberry-pi/)
+- 6:08 [Embedded MIDI synthesiser on Raspberry Pi](https://www.raspberrypi.com/news/embedded-midi-synthesiser-on-raspberry-pi/)
 
 - 7:21 [M5Stack Launches Cardputer-Adv: Upgraded Card-Sized Computer for Rapid IoT Development](https://shop.m5stack.com/blogs/news/m5stack-launches-cardputer-adv-upgraded-card-sized-computer-for-rapid-iot-development)
