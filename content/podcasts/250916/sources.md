@@ -2,8 +2,7 @@
 Title: Sources
 ---
 
-- 0:34 [OpenAI Ramps Up Robotics Work in Race Toward AGI]
-(https://www.wired.com/story/openai-ramps-up-robotics-work-in-race-toward-agi/)
+- 0:34 [OpenAI Ramps Up Robotics Work in Race Toward AGI](https://www.wired.com/story/openai-ramps-up-robotics-work-in-race-toward-agi/)
 
 - 2:12 [NVIDIA Jetson Thor Unlocks Real-Time Reasoning for General Robotics and Physical AI](https://blogs.nvidia.com/blog/jetson-thor-physical-ai-edge/)
 
