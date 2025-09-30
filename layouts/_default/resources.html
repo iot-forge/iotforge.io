@@ -1,6 +1,10 @@
 {{- define "main" }}
         <h1 style="font-size: 1.8em; margin-bottom: 1em;">{{ .Title }}</h1>
 
+        {{ $content := .Content | markdownify }}
+        {{ $content = $content | replaceRE "<a href=" " <a target=\"_blank\" href=" }}
+        {{ $content | safeHTML }}
+
         {{ $key := .Params.resourceKey }}
         {{ $items := index site.Data $key }}
 
