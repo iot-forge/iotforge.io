@@ -1,0 +1,337 @@
+[hidden] {
+    display: none !important;
+}
+
+:root {
+    font-family: "Inter", "Segoe UI", sans-serif;
+    --editor-bg: #f4f4f6;
+    --editor-text: #111;
+    --editor-muted: #555;
+    --border-color: rgba(0, 0, 0, 0.08);
+    --accent-color: #2563eb;
+    --accent-on-dark: #e11;
+    --monospace:
+        "SFMono-Regular", "JetBrains Mono", "Fira Mono", "Menlo", monospace;
+    --layout-max-width: 960px;
+    --run-bg: #111;
+    --run-text: #fff;
+    --run-muted: rgba(255, 255, 255, 0.45);
+    --run-next: rgba(255, 255, 255, 0.75);
+}
+
+body {
+    margin: 0;
+    background: var(--editor-bg);
+    color: var(--editor-text);
+}
+
+body,
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.noscript-warning {
+    background: #fde047;
+    color: #111;
+    padding: 8px 16px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.editor-view {
+    max-width: var(--layout-max-width);
+    display: grid;
+    gap: 1em;
+}
+
+.editor-header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.editor-header .tagline {
+    margin: 8px 0 0;
+    color: var(--editor-muted);
+}
+
+.editor-form {
+    display: grid;
+    gap: 16px;
+}
+
+.field {
+    display: grid;
+    gap: 8px;
+    font-size: 15px;
+}
+
+.field-label {
+    font-weight: 600;
+}
+
+.field.checkbox {
+    align-items: center;
+    grid-auto-flow: column;
+    justify-content: start;
+}
+
+.field select,
+.field input[type="number"] {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #fff;
+    color: var(--editor-text);
+    font: inherit;
+    line-height: 1.4;
+    box-sizing: border-box;
+}
+
+.field.checkbox .field-label {
+    font-weight: 500;
+}
+
+select,
+input,
+textarea {
+    background-color: #fff;
+    color: var(--editor-text);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+select {
+    padding: 10px;
+}
+
+input[type="number"] {
+    padding: 10px;
+}
+.script-input {
+    resize: vertical;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    min-height: 320px;
+    font-family: var(--monospace);
+    color: var(--editor-text);
+}
+
+.script-input:focus-visible,
+select:focus-visible,
+input:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.settings-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none;
+}
+
+button.primary {
+    color: #fff;
+}
+
+button.secondary {
+    background: transparent;
+    color: var(--editor-muted);
+    border: 1px solid var(--border-color);
+}
+
+.editor-notice {
+    min-height: 20px;
+    color: #dc2626;
+    font-size: 14px;
+}
+
+.keyboard-help {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.keyboard-help h2 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.keyboard-help ul {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--editor-muted);
+}
+
+.keyboard-help kbd {
+    background: rgba(17, 17, 17, 0.08);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: var(--monospace);
+    font-size: 14px;
+}
+
+.run-view {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--run-bg);
+    color: var(--run-text);
+}
+
+.run-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: inherit;
+    transition: transform 0.2s ease;
+}
+
+.run-container.is-mirrored {
+    transform: scaleY(-1);
+}
+
+.run-stage {
+    position: relative;
+    flex: 1;
+    width: min(1200px, 90vw);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    padding: 60px 20px 40px;
+    box-sizing: border-box;
+}
+
+.orp-word {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--monospace);
+    font-size: clamp(32px, 30vh, 120px);
+    line-height: 1;
+    transition: font-size 0.12s ease;
+    white-space: pre;
+    height: 30vh;
+    width: 100%;
+}
+
+.orp-left,
+.orp-right {
+    opacity: 0.95;
+}
+
+.orp-letter {
+    color: var(--accent-on-dark);
+}
+
+.preview-word {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--monospace);
+    opacity: 0.75;
+    color: var(--run-next);
+    font-size: clamp(20px, 18vh, 72px);
+    height: 18vh;
+    width: 100%;
+}
+
+.preview-word.second-word {
+    opacity: 0.45;
+    font-size: clamp(16px, 13.5vh, 54px);
+    height: 13vh;
+    width: 100%;
+}
+
+.run-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 24px;
+    box-sizing: border-box;
+    font-family: var(--monospace);
+    font-size: 16px;
+    opacity: 0.75;
+}
+
+.run-status {
+    min-height: 20px;
+}
+
+.wpm-display {
+    min-width: 80px;
+    text-align: right;
+}
+
+body[data-theme="dark-1"] .run-view {
+    --run-bg: #111111;
+    --run-text: #f8fafc;
+    --run-next: rgba(248, 250, 252, 0.75);
+    --run-muted: rgba(248, 250, 252, 0.45);
+    --accent-on-dark: #ff4444;
+}
+
+body[data-theme="dark-2"] .run-view {
+    --run-bg: #0b0b0f;
+    --run-text: #f5f5f7;
+    --run-next: rgba(245, 245, 247, 0.7);
+    --run-muted: rgba(245, 245, 247, 0.4);
+    --accent-on-dark: #ff4545;
+}
+
+body[data-theme="light"] .run-view {
+    --run-bg: #f7fafc;
+    --run-text: #1a202c;
+    --run-next: rgba(26, 32, 44, 0.7);
+    --run-muted: rgba(26, 32, 44, 0.4);
+    --accent-on-dark: #e11;
+}
+
+@media (max-width: 720px) {
+    .editor-view {
+        padding: 16px;
+    }
+
+    .run-stage {
+        padding-inline: 12px;
+    }
+}
+
+.preview-word.is-whitespace {
+    opacity: 0.35;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>RSVP Teleprompter</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.simplecss.org/simple.min.css"
+        />
+        <link rel="stylesheet" href="{{ "custom/style.css" | relURL }}">
+    </head>
+    <body data-theme="dark-1">
+        <noscript>
+            <div class="noscript-warning">
+                This teleprompter requires JavaScript.
+            </div>
+        </noscript>
+        <main id="editor-view" class="editor-view" aria-labelledby="app-title">
+            <header class="editor-header">
+                <h1 id="app-title">RSVP Teleprompter</h1>
+                <p class="tagline">
+                    Paste your script, configure speed, and press Run.
+                </p>
+            </header>
+            <form id="editor-form" class="editor-form">
+                <label class="field">
+                    <span class="field-label">Script</span>
+                    <textarea
+                        id="script-input"
+                        class="script-input"
+                        name="script"
+                        rows="12"
+                        placeholder="Paste text to start..."
+                        required
+                    ></textarea>
+                </label>
+                <div class="settings-grid">
+                    <label class="field">
+                        <span class="field-label">Mode</span>
+                        <select id="mode-select" name="mode">
+                            <option value="timer">Timer</option>
+                            <option value="manual">Manual Tick</option>
+                        </select>
+                    </label>
+                    <label class="field">
+                        <span class="field-label">Words per minute</span>
+                        <input
+                            id="wpm-input"
+                            name="wpm"
+                            type="number"
+                            min="100"
+                            max="1200"
+                            step="1"
+                            value="300"
+                        />
+                    </label>
+                    <label class="field">
+                        <span class="field-label">Theme</span>
+                        <select id="theme-select" name="theme">
+                            <option value="dark-1">Dark 1</option>
+                            <option value="dark-2">Dark 2</option>
+                            <option value="light">Light</option>
+                        </select>
+                    </label>
+                    <label class="field checkbox">
+                        <input
+                            id="mirror-toggle"
+                            name="mirror"
+                            type="checkbox"
+                        />
+                        <span class="field-label">Mirror run view</span>
+                    </label>
+                    <label class="field">
+                        <span class="field-label">Tokenization</span>
+                        <select id="tokenization-select" name="tokenization">
+                            <option value="whitespace">Whitespace</option>
+                            <option value="punctuation">
+                                Whitespace + punctuation
+                            </option>
+                        </select>
+                    </label>
+                    <label class="field checkbox">
+                        <input
+                            id="punctuation-toggle"
+                            name="punctuation-pauses"
+                            type="checkbox"
+                        />
+                        <span class="field-label">Punctuation pauses</span>
+                    </label>
+                </div>
+                <div class="actions">
+                    <button id="reset-button" class="secondary" type="button">
+                        Reset
+                    </button>
+                    <button
+                        id="run-button"
+                        class="primary"
+                        type="submit"
+                        disabled
+                    >
+                        Run
+                    </button>
+                </div>
+                <p
+                    id="editor-notice"
+                    class="editor-notice"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+            </form>
+            <section class="keyboard-help" aria-label="Keyboard shortcuts">
+                <h2>Keyboard</h2>
+                <ul>
+                    <li>
+                        <kbd>Space</kbd> pause/resume (Timer) or advance
+                        (Manual)
+                    </li>
+                    <li><kbd>+</kbd>/<kbd>-</kbd> adjust WPM (Timer)</li>
+                    <li><kbd>Esc</kbd> exit run view</li>
+                </ul>
+            </section>
+        </main>
+
+        <section id="run-view" class="run-view" aria-live="polite" hidden>
+            <div id="run-container" class="run-container">
+                <div class="run-stage">
+                    <div id="current-word" class="orp-word" aria-live="polite">
+                        <span class="orp-left"></span>
+                        <span class="orp-letter"></span>
+                        <span class="orp-right"></span>
+                    </div>
+                    <div
+                        id="next-word"
+                        class="preview-word next-word"
+                        aria-hidden="true"
+                    ></div>
+                    <div
+                        id="second-word"
+                        class="preview-word second-word"
+                        aria-hidden="true"
+                    ></div>
+                </div>
+                <footer class="run-footer">
+                    <div id="run-status" class="run-status" role="status"></div>
+                    <div
+                        id="wpm-display"
+                        class="wpm-display"
+                        aria-hidden="true"
+                    ></div>
+                </footer>
+            </div>
+        </section>
+
+        <script type="module" src="{{ "custom/script.js" | relURL }}"></script>
+    </body>
+</html>
