@@ -1,6 +1,8 @@
 import {
   DEFAULT_SETTINGS,
+  MAIN_WORD_VIEWPORT_HEIGHT,
   ORP_RULES,
+  PUNCTUATION_HELPER_RULES,
   PUNCTUATION_RULES,
   STORAGE_KEY,
   STORAGE_VERSION,
@@ -20,6 +22,7 @@ const elements = {
   mirrorToggle: document.getElementById('mirror-toggle'),
   tokenizationSelect: document.getElementById('tokenization-select'),
   punctuationToggle: document.getElementById('punctuation-toggle'),
+  helpersToggle: document.getElementById('helpers-toggle'),
   runButton: document.getElementById('run-button'),
   resetButton: document.getElementById('reset-button'),
   editorNotice: document.getElementById('editor-notice'),
@@ -43,6 +46,8 @@ const state = {
   timerId: null,
   spaceDown: false
 };
+
+const helperClasses = PUNCTUATION_HELPER_RULES.map(rule => rule.className);
 
 const TOKEN_CHUNKS = /\s+|[^\s]+/gu;
 const TOKEN_PATTERN = /https?:\/\/[^\s]+|www\.[^\s]+|[\p{L}\p{N}]+(?:['’][\p{L}\p{N}]+)*|[\p{N}]+(?:[.,][\p{N}]+)*(?:['’][\p{L}\p{N}]+)*|[^\s]/gu;
@@ -109,6 +114,7 @@ function applySettingsToUI() {
   elements.mirrorToggle.checked = settings.mirror;
   elements.tokenizationSelect.value = settings.tokenization;
   elements.punctuationToggle.checked = settings.punctuationPauses;
+  elements.helpersToggle.checked = settings.punctuationHelpers;
   elements.wpmInput.disabled = settings.mode !== 'timer';
   document.body.dataset.theme = settings.theme;
 }
@@ -121,6 +127,7 @@ function bindEditorEvents() {
   elements.mirrorToggle.addEventListener('change', handleMirrorToggle);
   elements.tokenizationSelect.addEventListener('change', handleTokenizationChange);
   elements.punctuationToggle.addEventListener('change', handlePunctuationToggle);
+  elements.helpersToggle.addEventListener('change', handleHelpersToggle);
   elements.form.addEventListener('submit', handleRunRequested);
   elements.resetButton.addEventListener('click', handleReset);
 }
@@ -163,6 +170,14 @@ function handleTokenizationChange(event) {
 function handlePunctuationToggle(event) {
   state.settings.punctuationPauses = Boolean(event.target.checked);
   persistSettings();
+}
+
+function handleHelpersToggle(event) {
+  state.settings.punctuationHelpers = Boolean(event.target.checked);
+  persistSettings();
+  if (!elements.runView.hidden) {
+    renderFrame();
+  }
 }
 
 function handleRunRequested(event) {
@@ -421,6 +436,9 @@ function setOrpWord(frame) {
   elements.currentLetter.textContent = frame.letter;
   elements.currentRight.textContent = frame.right;
   elements.currentWord.classList.toggle('is-whitespace', frame.isWhitespace);
+  applyHelperClasses(frame, elements.currentWord);
+  applyHelperClasses(frame, elements.currentLeft);
+  applyHelperClasses(frame, elements.currentRight);
   scheduleFontAdjustment(frame);
 }
 
@@ -434,7 +452,7 @@ function applyFontSizing(frame) {
     return;
   }
   const maxWidth = stage.clientWidth * 0.9;
-  const targetHeight = window.innerHeight * 0.3;
+  const targetHeight = window.innerHeight * MAIN_WORD_VIEWPORT_HEIGHT;
   const context = elements.currentWord;
   if (!context) {
     return;
@@ -452,7 +470,42 @@ function applyFontSizing(frame) {
 }
 
 
+function matchesHelperPattern(pattern, token) {
+  if (!pattern || !token) {
+    return false;
+  }
+  if (pattern instanceof RegExp) {
+    pattern.lastIndex = 0;
+    return pattern.test(token);
+  }
+  if (typeof pattern === 'string') {
+    return token.endsWith(pattern);
+  }
+  return false;
+}
+
+function applyHelperClasses(frame, element) {
+  if (!element) {
+    return;
+  }
+  helperClasses.forEach(cls => element.classList.remove(cls));
+  if (!state.settings.punctuationHelpers || !frame) {
+    return;
+  }
+  const token = (frame.token || '').trim();
+  for (const rule of PUNCTUATION_HELPER_RULES) {
+    if (matchesHelperPattern(rule.pattern, token)) {
+      element.classList.add(rule.className);
+      break;
+    }
+  }
+}
+
 function setPreviewWord(element, frame) {
+  if (!element) {
+    return;
+  }
+  applyHelperClasses(frame, element);
   if (!frame) {
     element.textContent = '';
     element.classList.remove('is-whitespace');
@@ -460,6 +513,10 @@ function setPreviewWord(element, frame) {
   }
   element.textContent = frame.token;
   element.classList.toggle('is-whitespace', frame.isWhitespace);
+  const left = element.querySelector('.orp-left');
+  const letter = element.querySelector('.orp-letter');
+  const right = element.querySelector('.orp-right');
+  [left, letter, right].forEach(part => applyHelperClasses(frame, part));
 }
 
 function resumeTimer() {
@@ -547,8 +604,11 @@ function handleEndOfScript() {
   elements.currentLeft.textContent = '';
   elements.currentLetter.textContent = '';
   elements.currentRight.textContent = '';
+  applyHelperClasses(null, elements.currentWord);
   elements.nextWord.textContent = '';
   elements.secondWord.textContent = '';
+  applyHelperClasses(null, elements.nextWord);
+  applyHelperClasses(null, elements.secondWord);
   elements.wpmDisplay.textContent = state.mode === 'timer' ? `${state.settings.wpm} WPM` : '';
 }
 

@@ -199,8 +199,8 @@ button.secondary {
 
 .run-view {
     position: fixed;
-    margin: 0;
     inset: 0;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -216,7 +216,6 @@ button.secondary {
     justify-content: center;
     align-items: center;
     background: inherit;
-    transition: transform 0.2s ease;
 }
 
 .run-container.is-mirrored {
@@ -239,29 +238,87 @@ button.secondary {
 }
 
 .orp-word {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--monospace);
     font-size: clamp(32px, 30vh, 120px);
     line-height: 1;
-    transition: font-size 0.12s ease;
-    white-space: pre;
+    white-space: nowrap;
     height: 30vh;
     width: 100%;
 }
 
+/* Note: maintain 25%/75% offsets for ORP alignment and leave .orp-right unconstrained per teleprompter preference. */
 .orp-left,
+.orp-letter,
 .orp-right {
-    opacity: 0.95;
+    position: absolute;
+    white-space: nowrap;
 }
 
 .orp-letter {
+    left: 25%;
+    transform: translateX(-50%);
+    width: 1ch;
+    text-align: center;
     color: var(--accent-on-dark);
+    z-index: 1;
+    pointer-events: none;
 }
 
+.orp-left {
+    right: 75%;
+    transform: translateX(-0.5ch);
+    text-align: right;
+    opacity: 0.95;
+    pointer-events: none;
+}
+
+.orp-right {
+    left: 25%;
+    transform: translateX(0.5ch);
+    text-align: left;
+    opacity: 0.95;
+    pointer-events: none;
+}
+
+.helper-ends-comma .orp-left,
+.helper-ends-comma .orp-letter,
+.helper-ends-comma .orp-right {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: currentColor;
+    text-underline-offset: 0.22em;
+}
+
+.helper-ends-period .orp-left,
+.helper-ends-period .orp-letter,
+.helper-ends-period .orp-right {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: currentColor;
+    text-underline-offset: 0.22em;
+}
+
+.preview-word.helper-ends-comma {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: currentColor;
+    text-underline-offset: 0.18em;
+}
+
+.preview-word.helper-ends-period {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: currentColor;
+    text-underline-offset: 0.18em;
+}
 .preview-word {
+    position: relative;
     display: flex;
+    right: 25%;
     align-items: center;
     justify-content: center;
     font-family: var(--monospace);

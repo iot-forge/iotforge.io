@@ -8,10 +8,12 @@ export const DEFAULT_SETTINGS = Object.freeze({
   mirror: false,
   tokenization: "whitespace",
   punctuationPauses: false,
+  punctuationHelpers: false,
   resumeBehavior: "beginning",
   lastIndex: 0,
 });
 
+export const MAIN_WORD_VIEWPORT_HEIGHT = 0.25;
 export const WPM_LIMITS = Object.freeze({
   min: 100,
   max: 1200,
@@ -42,6 +44,10 @@ export const ORP_RULES = Object.freeze([
   { maxLength: Infinity, pivotIndex: 4 },
 ]);
 
+export const PUNCTUATION_HELPER_RULES = Object.freeze([
+  Object.freeze({ pattern: /,$/, className: "helper-ends-comma" }),
+  Object.freeze({ pattern: /\.$/, className: "helper-ends-period" }),
+]);
 export const PUNCTUATION_RULES = Object.freeze({
   enabled: false,
   multipliers: {
@@ -54,7 +60,5 @@ export const PUNCTUATION_RULES = Object.freeze({
     "\n": 2.5,
   },
 });
-
-export const DEFAULT_PIVOT_TARGET = 4;
 
 export const STORAGE_VERSION = 1;
