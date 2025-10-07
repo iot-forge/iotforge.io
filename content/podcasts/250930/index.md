@@ -5,8 +5,9 @@ audio: "iotforge_unplugged_250708.mp3"
 image: "cover.png"
 script: "script.md"
 sources: "sources.md"
+season: 2025
+episode: 19
 description: "..."
 tags: ["podcast", "episode"]
 categories: ["Podcasts"]
-draft: true
 ---
