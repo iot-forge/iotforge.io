@@ -2,8 +2,13 @@
 publish = "public"
 command = "hugo"
 
+[build.environment]
+  HUGO_VERSION = "0.152.2"
+  HUGO_ENABLEGITINFO = "true"
+  HUGO_EXTENDED = "true"
+
 [context.production.environment]
-HUGO_VERSION = "0.147.8"
+HUGO_VERSION = "0.152.2"
 
 [[redirects]]
 from = "/channels/"
