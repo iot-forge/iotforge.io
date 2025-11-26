@@ -19,3 +19,8 @@ resources:
   description: Digital Designs for Physical Objects. Download millions of 3D models and files for your 3D printer, laser cutter, or CNC. From custom parts to unique designs
   tags: [ "3D Printing" ]
   notable_links: []
+- name: BuildList
+  link: https://buildlist.org/
+  description: A directory of on-demand manufacturers for your creative projects.
+  tags: ["DIY", "Electronics", "PCB", "3D Printing", "Laser Cutting", "CNC Milling", "Metal Casting"]
+  
