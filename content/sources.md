@@ -9,6 +9,7 @@ draft = false
 - https://www.espressif.com/en/company/newsroom/news
 - https://www.home-assistant.io/blog/
 - https://www.zephyrproject.org/announcements/
+- https://aliasrobotics.com/research-security.php
 
 ---
 
