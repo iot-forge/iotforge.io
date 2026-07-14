@@ -23,4 +23,129 @@ resources:
   link: https://buildlist.org/
   description: A directory of on-demand manufacturers for your creative projects.
   tags: ["DIY", "Electronics", "PCB", "3D Printing", "Laser Cutting", "CNC Milling", "Metal Casting"]
-  
+  notable_links: []
+- name: Arduino Blog
+  link: https://blog.arduino.cc/
+  description: The official Arduino blog featuring hardware and software release announcements, project showcases, and community news centered on the Arduino open-source ecosystem.
+  tags: ["IoT", "DIY", "Electronics", "Embedded", "Maker"]
+  notable_links: []
+- name: ESPHome
+  link: https://esphome.io/changelog/
+  description: ESPHome is an open-source platform for creating smart home devices by configuring ESP microcontrollers through simple YAML files, with deep Home Assistant integration and 300+ component library.
+  tags: ["IoT", "Home Automation", "Embedded", "DIY"]
+  notable_links: []
+- name: Espressif Newsroom
+  link: https://www.espressif.com/en/company/newsroom/news
+  description: Official newsroom for Espressif Systems, manufacturer of the ESP32 and ESP8266 Wi-Fi/Bluetooth SoC families, publishing product launches, SDK releases, and industry partnerships.
+  tags: ["IoT", "Electronics", "Embedded", "PCB"]
+  notable_links: []
+- name: Home Assistant Blog
+  link: https://www.home-assistant.io/blog/
+  description: Official blog for Home Assistant, the open-source home automation platform that puts local control and privacy first, featuring monthly release notes, integration spotlights, and community stories.
+  tags: ["Home Automation", "IoT", "DIY"]
+  notable_links: []
+- name: Zephyr Project Announcements
+  link: https://www.zephyrproject.org/announcements/
+  description: Official announcements for the Zephyr Project, a Linux Foundation open-source RTOS for resource-constrained IoT and embedded devices, covering new releases, membership news, and security certifications.
+  tags: ["Embedded", "IoT", "Electronics"]
+  notable_links: []
+- name: Alias Robotics Research
+  link: https://aliasrobotics.com/research-security.php
+  description: Alias Robotics is a robot cybersecurity firm publishing peer-validated research on vulnerabilities in robotic systems, with 30+ CVE IDs issued and papers accepted at USENIX Security and Black Hat.
+  tags: ["Robotics", "Security"]
+  notable_links: []
+- name: MIT News – Robotics
+  link: https://news.mit.edu/topic/robotics
+  description: MIT's official news outlet covering cutting-edge robotics research from across the institute, including autonomous systems, AI-driven robots, swarm robotics, and practical applications in manufacturing and healthcare.
+  tags: ["Robotics", "Electronics"]
+  notable_links: []
+- name: M5Stack
+  link: https://m5stack.com/explore?page=1
+  description: M5Stack is a global provider of modular IoT and embedded development platforms, publishing product announcements, software updates, and tutorials for its stackable hardware ecosystem.
+  tags: ["IoT", "Electronics", "Embedded", "Maker", "DIY"]
+  notable_links: []
+- name: Raspberry Pi Foundation Blog
+  link: https://www.raspberrypi.org/blog/
+  description: The Raspberry Pi Foundation blog focusing on computing education initiatives, curriculum development, teacher training, and global programs like Code Club and Astro Pi.
+  tags: ["DIY", "Electronics", "Maker", "Embedded"]
+  notable_links: []
+- name: Raspberry Pi News
+  link: https://www.raspberrypi.com/news/
+  description: Daily news and updates from Raspberry Pi covering hardware projects, DIY applications, software guides, and community maker stories built around Raspberry Pi single-board computers.
+  tags: ["DIY", "Electronics", "Maker", "Embedded", "IoT", "Robotics"]
+  notable_links: []
+- name: Adafruit Blog
+  link: https://www.adafruit.com/blog/
+  description: Adafruit Industries' official blog serving makers, hackers, artists, and engineers with news on CircuitPython, Arduino, Raspberry Pi, wearables, robotics, and open-source electronics.
+  tags: ["DIY", "Electronics", "Maker", "IoT", "Embedded", "3D Printing"]
+  notable_links: []
+- name: Homey Blog
+  link: https://blog.athom.com/
+  description: Official blog for Homey (by Athom), a smart home automation platform, featuring product updates, user stories, integration news, and practical tips for building connected home environments.
+  tags: ["Home Automation", "IoT"]
+  notable_links: []
+- name: Hackster.io Blog
+  link: https://blog.hackster.io/
+  description: Hackster.io is a community for hardware developers, publishing project tutorials, product announcements, and maker news covering IoT, embedded systems, robotics, and open-source hardware.
+  tags: ["IoT", "DIY", "Electronics", "Maker", "Embedded"]
+  notable_links: []
+- name: WIRED – Robotics
+  link: https://www.wired.com/tag/robotics/
+  description: WIRED magazine's robotics coverage delivering in-depth features, news, and analysis on robotic systems, artificial intelligence, and automation technology from an industry perspective.
+  tags: ["Robotics", "Electronics"]
+  notable_links: []
+- name: Silicon Labs Blog
+  link: https://www.silabs.com/blog
+  description: Official blog for Silicon Laboratories, a semiconductor company specializing in IoT, publishing technical articles and product news covering Bluetooth, Wi-Fi, Z-Wave, Zigbee, Matter, and Thread technologies.
+  tags: ["IoT", "Electronics", "Embedded", "Home Automation"]
+  notable_links: []
+- name: SmartThings Blog
+  link: https://blog.smartthings.com/
+  description: Samsung SmartThings' official blog covering smart home ecosystem news, product updates, Matter standard developments, energy management features, and partner integrations.
+  tags: ["Home Automation", "IoT"]
+  notable_links: []
+- name: All About Circuits – News
+  link: https://www.allaboutcircuits.com/news
+  description: All About Circuits is an electronics education and community platform; its news section covers the latest developments in electronic components, PCB design, embedded systems, and engineering.
+  tags: ["Electronics", "PCB", "Embedded", "IoT"]
+  notable_links: []
+- name: Hackaday.io
+  link: https://hackaday.io/discover
+  description: Hackaday.io is the world's largest collaborative hardware development community where makers share open-source projects spanning electronics, robotics, IoT, 3D printing, and retro computing.
+  tags: ["DIY", "Electronics", "Maker", "IoT", "Robotics", "PCB"]
+  notable_links: []
+- name: Tech Xplore – Robotics
+  link: https://techxplore.com/robotics-news/
+  description: Tech Xplore's robotics section delivers science and technology news on robotic systems, AI integration, and automation, covering humanoids, soft robotics, swarm systems, and research breakthroughs.
+  tags: ["Robotics", "Electronics"]
+  notable_links: []
+- name: Particle Blog
+  link: https://blog.spark.io/
+  description: The Particle (formerly Spark) blog is the leading destination for IoT developers, covering platform updates, hardware announcements, developer tools, and industry solutions for connected products.
+  tags: ["IoT", "Embedded", "Electronics", "DIY"]
+  notable_links: []
+- name: TheThings.io Blog
+  link: https://thethings.io/blog/
+  description: TheThings.io is an IoT platform publishing insights on smart cities, industrial IoT, connectivity technologies, and digital transformation across sectors like agriculture, retail, and smart buildings.
+  tags: ["IoT", "Home Automation"]
+  notable_links: []
+- name: Tindie Blog
+  link: https://blog.tindie.com/
+  description: Tindie is an online marketplace where independent makers buy and sell electronics projects, components, and kits; its blog covers platform updates, featured products, and community maker creations.
+  tags: ["DIY", "Electronics", "Maker", "PCB"]
+  notable_links: []
+- name: Z-Wave.Me Blog
+  link: https://blog.z-wave.me/
+  description: Z-Wave.Me specializes in Z-Wave smart home products and software, publishing updates on their gateway hardware, Z-Way controller software, and developer tools supporting Matter, Zigbee, and Thread.
+  tags: ["Home Automation", "IoT", "Embedded"]
+  notable_links: []
+- name: DFRobot Blog
+  link: https://www.dfrobot.com/blog
+  description: DFRobot is an open-source hardware and IoT solutions platform publishing tutorials, reviews, and guides for makers and educators building with Arduino, ESP32, sensors, and robotics components.
+  tags: ["DIY", "Electronics", "IoT", "Robotics", "Maker", "Embedded"]
+  notable_links: []
+- name: Sam Curry
+  link: https://samcurry.net/
+  description: Security research blog by Sam Curry documenting high-impact vulnerability discoveries in automotive systems, web applications, and telecom infrastructure with responsible disclosure write-ups.
+  tags: ["Security"]
+  notable_links: []
