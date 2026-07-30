@@ -1,0 +1,181 @@
+/* Bench & Signal — reset + base typography */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--board);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+img,
+picture,
+video,
+audio {
+  max-width: 100%;
+  display: block;
+}
+
+audio {
+  width: 100%;
+}
+
+ul,
+ol {
+  padding-left: 1.3em;
+}
+
+a {
+  color: var(--copper);
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+:focus-visible {
+  outline: 2px solid var(--copper);
+  outline-offset: 2px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 1.6em 0 0.6em;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 1.5rem + 1.8vw, 2.9rem);
+}
+
+h2 {
+  font-size: clamp(1.4rem, 1.2rem + 0.9vw, 1.9rem);
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+p {
+  margin: 0 0 1.1em;
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: var(--font-mono);
+}
+
+code {
+  background: var(--board-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.15em 0.4em;
+  font-size: 0.88em;
+}
+
+pre {
+  background: var(--code-bg);
+  color: var(--code-ink);
+  border-radius: var(--radius);
+  padding: 1em 1.2em;
+  overflow-x: auto;
+  font-size: 0.88em;
+  line-height: 1.55;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+}
+
+blockquote {
+  margin: 1.4em 0;
+  padding: 0.2em 0 0.2em 1em;
+  border-left: 3px solid var(--copper);
+  color: var(--ink-dim);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.4em 0;
+  font-size: 0.94em;
+}
+
+th,
+td {
+  border: 1px solid var(--line);
+  padding: 0.5em 0.7em;
+  text-align: left;
+}
+
+th {
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 2em 0;
+}
+
+/* small caps / mono "silkscreen" label, used for meta text throughout */
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

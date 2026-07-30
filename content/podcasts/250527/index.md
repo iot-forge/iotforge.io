@@ -2,6 +2,7 @@
 title: "Local Intelligence and Smarter Control in IoT"
 date: 2025-05-27
 audio: "iot_forge_unplugged_250527.mp3"
+youtube_id: "2p9VwlQQuVE"
 image: "cover.png"
 script: "script.md"
 sources: "sources.md"

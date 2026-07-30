@@ -2,6 +2,7 @@
 title: "Printing Faces, Printing Futures"
 date: 2025-08-19T10:19:52-04:00
 audio: "iotforge_unplugged_250819.mp3"
+youtube_id: "nt1lvlmavno"
 image: "cover.png"
 script: "script.md"
 sources: "sources.md"

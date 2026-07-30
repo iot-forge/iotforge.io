@@ -92,4 +92,12 @@ fabric.properties
 *_LOCAL_*.txt
 *_REMOTE_*.txt
 
-!/.hugo_build.lock
+### Hugo
+/public/
+/resources/_gen/
+/.hugo_cache/
+.hugo_build.lock
+hugo_stats.json
+
+### macOS
+.DS_Store

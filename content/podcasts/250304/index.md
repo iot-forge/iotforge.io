@@ -2,6 +2,7 @@
 title: "IoT Evolves: Smarter Hardware, Smarter Networks, Smarter Future"
 date: 2025-03-04
 audio: "iotforge_unplugged_250304.mp3"
+youtube_id: "F5lE_TooIwI"
 image: "cover.png"
 script: "script.md"
 sources: "sources.md"

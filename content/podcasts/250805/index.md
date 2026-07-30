@@ -2,6 +2,7 @@
 title: "Buzzing, Hissing, and Thinking: The Future of Autonomous Robotics"
 date: 2025-08-05T10:19:41-04:00
 audio: "iotforge_unplugged_250805.mp3"
+youtube_id: "umMFPHyxH1M"
 image: "cover.png"
 script: "script.md"
 sources: "sources.md"

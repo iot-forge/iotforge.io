@@ -2,6 +2,7 @@
 title: "Random News"
 date: 2025-04-01
 audio: "iotforge_unplugged_250401.mp3"
+youtube_id: ""
 image: "cover.png"
 sources: "sources.md"
 season: 2025

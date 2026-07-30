@@ -1,7 +1,6 @@
 baseURL = 'https://iotforge.io/'
 languageCode = 'en-us'
 title = 'IoT Forge'
-theme = 'PaperMod'
 mainSections = ['podcasts', 'articles', 'resources']
 sectionPagesMenu = 'main'
 [markup]
@@ -9,8 +8,9 @@ sectionPagesMenu = 'main'
 [markup.goldmark.renderer]
 unsafe = true
 [params]
-ShowPostNavLinks = true
-ShowBreadCrumbs = true
+description = "IoT Forge — a community podcast and build-log covering IoT, electronics, and robotics."
+heroTitle = "Signal traced from the workbench to your feed."
+heroSubtitle = "IoT Forge is a community podcast and build-log — IoT, electronics, and robotics news, hardware projects, and curated sources, shipped by the people who build the things they talk about."
 
 # Add external menu entries
 [menu]
@@ -24,19 +24,16 @@ weight = 10
 name = "Telegram"
 url = "https://t.me/IoTForge"
 weight = 14
-pre = "<i class='fa-brands fa-telegram'></i>&nbsp;"
 identifier = "telegram"
 
 [[menu.main]]
 name = "YouTube"
 url = "https://www.youtube.com/@IoTForge"
 weight = 50
-pre = "<i class='fa-brands fa-youtube'></i>&nbsp;"
 identifier = "youtube"
 
 [[menu.main]]
 name = "Podcast platforms"
 url = "https://creators.spotify.com/pod/profile/iot-forge/"
 weight = 60
-pre = "<i class='fa-brands fa-spotify'></i>&nbsp;"
 identifier = "spotify"

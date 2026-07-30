@@ -1,0 +1,23 @@
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="{{ "" | absLangURL }}">{{ site.Title }}</a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        {{- range site.Menus.main }}
+        <li>
+          <a href="{{ .URL }}"{{ if in .URL "://" }} target="_blank" rel="noopener"{{ end }}>
+            {{- with partial "icon.html" .Identifier }}{{ . }}{{ end -}}
+            {{ .Name }}
+          </a>
+        </li>
+        {{- end }}
+      </ul>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color theme" accesskey="t">
+        <span class="knob">
+          <span class="icon-sun">{{ partial "icon.html" "sun" }}</span>
+          <span class="icon-moon">{{ partial "icon.html" "moon" }}</span>
+        </span>
+      </button>
+    </nav>
+  </div>
+</header>

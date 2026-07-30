@@ -2,6 +2,7 @@
 title: "Robots, Synths, and Tiny Computers"
 date: 2025-09-16T10:20:13-04:00
 audio: "iotforge_unplugged_250916.mp3"
+youtube_id: "d9Uwbn7vOjY"
 image: "cover.png"
 script: "script.md"
 sources: "sources.md"

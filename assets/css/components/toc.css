@@ -1,0 +1,50 @@
+/* Bench & Signal — table of contents ("pinout" list) */
+
+details.toc {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--board-raised);
+  margin: 0 0 2.2rem;
+}
+
+details.toc summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.85em 1.1em;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+
+details.toc summary::-webkit-details-marker {
+  display: none;
+}
+
+details.toc .toc-body {
+  padding: 0 1.3em 1.1em 1.5em;
+  border-top: 1px solid var(--line);
+  padding-top: 0.9em;
+  font-size: 0.92rem;
+}
+
+details.toc ul {
+  list-style: none;
+  padding-left: 1.1em;
+  margin: 0.15em 0;
+}
+
+details.toc > .toc-body > ul {
+  padding-left: 0;
+}
+
+details.toc li::before {
+  content: "\2013";
+  color: var(--copper);
+  margin-right: 0.5em;
+}
+
+details.toc li {
+  margin: 0.25em 0;
+}

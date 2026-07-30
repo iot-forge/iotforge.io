@@ -2,6 +2,7 @@
 title: "Driver Assist, Fishbots & AI for Tiny Chips"
 date: 2025-07-22T10:19:32-04:00
 audio: "iotforge_unplugged_250722.mp3"
+youtube_id: "_1BtiR-ANsU"
 image: "cover.png"
 script: "script.md"
 sources: "sources.md"

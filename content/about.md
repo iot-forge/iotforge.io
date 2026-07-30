@@ -34,8 +34,8 @@ We want to increase IoT awareness and expertise. We support initiatives to desig
 
 # Core Team:
 
+- [Ihar Chaliadzinau](https://wearecommunity.io/communities/rust)
 - [Konstantin Barabanoff](https://www.linkedin.com/in/konstantinbarabanoff/)
 - [Kostiantyn Kazymirov](https://www.linkedin.com/in/konstantinkasimirov/)
 - [Pavel Korshunov](https://www.linkedin.com/in/pavel-korshunov-a21564287/)
 - [Uladzislau Bayouski](https://www.linkedin.com/in/uladzislau-bayouski-a7474111b/)
-- [Vasili Slapik](https://www.linkedin.com/in/vasili-slapik-59790726/)

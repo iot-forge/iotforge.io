@@ -2,6 +2,7 @@
 title: "CES Highlights & NB-IoT Shift"
 date: 2025-01-21
 audio: "iotforge_unplugged_250121.mp3"
+youtube_id: "ybH2mrzBANk"
 image: "cover.png"
 script: "script.md"
 sources: "sources.md"

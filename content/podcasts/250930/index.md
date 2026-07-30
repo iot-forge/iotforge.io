@@ -2,6 +2,7 @@
 title: "Where Home Automation Meets Human Signals"
 date: 2025-09-30T10:20:15-04:00
 audio: "iotforge_unplugged_250930.mp3"
+youtube_id: "K284peZcIP0"
 image: "cover.png"
 script: "script.md"
 sources: "sources.md"

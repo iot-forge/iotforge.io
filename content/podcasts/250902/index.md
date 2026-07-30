@@ -2,6 +2,7 @@
 title: "Nanometer Motion, Cellular Elephants, and Bambu’s Big Drop"
 date: 2025-09-02T10:20:03-04:00
 audio: "iotforge_unplugged_250902.mp3"
+youtube_id: "FstIiNCWcXk"
 image: "cover.png"
 script: "script.md"
 sources: "sources.md"

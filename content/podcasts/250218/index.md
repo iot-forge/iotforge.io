@@ -2,6 +2,7 @@
 title: "Smart home trends, AI-powered microcontrollers, IoT security, and the evolving cellular IoT market"
 date: 2025-02-18
 audio: "iotforge_unplugged_250218.mp3"
+youtube_id: "zo8rBu8lzRM"
 image: "cover.png"
 script: "script.md"
 sources: "sources.md"

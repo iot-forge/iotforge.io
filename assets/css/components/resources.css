@@ -1,0 +1,112 @@
+/* Bench & Signal — resources tag filter + list */
+
+.tag-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+  margin: 1.6rem 0 2.2rem;
+}
+
+.tag-toggle {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: var(--board-raised);
+  color: var(--ink-dim);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 0.4em 0.9em 0.4em 0.7em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  cursor: pointer;
+}
+
+.tag-toggle::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--ink-dim);
+  background: transparent;
+  flex: none;
+  transition: background-color 0.12s ease, border-color 0.12s ease;
+}
+
+.tag-toggle:hover {
+  color: var(--ink);
+  border-color: var(--copper);
+}
+
+.tag-toggle.active {
+  color: var(--ink);
+  border-color: var(--phosphor);
+}
+
+.tag-toggle.active::before {
+  background: var(--phosphor);
+  border-color: var(--phosphor);
+}
+
+.resource-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--gap);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resource-item {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--board-raised);
+  padding: 1.1rem 1.2rem;
+}
+
+.resource-item h3 {
+  margin: 0 0 0.35em;
+  font-size: 1.02rem;
+}
+
+.resource-item p {
+  color: var(--ink-dim);
+  font-size: 0.9rem;
+  margin: 0 0 0.7em;
+}
+
+.resource-item .entry-tags {
+  display: flex;
+  gap: 0.4em;
+  flex-wrap: wrap;
+}
+
+.resource-item .entry-tags span {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--copper);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.12em 0.55em;
+}
+
+.resource-item.is-hidden {
+  display: none;
+}
+
+.resource-item .notable-links {
+  margin-top: 0.7em;
+  padding-top: 0.6em;
+  border-top: 1px dashed var(--line);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+.resource-item .notable-links li {
+  list-style: none;
+  margin: 0.2em 0;
+}

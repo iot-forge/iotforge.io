@@ -2,6 +2,7 @@
 title: "Arduino + Qualcomm: The Blink Awakens | Robots That Understand"
 date: 2025-10-14T10:20:27-04:00
 audio: "iotforge_news_25_20.mp3"
+youtube_id: "vw4UTMsbnsM"
 image: "cover.png"
 script: "script.md"
 sources: "sources.md"

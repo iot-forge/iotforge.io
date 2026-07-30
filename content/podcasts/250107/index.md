@@ -2,6 +2,7 @@
 title: "Apple, NVIDIA, and Satellite NB-IoT"
 date: 2025-01-07
 audio: "iotforge_unplugged_250107.mp3"
+youtube_id: "Ob3Ta0UhGPI"
 image: "cover.png"
 script: "script.md"
 sources: "sources.md"

@@ -1,0 +1,95 @@
+/* Bench & Signal — design tokens */
+
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url("/fonts/space-grotesk-variable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/ibm-plex-sans-variable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/ibm-plex-mono-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/ibm-plex-mono-500.woff2") format("woff2");
+}
+
+:root {
+  /* board = page background, board-raised = card/header surface */
+  --board: #edeae0;
+  --board-raised: #f8f6ef;
+  --ink: #1b1e1a;
+  --ink-dim: #5b6259;
+  --line: #d8d3c3;
+  --copper: #a8652e;
+  --copper-ink: #ffffff;
+  --phosphor: #3f7d4a;
+  --danger: #b23b3b;
+
+  --code-bg: #16241c;
+  --code-ink: #e9e6d8;
+
+  color-scheme: light;
+
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --gap: 24px;
+  --content-gap: 20px;
+  --nav-width: 1180px;
+  --main-width: 760px;
+  --header-height: 64px;
+  --radius: 3px;
+  --pin: 7px; /* size of the IC-pin corner marks */
+}
+
+body.dark {
+  --board: #0f1913;
+  --board-raised: #16241c;
+  --ink: #e9e6d8;
+  --ink-dim: #8fa396;
+  --line: #24362c;
+  --copper: #d98b4a;
+  --copper-ink: #16241c;
+  --phosphor: #7fd858;
+  --danger: #e08080;
+
+  --code-bg: #0b140e;
+  --code-ink: #e9e6d8;
+
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not(.light) {
+    --board: #0f1913;
+    --board-raised: #16241c;
+    --ink: #e9e6d8;
+    --ink-dim: #8fa396;
+    --line: #24362c;
+    --copper: #d98b4a;
+    --copper-ink: #16241c;
+    --phosphor: #7fd858;
+    --danger: #e08080;
+    color-scheme: dark;
+  }
+}

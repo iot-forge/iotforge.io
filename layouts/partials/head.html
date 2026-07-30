@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="{{ if .Params.noindex }}noindex{{ else }}index, follow{{ end }}">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
+
+{{- with or .Description .Summary site.Params.description | plainify }}
+<meta name="description" content="{{ . }}">
+{{- end }}
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="icon" href="{{ "favicon.svg" | absURL }}" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" href="{{ "index.xml" | absURL }}" title="{{ site.Title }}">
+
+{{- $tokens := resources.Get "css/tokens.css" }}
+{{- $base := resources.Get "css/base.css" }}
+{{- $layout := resources.Get "css/layout.css" }}
+{{- $trace := resources.Get "css/components/trace.css" }}
+{{- $card := resources.Get "css/components/card.css" }}
+{{- $datasheet := resources.Get "css/components/datasheet.css" }}
+{{- $resourcesCss := resources.Get "css/components/resources.css" }}
+{{- $toc := resources.Get "css/components/toc.css" }}
+{{- $chroma := resources.Get "css/components/chroma.css" }}
+{{- $css := slice $tokens $base $layout $trace $card $datasheet $resourcesCss $toc $chroma | resources.Concat "css/site.css" }}
+{{- if hugo.IsProduction }}
+  {{- $css := $css | minify | fingerprint }}
+  <link rel="preload" as="style" href="{{ $css.RelPermalink }}">
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- else }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+{{- end }}
+
+<link rel="preload" as="font" type="font/woff2" href="{{ "fonts/space-grotesk-variable.woff2" | absURL }}" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="{{ "fonts/ibm-plex-sans-variable.woff2" | absURL }}" crossorigin>
+
+{{ partial "templates/opengraph.html" . }}

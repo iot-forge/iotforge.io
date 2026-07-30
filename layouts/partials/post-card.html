@@ -1,0 +1,25 @@
+{{- $p := . -}}
+<article class="pin-card">
+  <span class="pin-tl" aria-hidden="true"></span>
+  <span class="pin-tr" aria-hidden="true"></span>
+  <p class="designator">
+    {{- if and (eq $p.Section "podcasts") $p.Params.season $p.Params.episode -}}
+      S{{ $p.Params.season }} · E{{ printf "%02d" (int $p.Params.episode) }}
+    {{- else -}}
+      {{ $p.Section | title }}
+    {{- end -}}
+  </p>
+  <h3><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h3>
+  {{- with or $p.Description $p.Summary }}
+  <p class="entry-desc">{{ . | plainify | truncate 140 }}</p>
+  {{- end }}
+  <div class="entry-meta">
+    <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "Jan 2, 2006" }}</time>
+    {{- if $p.Params.audio }}<span>Audio</span>{{ end }}
+  </div>
+  {{- with $p.Params.tags }}
+  <div class="entry-tags">
+    {{- range first 4 . }}<span>{{ . }}</span>{{- end }}
+  </div>
+  {{- end }}
+</article>

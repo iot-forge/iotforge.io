@@ -2,6 +2,7 @@
 title: "251209"
 date: 2025-07-08T10:21:25-04:00
 audio: "iotforge_unplugged_250708.mp3"
+youtube_id: ""
 image: "cover.png"
 script: "script.md"
 sources: "sources.md"

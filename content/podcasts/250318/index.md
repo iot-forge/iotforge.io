@@ -2,6 +2,7 @@
 title: "From Arduino’s 20th Anniversary to AI-Powered Robotics"
 date: 2025-03-18
 audio: "iotforge_unplugged_250318.mp3"
+youtube_id: "W1U9UveeRpY"
 image: "cover.png"
 script: "script.md"
 sources: "sources.md"

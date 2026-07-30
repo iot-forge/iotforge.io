@@ -1,0 +1,77 @@
+{{- /*
+Two real signals, not decoration:
+CH1 (sine)   — a 24h day/night clock cycle, phase-locked to the current time.
+CH2 (square) — a PWM pulse train whose duty cycle is today's moon illumination
+               fraction, from Conway's moon-phase approximation (integer
+               arithmetic, epoch-corrected below; accurate to ~1 day, which is
+               plenty for a workbench readout rather than an ephemeris).
+*/ -}}
+
+{{- $year := now.Year }}
+{{- $month := int now.Month }}
+{{- $day := now.Day }}
+{{- $r := mod $year 100 }}
+{{- $r = mod $r 19 }}
+{{- if gt $r 9 }}{{ $r = sub $r 19 }}{{ end }}
+{{- $r = mod (add (add (mod (mul $r 11) 30) $month) $day) 30 }}
+{{- if lt $month 3 }}{{ $r = add $r 2 }}{{ end }}
+{{- $offset := 8.3 }}
+{{- if lt $year 2000 }}{{ $offset = 4.0 }}{{ end }}
+{{- $age := math.Mod (sub $r $offset) 30.0 }}
+{{- if lt $age 0.0 }}{{ $age = add $age 30.0 }}{{ end }}
+{{- $synodic := 29.53059 }}
+{{- $ageFrac := div $age $synodic }}
+{{- $illum := div (sub 1.0 (math.Cos (mul (mul 2.0 math.Pi) $ageFrac))) 2.0 }}
+{{- $dutyPct := math.Round (mul $illum 100) }}
+
+{{- $phaseName := "New Moon" }}
+{{- if lt $age 1.84566 }}{{ $phaseName = "New Moon" }}
+{{- else if lt $age 5.53699 }}{{ $phaseName = "Waxing Crescent" }}
+{{- else if lt $age 9.22831 }}{{ $phaseName = "First Quarter" }}
+{{- else if lt $age 12.91963 }}{{ $phaseName = "Waxing Gibbous" }}
+{{- else if lt $age 16.61096 }}{{ $phaseName = "Full Moon" }}
+{{- else if lt $age 20.30228 }}{{ $phaseName = "Waning Gibbous" }}
+{{- else if lt $age 23.99361 }}{{ $phaseName = "Last Quarter" }}
+{{- else if lt $age 27.68493 }}{{ $phaseName = "Waning Crescent" }}
+{{- else }}{{ $phaseName = "New Moon" }}
+{{- end }}
+
+{{- $duty := $illum }}
+{{- if lt $duty 0.04 }}{{ $duty = 0.04 }}{{ end }}
+{{- if gt $duty 0.96 }}{{ $duty = 0.96 }}{{ end }}
+{{- $period := 240.0 }}
+{{- $low := 220.0 }}
+{{- $high := 80.0 }}
+{{- $squareSegs := slice (printf "M0,%.0f" $low) }}
+{{- range $i := seq 0 4 }}
+  {{- $x0 := mul $period $i }}
+  {{- $xHigh := add $x0 (mul $period $duty) }}
+  {{- $x1 := add $x0 $period }}
+  {{- $squareSegs = $squareSegs | append (printf "L%.1f,%.0f L%.1f,%.0f L%.1f,%.0f L%.1f,%.0f" $x0 $high $xHigh $high $xHigh $low $x1 $low) }}
+{{- end }}
+{{- $squarePath := delimit $squareSegs " " }}
+
+{{- $center := 150.0 }}
+{{- $amp := 60.0 }}
+{{- $sinePeriod := 600.0 }}
+{{- $hourFrac := div (add now.Hour (div now.Minute 60.0)) 24.0 }}
+{{- $sinePts := slice }}
+{{- range $x := seq 0 24 1200 }}
+  {{- $theta := mul (mul 2.0 math.Pi) (div $x $sinePeriod) }}
+  {{- $y := sub $center (mul $amp (math.Sin $theta)) }}
+  {{- $sinePts = $sinePts | append (printf "%d,%.1f" $x $y) }}
+{{- end }}
+{{- $sinePath := printf "M%s" (delimit $sinePts " L") }}
+{{- $nowX := mul $hourFrac $sinePeriod }}
+{{- $nowTheta := mul (mul 2.0 math.Pi) $hourFrac }}
+{{- $nowY := sub $center (mul $amp (math.Sin $nowTheta)) }}
+
+<svg class="hero-scope" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true">
+  <path class="trace-a" d="{{ $sinePath }}" />
+  <path class="trace-b" d="{{ $squarePath }}" />
+  <circle class="trace-now" cx="{{ printf "%.1f" $nowX }}" cy="{{ printf "%.1f" $nowY }}" r="4" />
+</svg>
+<dl class="scope-readout">
+  <div><dt>CH1</dt><dd>Day cycle &middot; {{ now.Format "15:04 MST" }}</dd></div>
+  <div><dt>CH2</dt><dd>Moon PWM &middot; {{ $phaseName }} &middot; {{ printf "%.0f" $dutyPct }}% duty</dd></div>
+</dl>

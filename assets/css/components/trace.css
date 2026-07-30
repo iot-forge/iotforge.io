@@ -1,0 +1,161 @@
+/* Bench & Signal — hero waveform + trace dividers */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background: var(--board-raised);
+}
+
+.hero .wrap {
+  position: relative;
+  z-index: 1;
+  padding: 4.5rem var(--gap) 3.5rem;
+  max-width: var(--nav-width);
+}
+
+.hero-scope {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.55;
+}
+
+.hero-scope path {
+  fill: none;
+  stroke: var(--phosphor);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-dasharray: 8 7;
+  animation: trace-flow 5.5s linear infinite;
+  opacity: 0.55;
+}
+
+.hero-scope path.trace-b {
+  stroke: var(--copper);
+  stroke-dasharray: 5 5;
+  animation-duration: 8s;
+  animation-direction: reverse;
+  opacity: 0.4;
+}
+
+.hero-scope .trace-now {
+  fill: var(--phosphor);
+  opacity: 0.8;
+  animation: trace-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes trace-flow {
+  to {
+    stroke-dashoffset: -300;
+  }
+}
+
+@keyframes trace-pulse {
+  0%, 100% {
+    r: 4;
+    opacity: 0.8;
+  }
+  50% {
+    r: 7;
+    opacity: 0.3;
+  }
+}
+
+.scope-readout {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  padding: 0 var(--gap) 1rem;
+  max-width: var(--nav-width);
+  display: flex;
+  gap: 1.6em;
+  flex-wrap: wrap;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scope-readout > div {
+  display: flex;
+  gap: 0.5em;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.02em;
+  color: var(--ink-dim);
+}
+
+.scope-readout dt {
+  color: var(--copper);
+}
+
+.scope-readout dd {
+  margin: 0;
+}
+
+.hero .eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin: 0 0 0.9em;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 1.8rem + 3vw, 4.2rem);
+  margin: 0 0 0.5em;
+  max-width: 16ch;
+}
+
+.hero p {
+  max-width: 46ch;
+  color: var(--ink-dim);
+  font-size: 1.08rem;
+  margin: 0;
+}
+
+/* ---------- trace divider: a hairline with a right-angle jog + via dot ---------- */
+
+.trace-divider {
+  border: none;
+  height: 17px;
+  margin: 2.75rem 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: left center;
+  position: relative;
+}
+
+.trace-divider::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 8px;
+  height: 1px;
+  background: var(--line);
+}
+
+.trace-divider::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--jog, 12%));
+  top: 3px;
+  width: 11px;
+  height: 11px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--board);
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scope path {
+    animation: none;
+  }
+}

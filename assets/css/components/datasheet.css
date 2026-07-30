@@ -1,0 +1,205 @@
+/* Bench & Signal — single-page "datasheet" layout */
+
+.datasheet-head {
+  margin-bottom: 2.2rem;
+}
+
+.datasheet-head .designator {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: var(--copper);
+  margin: 0 0 0.6em;
+}
+
+.datasheet-head h1 {
+  margin: 0 0 0.5em;
+}
+
+.datasheet-head .tick-rule {
+  height: 9px;
+  margin: 1.1em 0 1.3em;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--line) 0,
+    var(--line) 1px,
+    transparent 1px,
+    transparent 12px
+  );
+  background-position: bottom;
+  background-size: 100% 1px;
+  background-repeat: repeat-x;
+  border-bottom: 1px solid var(--line);
+}
+
+.datasheet-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em 1.4em;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--ink-dim);
+}
+
+.datasheet-meta a {
+  color: var(--ink-dim);
+}
+
+.datasheet-meta a:hover {
+  color: var(--copper);
+}
+
+.datasheet-desc {
+  font-size: 1.08rem;
+  color: var(--ink-dim);
+  margin: 1.1em 0 0;
+}
+
+/* ---------- media panel (audio player + youtube link) ---------- */
+
+.media-panel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--board-raised);
+  padding: 1.1rem 1.2rem;
+  margin: 1.6rem 0 2.2rem;
+}
+
+.media-panel audio {
+  accent-color: var(--copper);
+}
+
+.media-panel .media-links {
+  display: flex;
+  gap: 1.2em;
+  margin-top: 0.8em;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.media-panel .media-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.media-panel .media-links svg {
+  width: 14px;
+  height: 14px;
+}
+
+.featured-image {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  margin: 0 0 2rem;
+}
+
+/* ---------- collapsible datasheet fields (Sources / Script) ---------- */
+
+details.field {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin: 1.4rem 0;
+  background: var(--board-raised);
+}
+
+details.field summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.85em 1.1em;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+
+details.field summary::-webkit-details-marker {
+  display: none;
+}
+
+details.field summary::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid var(--copper);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  transition: transform 0.15s ease;
+  flex: none;
+}
+
+details.field[open] summary::before {
+  transform: rotate(90deg);
+}
+
+details.field .field-body {
+  padding: 0 1.1em 1.1em;
+  border-top: 1px solid var(--line);
+  padding-top: 1em;
+}
+
+details.field .field-body a {
+  word-break: break-word;
+}
+
+/* ---------- article/post body caption from render-image hook ---------- */
+
+.img-caption {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-dim);
+  margin: -1.2em 0 1.4em;
+}
+
+/* ---------- post meta line + word count for articles ---------- */
+
+.post-meta {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--ink-dim);
+  display: flex;
+  gap: 1.1em;
+  flex-wrap: wrap;
+}
+
+/* ---------- prev/next episode navigation ---------- */
+
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5em;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.post-nav a {
+  max-width: 46%;
+  color: var(--ink);
+}
+
+.post-nav a:hover {
+  color: var(--copper);
+  text-decoration: none;
+}
+
+.post-nav .nav-dir {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  margin-bottom: 0.3em;
+}
+
+.post-nav .nav-next {
+  margin-left: auto;
+  text-align: right;
+}

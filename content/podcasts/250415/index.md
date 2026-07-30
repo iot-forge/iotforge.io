@@ -2,6 +2,7 @@
 title: "GR00T, Bluetooth to Cloud, Home Assistant Dashboards, Hackster Contests"
 date: 2025-04-15
 audio: "iotforge_unplugged_250415.mp3"
+youtube_id: "Z7yYqR72m5Y"
 image: "cover.png"
 script: "script.md"
 sources: "sources.md"

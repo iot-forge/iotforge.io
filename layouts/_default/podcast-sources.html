@@ -1,16 +1,28 @@
 {{ define "main" }}
-<article class="post-content">
-  <h1>{{ .Title }}</h1>
-  {{ range sort (where site.RegularPages "Section" "podcasts") "Date" "desc" }}
-    {{ $episode := . }}
-    {{ $src := $episode.Params.sources }}
-    {{ with $episode.Resources.GetMatch $src }}
-      <h3>{{ $episode.Date.Format "Jan 2, 2006" }}</h3>
-      <h6>#{{- $episode.Params.season }}.{{- $episode.Params.episode }}</h6>
-      {{ $content := .Content | markdownify }}
-      {{ $content = $content | replaceRE "<a href=" " <a target=\"_blank\" href=" }}
+<div class="page-wrap">
+  <header class="datasheet-head">
+    <p class="designator">Resources</p>
+    <h1>{{ .Title }}</h1>
+    <div class="tick-rule" aria-hidden="true"></div>
+  </header>
+
+  {{- range sort (where site.RegularPages "Section" "podcasts") "Date" "desc" }}
+  {{- $episode := . }}
+  {{- with $episode.Resources.GetMatch $episode.Params.sources }}
+  <details class="field" open>
+    <summary>
+      {{- if and $episode.Params.season $episode.Params.episode -}}
+      S{{ $episode.Params.season }} · E{{ printf "%02d" (int $episode.Params.episode) }} —
+      {{- end }}
+      {{ $episode.Date.Format "Jan 2, 2006" }}
+    </summary>
+    <div class="field-body">
+      {{- $content := .Content | markdownify }}
+      {{- $content = $content | replaceRE "<a href=" " <a target=\"_blank\" rel=\"noopener\" href=" }}
       {{ $content | safeHTML }}
-    {{ end }}
-  {{ end }}
-</article>
+    </div>
+  </details>
+  {{- end }}
+  {{- end }}
+</div>
 {{ end }}

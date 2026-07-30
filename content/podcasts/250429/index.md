@@ -2,6 +2,7 @@
 title: "Robots That Stumble, Roombas That Rise: IoT in Motion"
 date: 2025-04-29
 audio: "iotforge_unplugged_250429.mp3"
+youtube_id: "-TRH20TsS_E"
 image: "cover.png"
 script: "script.md"
 sources: "sources.md"

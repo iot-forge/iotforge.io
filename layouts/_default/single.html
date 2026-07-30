@@ -1,44 +1,110 @@
 {{ define "main" }}
-  {{- if eq .Section "podcasts" }}
-    <article class="post-content">
-      <h1>{{ .Title }}</h1>
-      <h3>{{ .Date.Format "Jan 2, 2006" }}</h3>
-      <h6>#{{- .Params.season }}.{{- .Params.episode }}</h6>
-      <p>{{ .Description }}</p>
+<div class="page-wrap">
+{{- if eq .Section "podcasts" }}
 
-      {{ with .Params.audio }}
-        <audio controls style="width: 100%; margin-top: 1em;">
-          <source src="{{ . }}" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-      {{ end }}
+  <header class="datasheet-head">
+    {{- if and .Params.season .Params.episode }}
+    <p class="designator">S{{ .Params.season }} · E{{ printf "%02d" (int .Params.episode) }}</p>
+    {{- end }}
+    <h1>{{ .Title }}</h1>
+    <div class="tick-rule" aria-hidden="true"></div>
+    <div class="datasheet-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+    </div>
+    {{- with .Description }}<p class="datasheet-desc">{{ . }}</p>{{- end }}
+  </header>
 
-      {{ with .Params.sources }}
-        {{ $src := . }}
-        {{ with $.Resources.GetMatch $src }}
-          {{ $content := .Content | markdownify }}
-          {{ $content = $content | replaceRE "<a href=" " <a target=\"_blank\" href=" }}
-          {{ $content | safeHTML }}
-        {{ end }}
-      {{ end }}
+  {{- with .Params.image }}
+  <img src="{{ . }}" alt="{{ $.Title }}" class="featured-image">
+  {{- end }}
 
-      {{ with .Params.script }}
-        {{ $scr := . }}
-        {{ with $.Resources.GetMatch $scr }}
-          <details style="font-family: monospace; font-size: 0.85rem; line-height: 1.5; margin-top: 1em;">
-            <summary><strong>Show Script</strong></summary>
-            {{ .Content }}
-          </details>
-        {{ end }}
-      {{ end }}
+  <div class="media-panel">
+    {{- with .Params.audio }}
+    <audio controls preload="none">
+      <source src="{{ . }}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    {{- end }}
+    {{- with .Params.youtube_id }}
+    <div class="media-links">
+      <a href="https://www.youtube.com/watch?v={{ . }}" target="_blank" rel="noopener noreferrer">
+        {{ partial "icon.html" "play" }} Watch on YouTube
+      </a>
+    </div>
+    {{- end }}
+  </div>
 
-      {{ with .Params.image }}
-        <img src="{{ . }}" alt="{{ $.Title }}" class="featured-image">
-      {{ end }}
+  {{- with .Params.sources }}
+  {{- with $.Resources.GetMatch . }}
+  <details class="field" open>
+    <summary>Sources</summary>
+    <div class="field-body">
+      {{- $content := .Content | markdownify }}
+      {{- $content = $content | replaceRE "<a href=" " <a target=\"_blank\" rel=\"noopener\" href=" }}
+      {{ $content | safeHTML }}
+    </div>
+  </details>
+  {{- end }}
+  {{- end }}
 
-    </article>
-  {{ else }}
-    {{/* fallback to default PaperMod layout */}}
-    {{ .Content }}
-  {{ end }}
+  {{- with .Params.script }}
+  {{- with $.Resources.GetMatch . }}
+  <details class="field">
+    <summary>Script</summary>
+    <div class="field-body">{{ .Content }}</div>
+  </details>
+  {{- end }}
+  {{- end }}
+
+  {{- $prev := .PrevInSection }}
+  {{- $next := .NextInSection }}
+  {{- if or $prev $next }}
+  <nav class="post-nav" aria-label="Episode navigation">
+    {{- with $next }}
+    <a class="nav-prev" href="{{ .RelPermalink }}"><span class="nav-dir">&larr; Previous</span>{{ .Title }}</a>
+    {{- end }}
+    {{- with $prev }}
+    <a class="nav-next" href="{{ .RelPermalink }}"><span class="nav-dir">Next &rarr;</span>{{ .Title }}</a>
+    {{- end }}
+  </nav>
+  {{- end }}
+
+{{- else }}
+
+  <header class="datasheet-head">
+    <p class="designator">{{ .Section | default .Type | title }}</p>
+    <h1>{{ .Title }}</h1>
+    <div class="tick-rule" aria-hidden="true"></div>
+    <div class="post-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      {{- with .Params.author }}<span>by {{ . }}</span>{{- end }}
+      {{- if .Param "ShowWordCount" }}<span>{{ .WordCount }} words · {{ .ReadingTime }} min read</span>{{- end }}
+    </div>
+  </header>
+
+  {{- $toc := printf "%s" .TableOfContents }}
+  {{- if and (.Param "showToc") (in $toc "<li") }}
+  <details class="toc"{{ if .Param "TocOpen" }} open{{ end }}>
+    <summary>Contents</summary>
+    <div class="toc-body">{{ .TableOfContents }}</div>
+  </details>
+  {{- end }}
+
+  <div class="post-body">{{ .Content }}</div>
+
+  {{- $prev := .PrevInSection }}
+  {{- $next := .NextInSection }}
+  {{- if or $prev $next }}
+  <nav class="post-nav" aria-label="Post navigation">
+    {{- with $next }}
+    <a class="nav-prev" href="{{ .RelPermalink }}"><span class="nav-dir">&larr; Previous</span>{{ .Title }}</a>
+    {{- end }}
+    {{- with $prev }}
+    <a class="nav-next" href="{{ .RelPermalink }}"><span class="nav-dir">Next &rarr;</span>{{ .Title }}</a>
+    {{- end }}
+  </nav>
+  {{- end }}
+
+{{- end }}
+</div>
 {{ end }}

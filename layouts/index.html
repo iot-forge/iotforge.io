@@ -1,0 +1,77 @@
+{{ define "main" }}
+
+<section class="hero">
+  {{ partial "hero-scope.html" . }}
+  <div class="wrap">
+    <p class="eyebrow">IoT Forge Community</p>
+    <h1>{{ site.Params.heroTitle }}</h1>
+    <p>{{ site.Params.heroSubtitle }}</p>
+  </div>
+</section>
+
+<div class="wrap">
+  {{ partial "trace-divider.html" }}
+
+  {{- with site.GetPage "podcasts" }}
+  {{- $section := . }}
+  {{- $pages := .RegularPagesRecursive.ByDate.Reverse }}
+  {{- with $pages }}
+  <div class="section-row">
+    <div class="section-row-head">
+      <h2>Latest Episodes</h2>
+      <a class="see-all" href="{{ $section.RelPermalink }}">All episodes &rarr;</a>
+    </div>
+    <ul class="entry-grid">
+      {{- range first 3 $pages }}
+      <li>{{ partial "post-card.html" . }}</li>
+      {{- end }}
+    </ul>
+  </div>
+  {{- end }}
+  {{- end }}
+
+  {{ partial "trace-divider.html" }}
+
+  {{- with site.GetPage "articles" }}
+  {{- $section := . }}
+  {{- $pages := .RegularPagesRecursive.ByDate.Reverse }}
+  {{- with $pages }}
+  <div class="section-row">
+    <div class="section-row-head">
+      <h2>Build Logs &amp; Articles</h2>
+      <a class="see-all" href="{{ $section.RelPermalink }}">All articles &rarr;</a>
+    </div>
+    <ul class="entry-grid">
+      {{- range first 3 $pages }}
+      <li>{{ partial "post-card.html" . }}</li>
+      {{- end }}
+    </ul>
+  </div>
+  {{- end }}
+  {{- end }}
+
+  {{ partial "trace-divider.html" }}
+
+  <div class="section-row">
+    <div class="section-row-head">
+      <h2>Resources</h2>
+      <a class="see-all" href="{{ "resources/" | relURL }}">Browse all &rarr;</a>
+    </div>
+    <ul class="resource-list">
+      <li class="resource-item">
+        <h3><a href="{{ "resources/channels/" | relURL }}">Channels</a></h3>
+        <p>Video and podcast channels the community follows for IoT, electronics and robotics.</p>
+      </li>
+      <li class="resource-item">
+        <h3><a href="{{ "resources/links/" | relURL }}">Links</a></h3>
+        <p>A curated, tag-filterable list of blogs, tools and communities worth bookmarking.</p>
+      </li>
+      <li class="resource-item">
+        <h3><a href="{{ "resources/podcast-sources/" | relURL }}">Episode Sources</a></h3>
+        <p>Every link referenced across every episode, aggregated in one place.</p>
+      </li>
+    </ul>
+  </div>
+
+</div>
+{{ end }}

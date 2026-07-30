@@ -1,0 +1,170 @@
+/* Bench & Signal — IC-pin entry cards */
+
+.entry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--gap);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.section-row + .section-row {
+  margin-top: 3rem;
+}
+
+.section-row-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1em;
+  margin-bottom: 1.1rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.6rem;
+}
+
+.section-row-head h2 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.section-row-head a.see-all {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.pin-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--board-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.3rem 1.3rem 1.1rem;
+  min-height: 100%;
+}
+
+/* four small square "pins" at the corners, like an IC footprint */
+.pin-card::before,
+.pin-card::after,
+.pin-card .pin-tl,
+.pin-card .pin-tr {
+  content: "";
+  position: absolute;
+  width: var(--pin);
+  height: var(--pin);
+  background: var(--line);
+}
+
+.pin-card::before {
+  left: -1px;
+  top: -1px;
+}
+
+.pin-card::after {
+  right: -1px;
+  bottom: -1px;
+}
+
+.pin-card .pin-tl {
+  left: -1px;
+  bottom: -1px;
+}
+
+.pin-card .pin-tr {
+  right: -1px;
+  top: -1px;
+}
+
+.pin-card:hover {
+  border-color: var(--copper);
+}
+
+.pin-card:hover::before,
+.pin-card:hover::after,
+.pin-card:hover .pin-tl,
+.pin-card:hover .pin-tr {
+  background: var(--copper);
+}
+
+.pin-card .designator {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  color: var(--copper);
+  margin: 0 0 0.5em;
+}
+
+.pin-card h3 {
+  margin: 0 0 0.45em;
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+.pin-card h3 a {
+  color: var(--ink);
+}
+
+.pin-card h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.pin-card .entry-desc {
+  color: var(--ink-dim);
+  font-size: 0.94rem;
+  margin: 0 0 0.9em;
+  flex: 1;
+}
+
+.pin-card .entry-meta {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--ink-dim);
+  display: flex;
+  gap: 0.9em;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.pin-card .entry-tags {
+  display: flex;
+  gap: 0.4em;
+  flex-wrap: wrap;
+  margin-top: 0.7em;
+}
+
+.pin-card .entry-tags span {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--phosphor);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.15em 0.6em;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  margin-top: 3rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.pagination a {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.5em 1em;
+}
+
+.pagination a:hover {
+  border-color: var(--copper);
+  text-decoration: none;
+}
