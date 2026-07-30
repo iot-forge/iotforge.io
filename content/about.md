@@ -4,8 +4,6 @@ date = 2025-05-30T13:02:37-04:00
 draft = false
 +++
 
-# About
-
 ## Who We Are
 
 We are IoT Forge Community. We serve as a nexus for collaboration, knowledge sharing, and transformative solutions that cater to the surging demand for IoT implementations, in various domains including industrial IoT and Industry 4.0.
