@@ -27,6 +27,12 @@ weight = 14
 identifier = "telegram"
 
 [[menu.main]]
+name = "GitHub"
+url = "https://github.com/iot-forge"
+weight = 20
+identifier = "github"
+
+[[menu.main]]
 name = "YouTube"
 url = "https://www.youtube.com/@IoTForge"
 weight = 50
