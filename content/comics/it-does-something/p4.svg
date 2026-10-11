@@ -1,0 +1,6 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="-4" y="246" width="308" height="60" fill="#caa56a" stroke="#1b1e1a" stroke-width="3"/>
+  <use href="#c-mcu" x="70" y="140" width="116" height="116"/>
+  <use href="#c-led-on" x="200" y="150" width="56" height="98"/>
+  <path d="M228 152 v-10 M202.5 160.5 l-7 -7 M253.5 160.5 l7 -7" fill="none" stroke="#d83a34" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

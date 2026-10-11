@@ -1,0 +1,13 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <use href="#c-pcb" x="0" y="250" width="300" height="50"/>
+  <rect x="-4" y="243" width="308" height="9" fill="#f2c230" stroke="#1b1e1a" stroke-width="2"/>
+  <path d="M12 243 l-6 9 M24 243 l-6 9 M36 243 l-6 9 M132 243 l-6 9 M144 243 l-6 9 M156 243 l-6 9 M168 243 l-6 9 M180 243 l-6 9 M192 243 l-6 9 M204 243 l-6 9 M216 243 l-6 9 M228 243 l-6 9 M240 243 l-6 9 M252 243 l-6 9 M264 243 l-6 9 M276 243 l-6 9 M288 243 l-6 9 M300 243 l-6 9" stroke="#1b1e1a" stroke-width="3"/>
+  <path d="M118 238 C150 238 150 230 186 238" fill="none" stroke="#b23b3b" stroke-width="4" stroke-linecap="round"/>
+  <rect x="34" y="214" width="86" height="38" rx="4" fill="#f2c230" stroke="#1b1e1a" stroke-width="3"/>
+  <path d="M46 214 V204 A31 12 0 0 1 108 204 V214 Z" fill="#d83a34" stroke="#1b1e1a" stroke-width="3" stroke-linejoin="round"/>
+  <text x="77" y="239" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="12" fill="#1b1e1a">STOP</text>
+  <use href="#c-mcu" x="47" y="136" width="60" height="60"/>
+  <text x="124" y="200" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="12" fill="#1b1e1a" transform="rotate(-12 124 200)">CLICK</text>
+  <use href="#c-humanoid-stride" x="190" y="109" width="79.400" height="150"/>
+  <path d="M184 120 l-8 -6 M184 136 h-10 M276 120 l8 -6 M278 136 h10" stroke="#1b1e1a" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,23 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="-4" y="250" width="308" height="54" fill="#d8d3c3" stroke="#1b1e1a" stroke-width="3"/>
+  <rect x="150" y="50" width="124" height="150" fill="#ffffff" stroke="#1b1e1a" stroke-width="3"/>
+  <rect x="150" y="50" width="124" height="26" fill="#a8652e" stroke="#1b1e1a" stroke-width="3"/>
+  <text x="212" y="68" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="13" fill="#ffffff">MOON</text>
+  <circle cx="212" cy="46" r="4" fill="#8d918b" stroke="#1b1e1a" stroke-width="2"/>
+  <circle cx="170" cy="102" r="9" fill="#262b28" stroke="#1b1e1a" stroke-width="2"/>
+  <circle cx="198" cy="102" r="9" fill="#262b28" stroke="#1b1e1a" stroke-width="2"/><path d="M198 93 A9 9 0 0 1 198 111 A6 9 0 0 0 198 93 Z" fill="#f3e3b3"/>
+  <circle cx="226" cy="102" r="9" fill="#262b28" stroke="#1b1e1a" stroke-width="2"/><path d="M226 93 A9 9 0 0 1 226 111 A0.1 9 0 0 0 226 93 Z" fill="#f3e3b3"/>
+  <circle cx="254" cy="102" r="9" fill="#262b28" stroke="#1b1e1a" stroke-width="2"/><path d="M254 93 A9 9 0 0 1 254 111 A6 9 0 0 1 254 93 Z" fill="#f3e3b3"/>
+  <circle cx="170" cy="136" r="9" fill="#f3e3b3" stroke="#1b1e1a" stroke-width="2"/>
+  <circle cx="198" cy="136" r="9" fill="#262b28" stroke="#1b1e1a" stroke-width="2"/><path d="M198 127 A9 9 0 0 0 198 145 A6 9 0 0 0 198 127 Z" fill="#f3e3b3"/>
+  <circle cx="226" cy="136" r="9" fill="#262b28" stroke="#1b1e1a" stroke-width="2"/><path d="M226 127 A9 9 0 0 0 226 145 A0.1 9 0 0 1 226 127 Z" fill="#f3e3b3"/>
+  <circle cx="254" cy="136" r="9" fill="#262b28" stroke="#1b1e1a" stroke-width="2"/><path d="M254 127 A9 9 0 0 0 254 145 A6 9 0 0 1 254 127 Z" fill="#f3e3b3"/>
+  <circle cx="170" cy="170" r="9" fill="#262b28" stroke="#1b1e1a" stroke-width="2"/>
+  <circle cx="198" cy="170" r="9" fill="#262b28" stroke="#1b1e1a" stroke-width="2"/><path d="M198 161 A9 9 0 0 1 198 179 A6 9 0 0 0 198 161 Z" fill="#f3e3b3"/>
+  <circle cx="226" cy="170" r="9" fill="#262b28" stroke="#1b1e1a" stroke-width="2"/><path d="M226 161 A9 9 0 0 1 226 179 A0.1 9 0 0 0 226 161 Z" fill="#f3e3b3"/>
+  <circle cx="254" cy="170" r="9" fill="#262b28" stroke="#1b1e1a" stroke-width="2"/><path d="M254 161 A9 9 0 0 1 254 179 A6 9 0 0 1 254 161 Z" fill="#f3e3b3"/>
+  <circle cx="198" cy="136" r="14" fill="none" stroke="#d83a34" stroke-width="3"/>
+  <use href="#c-person-body" x="44" y="136" width="68" height="119"/>
+  <use href="#c-person-face" x="44" y="136" width="68" height="119"/>
+  <path d="M65 197 L56 219 M91 197 L102 186 L90 174" fill="none" stroke="#1b1e1a" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

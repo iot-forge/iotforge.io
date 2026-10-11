@@ -1,0 +1,11 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <use href="#c-pcb" x="0" y="250" width="300" height="50"/>
+  <rect x="236" y="243" width="66" height="9" fill="#f2c230" stroke="#1b1e1a" stroke-width="2"/>
+  <path d="M246 243 l-6 9 M258 243 l-6 9 M270 243 l-6 9 M282 243 l-6 9 M294 243 l-6 9" stroke="#1b1e1a" stroke-width="3"/>
+  <path d="M270 243 V196" stroke="#1b1e1a" stroke-width="4"/>
+  <rect x="241" y="164" width="58" height="32" rx="3" fill="#f2c230" stroke="#1b1e1a" stroke-width="3"/>
+  <text x="270" y="178" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="11" fill="#1b1e1a">KEEP</text>
+  <text x="270" y="191" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="11" fill="#1b1e1a">OUT</text>
+  <use href="#c-person" x="22" y="136" width="68" height="119"/>
+  <use href="#c-humanoid" x="140" y="109" width="79.400" height="150"/>
+</svg>

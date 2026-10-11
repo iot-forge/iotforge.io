@@ -1,0 +1,7 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="-4" y="250" width="308" height="54" fill="#b9bdb8" stroke="#1b1e1a" stroke-width="3"/>
+  <g transform="translate(180 180) rotate(90)"><use href="#c-humanoid" x="0" y="0" width="79.400" height="150"/></g>
+  <use href="#c-vacuum" x="226" y="232" width="56" height="18.7"/>
+  <use href="#c-mcu" x="242" y="208" width="26" height="26"/>
+  <circle cx="214" cy="244" r="5" fill="#d8d3c3" stroke="#8d918b" stroke-width="2"/><circle cx="202" cy="240" r="7" fill="#d8d3c3" stroke="#8d918b" stroke-width="2"/><circle cx="188" cy="244" r="4" fill="#d8d3c3" stroke="#8d918b" stroke-width="2"/>
+</svg>

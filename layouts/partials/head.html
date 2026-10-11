@@ -19,7 +19,8 @@
 {{- $resourcesCss := resources.Get "css/components/resources.css" }}
 {{- $toc := resources.Get "css/components/toc.css" }}
 {{- $chroma := resources.Get "css/components/chroma.css" }}
-{{- $css := slice $tokens $base $layout $trace $card $datasheet $resourcesCss $toc $chroma | resources.Concat "css/site.css" }}
+{{- $comic := resources.Get "css/components/comic.css" }}
+{{- $css := slice $tokens $base $layout $trace $card $datasheet $resourcesCss $toc $chroma $comic | resources.Concat "css/site.css" }}
 {{- if hugo.IsProduction }}
   {{- $css := $css | minify | fingerprint }}
   <link rel="preload" as="style" href="{{ $css.RelPermalink }}">
@@ -32,3 +33,11 @@
 <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/ibm-plex-sans-variable.woff2" | absURL }}" crossorigin>
 
 {{ partial "templates/opengraph.html" . }}
+{{- if eq .Section "comics" }}
+{{- with partial "_funcs/get-page-images" . }}
+{{- with index . 0 }}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ .Permalink }}">
+{{- end }}
+{{- end }}
+{{- end }}

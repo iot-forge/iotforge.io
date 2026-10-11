@@ -1,0 +1,15 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="-4" y="250" width="308" height="54" fill="#d8d3c3" stroke="#1b1e1a" stroke-width="3"/>
+  <rect x="14" y="12" width="272" height="34" rx="3" fill="#262b28" stroke="#1b1e1a" stroke-width="3"/>
+  <text x="150" y="34" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="15" fill="#f8f6ef">TRANSFORMING THE FUTURE</text>
+  <path d="M138 166 V250 M124 250 H152" fill="none" stroke="#1b1e1a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="112" y="128" width="52" height="38" rx="3" fill="#f8f6ef" stroke="#1b1e1a" stroke-width="3"/>
+  <path d="M126 160 v-10 M138 160 v-18 M150 160 v-25" stroke="#3f7d4a" stroke-width="6"/>
+  <path d="M198 166 V250 M184 250 H212" fill="none" stroke="#1b1e1a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="172" y="128" width="52" height="38" rx="3" fill="#f8f6ef" stroke="#1b1e1a" stroke-width="3"/>
+  <circle cx="198" cy="147" r="12" fill="#d98b4a" stroke="#1b1e1a" stroke-width="2"/><path d="M198 147 V135 A12 12 0 0 1 210 147 Z" fill="#3f7d4a" stroke="#1b1e1a" stroke-width="2"/>
+  <path d="M258 166 V250 M244 250 H272" fill="none" stroke="#1b1e1a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="232" y="128" width="52" height="38" rx="3" fill="#f8f6ef" stroke="#1b1e1a" stroke-width="3"/>
+  <path d="M240 140 H276 M240 148 H268 M240 156 H272" stroke="#8d918b" stroke-width="3" stroke-linecap="round"/>
+  <use href="#c-ai" x="10" y="150" width="88" height="88"/>
+</svg>

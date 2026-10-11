@@ -1,0 +1,8 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="-4" y="250" width="308" height="54" fill="#d8d3c3" stroke="#1b1e1a" stroke-width="3"/>
+  <path d="M150 166 V250 M136 250 H164" fill="none" stroke="#1b1e1a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="124" y="128" width="52" height="38" rx="3" fill="#f8f6ef" stroke="#1b1e1a" stroke-width="3"/>
+  <path d="M138 160 v-10 M150 160 v-18 M162 160 v-25" stroke="#3f7d4a" stroke-width="6"/>
+  <use href="#c-person" x="24" y="136" width="68" height="119"/>
+  <use href="#c-ai" x="190" y="124" width="90" height="90"/>
+</svg>

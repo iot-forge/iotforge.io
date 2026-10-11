@@ -1,0 +1,12 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <use href="#c-pcb" x="0" y="250" width="300" height="50"/>
+  <path d="M246 190 H280 M252 208 H288 M246 226 H276" stroke="#1b1e1a" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="112" cy="178" r="38" fill="#d9eef8" stroke="#1b1e1a" stroke-width="3"/>
+  <path d="M77 164 Q112 156 147 164" fill="none" stroke="#7fb9d6" stroke-width="3"/>
+  <path d="M92 142 H132" stroke="#1b1e1a" stroke-width="6" stroke-linecap="round"/>
+  <use href="#c-fish" x="88" y="168" width="46" height="27.600"/>
+  <use href="#c-sbc" x="160" y="156" width="70" height="58.300"/>
+  <rect x="62" y="214" width="176" height="14" rx="4" fill="#b9bdb8" stroke="#1b1e1a" stroke-width="3"/>
+  <g fill="#262b28" stroke="#1b1e1a" stroke-width="3"><circle cx="92" cy="238" r="12"/><circle cx="208" cy="238" r="12"/></g>
+  <g fill="#c9ccc6"><circle cx="92" cy="238" r="3.500"/><circle cx="208" cy="238" r="3.500"/></g>
+</svg>

@@ -1,0 +1,10 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <use href="#c-pcb" x="0" y="250" width="300" height="50"/>
+  <use href="#c-humanoid-pour" x="24" y="109" width="79.400" height="150"/>
+  <path d="M136 152 C147 152 147 167 136 167" fill="none" stroke="#1b1e1a" stroke-width="3"/>
+  <rect x="113" y="146" width="24" height="28" rx="3" fill="#f8f6ef" stroke="#1b1e1a" stroke-width="3"/>
+  <circle cx="120" cy="170" r="6.500" fill="#cfd3ce" stroke="#1b1e1a" stroke-width="3"/>
+  <path d="M120 138 q-4 -6 0 -11 M130 138 q-4 -6 0 -11" fill="none" stroke="#8d918b" stroke-width="2.500" stroke-linecap="round"/>
+  <path d="M70 108 C96 30 220 26 304 84" fill="none" stroke="#d98b4a" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 11"/>
+  <path d="M52 100 A16 16 0 0 1 76 100 M44 92 A27 27 0 0 1 84 92" fill="none" stroke="#d98b4a" stroke-width="3" stroke-linecap="round"/>
+</svg>

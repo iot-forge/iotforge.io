@@ -1,0 +1,9 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <use href="#c-pcb" x="0" y="250" width="300" height="50"/>
+  <use href="#c-toaster" x="70" y="120" width="160" height="130"/>
+  <path d="M78 190 C62 186 58 196 52 200" fill="none" stroke="#1b1e1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="12" y="198" width="46" height="24" rx="3" fill="#f3e3b3" stroke="#1b1e1a" stroke-width="2.500"/>
+  <text x="35" y="215" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="13" fill="#1b1e1a">$89</text>
+  <rect x="92" y="147" width="116" height="20" rx="4" fill="#d98b4a" stroke="#1b1e1a" stroke-width="2.500" transform="rotate(-3 150 157)"/>
+  <text x="150" y="161.5" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="12" fill="#1b1e1a" transform="rotate(-3 150 157)">AI-POWERED</text>
+</svg>

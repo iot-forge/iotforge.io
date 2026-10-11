@@ -1,0 +1,10 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="-4" y="250" width="308" height="54" fill="#d8d3c3" stroke="#1b1e1a" stroke-width="3"/>
+  <rect x="166" y="236" width="118" height="16" rx="3" fill="#f8f6ef" stroke="#1b1e1a" stroke-width="3"/>
+  <use href="#c-exo" x="185" y="102" width="80" height="150"/>
+  <use href="#c-person-body" x="74" y="136" width="68" height="119" style="--hoodie:#2f5f8a"/>
+  <use href="#c-person-face" x="76" y="136" width="68" height="119"/>
+  <path d="M95 197 L86 219 M121 197 L146 190 L170 178" fill="none" stroke="#1b1e1a" stroke-width="4.200" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M100 188 L108 206 L116 188" fill="none" stroke="#f8f6ef" stroke-width="2"/>
+  <rect x="102" y="204" width="12" height="15" rx="2" fill="#f8f6ef" stroke="#1b1e1a" stroke-width="2"/>
+</svg>

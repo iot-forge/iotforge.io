@@ -1,0 +1,13 @@
+{{- /* One comic panel: inline art from the page bundle plus speech bubbles from front matter. Context: dict "page" Page "panel" map */ -}}
+{{- $page := .page -}}
+{{- $p := .panel -}}
+<div class="comic-panel">
+  {{- with $p.desc }}<p class="visually-hidden">{{ . }}</p>{{ end }}
+  {{- with $page.Resources.Get $p.art }}{{ .Content | safeHTML }}{{ end }}
+  {{- with $p.caption }}<p class="comic-caption">{{ . }}</p>{{ end }}
+  {{- range $p.lines }}
+  {{- $style := printf "--x:%v;--y:%v;--w:%v" .x .y .w }}
+  {{- with .tail }}{{ $style = printf "%s;--t:%v" $style . }}{{ end }}
+  <p class="bubble{{ with .style }} is-{{ . }}{{ end }}{{ if .tail }} has-tail{{ end }}" style="{{ $style | safeCSS }}"><span class="visually-hidden">{{ .who }}: </span>{{ .text }}</p>
+  {{- end }}
+</div>

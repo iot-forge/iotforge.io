@@ -1,0 +1,9 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="-4" y="266" width="308" height="40" fill="#b9bdb8" stroke="#1b1e1a" stroke-width="3"/>
+  <circle cx="116" cy="186" r="82" fill="#d9eef8" stroke="#1b1e1a" stroke-width="3"/>
+  <path d="M42 152 Q116 136 190 152" fill="none" stroke="#7fb9d6" stroke-width="3"/>
+  <path d="M76 110 H156" stroke="#1b1e1a" stroke-width="7" stroke-linecap="round"/>
+  <use href="#c-fish" x="58" y="164" width="110" height="66"/>
+  <path d="M40 200 h-18 M36 222 h-22" stroke="#1b1e1a" stroke-width="3" stroke-linecap="round"/>
+  <use href="#c-sbc" x="212" y="140" width="150" height="125"/>
+</svg>

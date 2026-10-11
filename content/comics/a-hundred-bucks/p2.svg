@@ -1,0 +1,6 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <use href="#c-pcb" x="0" y="250" width="300" height="50"/>
+  <use href="#c-office-pc" x="24" y="124" width="110" height="130.0"/>
+  <path d="M14 244 h-10 M16 232 l-10 -6 M144 244 h10 M142 232 l10 -6" fill="none" stroke="#1b1e1a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <use href="#c-sbc" x="180" y="180" width="90" height="75.0"/>
+</svg>

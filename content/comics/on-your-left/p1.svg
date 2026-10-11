@@ -1,0 +1,8 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="-4" y="250" width="308" height="54" fill="#b9bdb8" stroke="#1b1e1a" stroke-width="3"/>
+  <path d="M40 250 V176" fill="none" stroke="#1b1e1a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="10" y="148" width="60" height="28" rx="3" fill="#ffffff" stroke="#1b1e1a" stroke-width="3"/>
+  <text x="40" y="167" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="12" fill="#1b1e1a">START</text>
+  <use href="#c-humanoid" x="96" y="109" width="79.4" height="150"/>
+  <use href="#c-ai" x="196" y="120" width="90" height="90"/>
+</svg>

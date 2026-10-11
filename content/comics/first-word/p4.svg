@@ -1,0 +1,9 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <use href="#c-pcb" x="0" y="250" width="300" height="50"/>
+  <use href="#c-mcu" x="24" y="190" width="64" height="64"/>
+  <use href="#c-led-on" x="98" y="194" width="34" height="60"/>
+  <use href="#c-person-body" x="170" y="136" width="68" height="119"/>
+  <use href="#c-person-face" x="170" y="136" width="68" height="119"/>
+  <path d="M191 197 L181 219 M217 197 L226 184 L214 172" fill="none" stroke="#1b1e1a" stroke-width="4.200" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M199 172 q-4 7 0 9 q4 -2 0 -9 Z" fill="#5aa9e6" stroke="#1b1e1a" stroke-width="1.200"/>
+</svg>

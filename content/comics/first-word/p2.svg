@@ -1,0 +1,6 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <use href="#c-pcb" x="0" y="250" width="300" height="50"/>
+  <use href="#c-ai" x="12" y="60" width="70" height="70"/>
+  <use href="#c-mcu" x="96" y="168" width="88" height="88"/>
+  <use href="#c-led" x="204" y="176" width="44" height="77"/>
+</svg>

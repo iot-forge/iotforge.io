@@ -1,0 +1,12 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="-4" y="250" width="308" height="54" fill="#d8d3c3" stroke="#1b1e1a" stroke-width="3"/>
+  <use href="#c-person" x="-6" y="136" width="68" height="119" style="--hoodie:#2f5f8a"/>
+  <use href="#c-person" x="36" y="136" width="68" height="119" style="--hoodie:#7b5ea7"/>
+  <use href="#c-person" x="200" y="136" width="68" height="119" style="--hoodie:#2f8f83"/>
+  <use href="#c-person" x="242" y="136" width="68" height="119" style="--hoodie:#a8652e"/>
+  <path d="M114 214 V250 M186 214 V250" fill="none" stroke="#1b1e1a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="106" y="206" width="88" height="8" fill="#caa56a" stroke="#1b1e1a" stroke-width="3"/>
+  <use href="#c-mcu" x="112" y="160" width="50" height="50"/>
+  <use href="#c-led-on" x="166" y="160" width="26" height="46"/>
+  <path d="M179 156 v-10 M167.0 160.0 l-7 -7 M191.0 160.0 l7 -7" fill="none" stroke="#d83a34" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

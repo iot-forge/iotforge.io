@@ -1,0 +1,8 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <use href="#c-pcb" x="0" y="250" width="300" height="50"/>
+  <use href="#c-mcu" x="150" y="180" width="76" height="76"/>
+  <use href="#c-cell" x="236" y="172" width="30" height="80"/>
+  <rect x="-2" y="-2" width="304" height="304" fill="#1b1e1a" opacity="0.62"/>
+  <use href="#c-ai" x="16" y="50" width="124" height="124"/>
+  <use href="#c-pcb-face" x="34" y="260" width="48" height="32"/>
+</svg>

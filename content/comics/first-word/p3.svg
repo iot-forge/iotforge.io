@@ -1,0 +1,7 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <use href="#c-pcb" x="0" y="250" width="300" height="50"/>
+  <use href="#c-ai-meh" x="12" y="60" width="70" height="70"/>
+  <use href="#c-mcu" x="96" y="168" width="88" height="88"/>
+  <use href="#c-led-on" x="204" y="176" width="44" height="77"/>
+  <path d="M226 168 V154 M204 180 L194 170 M248 180 L258 170 M196 204 H184 M256 204 H268" stroke="#d83a34" stroke-width="3" stroke-linecap="round"/>
+</svg>

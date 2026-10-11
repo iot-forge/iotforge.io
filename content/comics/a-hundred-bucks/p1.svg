@@ -1,0 +1,11 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <use href="#c-pcb" x="0" y="250" width="300" height="50"/>
+  <rect x="50" y="40" width="200" height="64" rx="6" fill="#262b28" stroke="#1b1e1a" stroke-width="3"/>
+  <text x="150" y="67" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="15" fill="#7fd858">COMPILING… 3%</text>
+  <rect x="70" y="80" width="160" height="12" fill="none" stroke="#7fd858" stroke-width="2"/>
+  <rect x="70" y="80" width="6" height="12" fill="#7fd858"/>
+  <use href="#c-sbc" x="95" y="164" width="110" height="91.7"/>
+  <rect x="100" y="180" width="100" height="56" rx="6" fill="#bfe3f5" opacity="0.5"/>
+  <path d="M106 229 l5 16 l5 -16 Z M130 229 l4 11 l4 -11 Z M158 229 l6 20 l6 -20 Z M182 229 l4 12 l4 -12 Z" fill="#d9eef8" stroke="#7fb9d6" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M70 150 l10 10 M80 150 l-10 10 M75 148 v14 M68 155 h14 M224 140 l10 10 M234 140 l-10 10 M229 138 v14 M222 145 h14" fill="none" stroke="#7fb9d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

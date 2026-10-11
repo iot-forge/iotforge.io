@@ -129,6 +129,13 @@
   display: none;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
 body.dark .theme-toggle .knob {
   transform: translateX(20px);
 }
@@ -144,7 +151,7 @@ body.dark .theme-toggle .icon-moon {
 /* ---------- main ---------- */
 
 .main {
-  min-height: 60vh;
+  flex: 1 0 auto;
   padding: 2.5rem 0 4rem;
 }
 

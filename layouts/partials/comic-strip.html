@@ -1,0 +1,7 @@
+{{- /* A full strip. Context: dict "page" Page "class" string (optional). The id is the target used by comics-studio/render-covers.py. */ -}}
+{{- $page := .page -}}
+<div id="cover-render" class="comic-strip{{ with .class }} {{ . }}{{ end }}" role="group" aria-label="{{ $page.Title }}">
+  {{- range $page.Params.panels }}
+  {{ partial "comic-panel.html" (dict "page" $page "panel" .) }}
+  {{- end }}
+</div>

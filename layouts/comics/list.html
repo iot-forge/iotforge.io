@@ -1,0 +1,35 @@
+{{ define "main" }}
+{{- $all := .RegularPages.ByDate }}
+{{ partial "comic-cast.html" . }}
+<div class="page-wrap comic-page">
+  <header class="datasheet-head">
+    <p class="designator">Comics</p>
+    <h1>{{ .Params.series | default .Title }}</h1>
+    <div class="tick-rule" aria-hidden="true"></div>
+    {{- with .Description }}<p class="datasheet-desc">{{ . }}</p>{{ end }}
+  </header>
+
+  {{- /* The whole archive is one page: thumbnails are small inline drawings, so there is no paging. */}}
+  {{- if $all }}
+  <ul class="comic-grid">
+    {{- range $all.Reverse }}
+    {{- $page := . }}
+    {{- $no := 0 }}
+    {{- range $i, $p := $all }}{{ if eq $p.RelPermalink $page.RelPermalink }}{{ $no = add $i 1 }}{{ end }}{{ end }}
+    <li>
+      <article class="comic-card">
+        <div class="comic-thumb" aria-hidden="true">
+          {{- with index .Params.panels 0 }}{{ partial "comic-panel.html" (dict "page" $page "panel" .) }}{{ end }}
+        </div>
+        <p class="designator">No. {{ printf "%03d" $no }}</p>
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+      </article>
+    </li>
+    {{- end }}
+  </ul>
+  {{- else }}
+  <p class="entry-desc">Nothing here yet.</p>
+  {{- end }}
+</div>
+{{ end }}

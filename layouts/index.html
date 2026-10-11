@@ -12,6 +12,25 @@
 <div class="wrap">
   {{ partial "trace-divider.html" }}
 
+  {{- with site.GetPage "comics" }}
+  {{- $section := . }}
+  {{- with first 1 .RegularPages.ByDate.Reverse }}
+  {{- range . }}
+  {{ partial "comic-cast.html" . }}
+  <div class="section-row">
+    <div class="section-row-head">
+      <h2>This Week's Comic</h2>
+      <a class="see-all" href="{{ $section.RelPermalink }}">All comics &rarr;</a>
+    </div>
+    <h3 class="comic-feature-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{ partial "comic-strip.html" (dict "page" . "class" "is-row") }}
+  </div>
+  {{- end }}
+
+  {{ partial "trace-divider.html" }}
+  {{- end }}
+  {{- end }}
+
   {{- with site.GetPage "podcasts" }}
   {{- $section := . }}
   {{- $pages := .RegularPagesRecursive.ByDate.Reverse }}

@@ -101,3 +101,7 @@ hugo_stats.json
 
 ### macOS
 .DS_Store
+
+### Comics
+# Unpublished script drafts
+/comics-studio/candidates/

@@ -1,0 +1,9 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="16" y="92" width="268" height="230" rx="10" fill="#262b28" stroke="#1b1e1a" stroke-width="3"/>
+  <rect x="30" y="106" width="240" height="210" fill="#2f6b3c"/>
+  <path d="M30 140 H70 L86 156 H130 M30 260 H96 L110 246 H150 M200 106 V150 H270" fill="none" stroke="#4c9a5a" stroke-width="3"/>
+  <use href="#c-pcb-face" x="48" y="170" width="96" height="64"/>
+  <rect x="166" y="192" width="92" height="40" rx="7" fill="#d98b4a" stroke="#1b1e1a" stroke-width="3"/>
+  <text x="212" y="218" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="17" fill="#1b1e1a">ORDER</text>
+  <path d="M236 240 L236 266 L243 259 L249 272 L254 270 L248 257 L258 257 Z" fill="#f8f6ef" stroke="#1b1e1a" stroke-width="2.500" stroke-linejoin="round"/>
+</svg>

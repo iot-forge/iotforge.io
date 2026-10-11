@@ -1,0 +1,5 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="-4" y="264" width="308" height="40" fill="#d8d3c3" stroke="#1b1e1a" stroke-width="3"/>
+  <use href="#c-laptop" x="50" y="118" width="200" height="150"/>
+  <use href="#c-pcb-face" x="116" y="150" width="68" height="45.300"/>
+</svg>

@@ -1,0 +1,62 @@
+{{ define "main" }}
+{{- $section := .CurrentSection }}
+{{- $pages := $section.RegularPages.ByDate }}
+{{- $idx := 0 }}
+{{- range $i, $p := $pages }}{{ if eq $p.RelPermalink $.RelPermalink }}{{ $idx = $i }}{{ end }}{{ end }}
+{{- $last := sub (len $pages) 1 }}
+{{ partial "comic-cast.html" . }}
+<div class="page-wrap comic-page">
+  <header class="datasheet-head">
+    <p class="designator">{{ with $section.Params.series }}{{ . }} · {{ end }}No. {{ printf "%03d" (add $idx 1) }}</p>
+    <h1>{{ .Title }}</h1>
+    <div class="tick-rule" aria-hidden="true"></div>
+    <div class="datasheet-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+    </div>
+  </header>
+
+  {{ partial "comic-strip.html" (dict "page" .) }}
+
+  <nav class="comic-nav" aria-label="Comic navigation">
+    {{- if gt $idx 0 }}
+    <a href="{{ (index $pages 0).RelPermalink }}">&laquo; First</a>
+    <a href="{{ (index $pages (sub $idx 1)).RelPermalink }}" rel="prev">&larr; Previous</a>
+    {{- else }}
+    <span>&laquo; First</span>
+    <span>&larr; Previous</span>
+    {{- end }}
+    {{- if lt $idx $last }}
+    <a href="{{ (index $pages (add $idx 1)).RelPermalink }}" rel="next">Next &rarr;</a>
+    <a href="{{ (index $pages $last).RelPermalink }}">Latest &raquo;</a>
+    {{- else }}
+    <span>Next &rarr;</span>
+    <span>Latest &raquo;</span>
+    {{- end }}
+  </nav>
+
+  {{- with .Params.note }}
+  <aside class="comic-note">
+    <p class="designator">Behind the joke</p>
+    <p>{{ . | markdownify }}</p>
+    {{- with $.Params.source }}
+    <p class="comic-source">Source: <a href="{{ .url }}"{{ if in .url "://" }} target="_blank" rel="noopener"{{ end }}>{{ .title }}</a></p>
+    {{- end }}
+  </aside>
+  {{- end }}
+
+  <details class="field">
+    <summary>Transcript</summary>
+    <div class="field-body">
+      <ol class="comic-transcript">
+        {{- range .Params.panels }}
+        <li>
+          {{- with .desc }}<em>{{ . }}</em>{{ end }}
+          {{- with .caption }}<br>Caption: {{ . }}{{ end }}
+          {{- range .lines }}<br><strong>{{ .who }}:</strong> {{ .text }}{{ end }}
+        </li>
+        {{- end }}
+      </ol>
+    </div>
+  </details>
+</div>
+{{ end }}

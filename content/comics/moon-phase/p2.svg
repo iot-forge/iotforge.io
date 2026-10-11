@@ -1,0 +1,10 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="-4" y="258" width="308" height="46" fill="#d8d3c3" stroke="#1b1e1a" stroke-width="3"/>
+  <path d="M133 230 V258 M103 258 H163" fill="none" stroke="#1b1e1a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="30" y="90" width="206" height="140" rx="8" fill="#262b28" stroke="#1b1e1a" stroke-width="3"/>
+  <rect x="42" y="102" width="182" height="116" fill="#16241c"/>
+  <text x="133" y="154" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="22" fill="#e08080">NO DEVICE</text>
+  <text x="133" y="182" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="22" fill="#e08080">FOUND</text>
+  <rect x="173" y="168" width="12" height="16" fill="#e08080"/>
+  <use href="#c-mcu" x="246" y="214" width="46" height="46"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <use href="#c-pcb" x="0" y="250" width="300" height="50"/>
+  <rect x="176" y="226" width="96" height="24" rx="3" fill="#f8f6ef" stroke="#1b1e1a" stroke-width="3"/>
+  <path d="M184 234 H264 M184 242 H264" stroke="#b9bdb8" stroke-width="2" stroke-dasharray="2 5"/>
+  <rect x="186" y="196" width="56" height="30" rx="3" fill="#3f7d4a" stroke="#1b1e1a" stroke-width="3" transform="rotate(-8 214 211)"/>
+  <rect x="236" y="204" width="46" height="22" rx="3" fill="#2f5f8a" stroke="#1b1e1a" stroke-width="3" transform="rotate(10 259 215)"/>
+  <rect x="206" y="172" width="40" height="24" rx="3" fill="#b23b3b" stroke="#1b1e1a" stroke-width="3" transform="rotate(6 226 184)"/>
+  <path d="M180 226 C160 200 200 180 210 174 M246 178 C272 160 288 200 280 208 M200 226 C196 246 170 236 166 250" fill="none" stroke="#1b1e1a" stroke-width="2.500" stroke-linecap="round"/>
+  <path d="M258 226 C262 240 280 238 286 250" fill="none" stroke="#d98b4a" stroke-width="2.500" stroke-linecap="round"/>
+  <use href="#c-person-body" x="24" y="136" width="68" height="119"/>
+  <use href="#c-person-face" x="24" y="136" width="68" height="119"/>
+  <rect x="84" y="186" width="42" height="34" fill="#caa56a" stroke="#1b1e1a" stroke-width="3"/>
+  <path d="M84 200 H126 M105 186 V200" stroke="#1b1e1a" stroke-width="2"/>
+  <path d="M71 197 L88 208 M45 197 L60 214 L84 214" fill="none" stroke="#1b1e1a" stroke-width="4.200" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

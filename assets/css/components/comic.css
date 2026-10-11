@@ -1,0 +1,262 @@
+/* Bench & Signal — comic strips */
+
+/* Panels are printed "paper": they keep the same ink and paper in both themes. */
+
+.comic-sprite {
+  position: absolute;
+}
+
+.comic-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0 0 1.6rem;
+}
+
+.comic-panel {
+  position: relative;
+  container-type: inline-size;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #f8f6ef;
+  color: #1b1e1a;
+  border: 2px solid #1b1e1a;
+  border-radius: var(--radius);
+}
+
+.comic-panel > svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+.comic-panel .bubble {
+  position: absolute;
+  left: calc(var(--x) * 1%);
+  top: calc(var(--y) * 1%);
+  width: calc(var(--w) * 1%);
+  margin: 0;
+  padding: 1.7cqw 2.2cqw;
+  background: #ffffff;
+  color: #1b1e1a;
+  border: 0.7cqw solid #1b1e1a;
+  border-radius: 3.4cqw;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 4.5cqw;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.comic-panel .bubble.has-tail::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--t) * 1%);
+  bottom: -2.2cqw;
+  width: 3.2cqw;
+  height: 3.2cqw;
+  background: inherit;
+  border-right: 0.7cqw solid;
+  border-bottom: 0.7cqw solid;
+  border-color: inherit;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.comic-panel .bubble.is-ai {
+  background: #eef8e8;
+  border-color: #3f7d4a;
+}
+
+.comic-panel .bubble.is-loud {
+  font-size: 8cqw;
+  letter-spacing: 0.02em;
+}
+
+.comic-panel .comic-caption {
+  position: absolute;
+  left: 3%;
+  top: 3%;
+  max-width: 80%;
+  margin: 0;
+  padding: 1.2cqw 2cqw;
+  background: #f3e3b3;
+  color: #1b1e1a;
+  border: 0.6cqw solid #1b1e1a;
+  font-family: var(--font-mono);
+  font-size: 3.4cqw;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Cover render: opening a comic at #cover-render fills the viewport with its
+   first two panels, which comics-studio/render-covers.py screenshots as cover.png. */
+
+.comic-strip:target {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin: 0;
+  background: #f8f6ef;
+}
+
+.comic-strip:target .comic-panel {
+  border-radius: 0;
+}
+
+.comic-strip:target .comic-panel:nth-child(n + 3) {
+  display: none;
+}
+
+/* ---------- single comic ---------- */
+
+.comic-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 0 0 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.comic-nav a,
+.comic-nav span {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.6em 0.4em;
+}
+
+.comic-nav a {
+  color: var(--ink);
+}
+
+.comic-nav a:hover {
+  border-color: var(--copper);
+  color: var(--copper);
+  text-decoration: none;
+}
+
+.comic-nav span {
+  color: var(--ink-dim);
+  opacity: 0.5;
+}
+
+.comic-note {
+  border-left: 3px solid var(--copper);
+  padding: 0.2em 0 0.2em 1.1em;
+  margin: 0 0 1.6rem;
+}
+
+.comic-note .designator {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin: 0 0 0.4em;
+}
+
+.comic-note p {
+  margin: 0 0 0.5em;
+}
+
+.comic-note .comic-source {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-dim);
+}
+
+.comic-transcript {
+  margin: 0;
+  padding-left: 1.4em;
+}
+
+.comic-transcript li + li {
+  margin-top: 0.8em;
+}
+
+/* ---------- archive grid ---------- */
+
+.comic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: var(--gap);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.comic-card {
+  position: relative;
+}
+
+.comic-card .comic-thumb {
+  margin-bottom: 0.7em;
+}
+
+.comic-card:hover .comic-panel {
+  border-color: var(--copper);
+}
+
+.comic-card .designator {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.05em;
+  color: var(--copper);
+  margin: 0 0 0.3em;
+}
+
+.comic-card h3 {
+  margin: 0 0 0.3em;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.comic-card h3 a {
+  color: var(--ink);
+}
+
+.comic-card h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.comic-card time {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--ink-dim);
+}
+
+/* ---------- homepage row ---------- */
+
+.comic-feature-title {
+  margin: 0 0 0.9rem;
+  font-size: 1.15rem;
+}
+
+.comic-feature-title a {
+  color: var(--ink);
+}
+
+@media (min-width: 900px) {
+  .comic-strip.is-row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .comic-strip {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .comic-nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
