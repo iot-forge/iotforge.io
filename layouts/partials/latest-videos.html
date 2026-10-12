@@ -1,0 +1,46 @@
+{{- /* Latest long-form videos, read from the channel's public feed at build time.
+       The "UULF" playlist is YouTube's long-form uploads list, so Shorts are left out.
+       If the feed cannot be fetched the row is skipped and the build carries on. */ -}}
+{{- with site.Params.youtubeChannelId }}
+{{- $feedURL := printf "https://www.youtube.com/feeds/videos.xml?playlist_id=UULF%s" (strings.TrimPrefix "UC" .) }}
+{{- $entries := slice }}
+{{- with try (resources.GetRemote $feedURL) }}
+  {{- with .Err }}
+    {{- warnf "Latest videos: could not fetch the YouTube feed: %s" . }}
+  {{- else with .Value }}
+    {{- with (. | transform.Unmarshal).entry }}
+      {{- if reflect.IsSlice . }}{{ $entries = . }}{{ else }}{{ $entries = slice . }}{{ end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- with $entries }}
+<div class="section-row">
+  <div class="section-row-head">
+    <h2>Latest Videos</h2>
+    {{- range where site.Menus.social "Identifier" "youtube" }}
+    <a class="see-all" href="{{ .URL }}" target="_blank" rel="noopener">YouTube channel &rarr;</a>
+    {{- end }}
+  </div>
+  <ul class="entry-grid">
+    {{- range first 3 (sort . "published" "desc") }}
+    {{- $date := time.AsTime .published }}
+    <li>
+      <article class="pin-card video-card">
+        <span class="pin-tl" aria-hidden="true"></span>
+        <span class="pin-tr" aria-hidden="true"></span>
+        <img class="video-thumb" src="{{ index .group.thumbnail "-url" }}" alt="" width="480" height="360" loading="lazy">
+        <p class="designator">Video</p>
+        <h3><a href="{{ index .link "-href" }}" target="_blank" rel="noopener">{{ .title }}</a></h3>
+        <div class="entry-meta">
+          <time datetime="{{ $date.Format "2006-01-02" }}">{{ $date.Format "Jan 2, 2006" }}</time>
+          <span>YouTube</span>
+        </div>
+      </article>
+    </li>
+    {{- end }}
+  </ul>
+</div>
+
+{{ partial "trace-divider.html" }}
+{{- end }}
+{{- end }}

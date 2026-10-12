@@ -3,11 +3,21 @@ languageCode = 'en-us'
 title = 'IoT Forge'
 mainSections = ['podcasts', 'articles', 'resources']
 sectionPagesMenu = 'main'
+# Google Analytics measurement ID; the tag is only added to production builds
+[services.googleAnalytics]
+id = "G-ZETZ3R066H"
+
+# Re-fetch remote data (the YouTube feed) at most once an hour
+[caches.getresource]
+maxAge = "1h"
+
 [markup]
 [markup.goldmark]
 [markup.goldmark.renderer]
 unsafe = true
 [params]
+# Channel whose latest long-form videos are listed on the homepage
+youtubeChannelId = "UC-4Jx7yjLemePx2JFN9UbyA"
 description = "IoT Forge — a community podcast and build-log covering IoT, electronics, and robotics."
 heroTitle = "Signal traced from the workbench to your feed."
 heroSubtitle = "IoT Forge is a community podcast and build-log — IoT, electronics, and robotics news, hardware projects, and curated sources, shipped by the people who build the things they talk about."

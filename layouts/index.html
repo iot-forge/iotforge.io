@@ -31,6 +31,8 @@
   {{- end }}
   {{- end }}
 
+  {{ partial "latest-videos.html" . }}
+
   {{- with site.GetPage "podcasts" }}
   {{- $section := . }}
   {{- $pages := .RegularPagesRecursive.ByDate.Reverse }}
