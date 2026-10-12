@@ -188,6 +188,31 @@ body.dark .theme-toggle .icon-moon {
   color: var(--copper);
 }
 
+.footer-social {
+  display: flex;
+  gap: 0.6em;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.footer-social a:hover {
+  border-color: var(--copper);
+  text-decoration: none;
+}
+
+.footer-social svg {
+  width: 18px;
+  height: 18px;
+}
+
 #top-link {
   position: fixed;
   right: 22px;

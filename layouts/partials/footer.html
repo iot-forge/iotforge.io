@@ -1,7 +1,12 @@
 {{- if not (.Param "hideFooter") }}
 <footer class="site-footer">
   <div class="wrap">
-    <span>&copy; {{ now.Year }} <a href="https://github.com/iot-forge/iotforge.io" target="_blank" rel="noopener">{{ site.Title }}</a></span>
+    <span>&copy; {{ now.Year }} <a href="https://github.com/iot-forge/iotforge.io" target="_blank" rel="noopener">{{ site.Title }}</a> · <a href="mailto:team@iotforge.org">team@iotforge.org</a></span>
+    <nav class="footer-social" aria-label="Social">
+      {{- range site.Menus.social }}
+      <a href="{{ .URL }}" target="_blank" rel="noopener" aria-label="{{ .Name }}" title="{{ .Name }}">{{ partial "icon.html" .Identifier }}</a>
+      {{- end }}
+    </nav>
     <span>Built on <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a></span>
   </div>
 </footer>

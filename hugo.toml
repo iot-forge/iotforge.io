@@ -20,26 +20,53 @@ name = "About"
 url = "/about/"
 weight = 10
 
-[[menu.main]]
-name = "Telegram"
-url = "https://t.me/IoTForge"
-weight = 14
-identifier = "telegram"
+# External links are shown as icons in the footer (menu.social below).
+# Uncomment these to show them in the header again.
+# [[menu.main]]
+# name = "Telegram"
+# url = "https://t.me/IoTForge"
+# weight = 14
+# identifier = "telegram"
+#
+# [[menu.main]]
+# name = "GitHub"
+# url = "https://github.com/iot-forge"
+# weight = 20
+# identifier = "github"
+#
+# [[menu.main]]
+# name = "YouTube"
+# url = "https://www.youtube.com/@IoTForge"
+# weight = 50
+# identifier = "youtube"
+#
+# [[menu.main]]
+# name = "Podcast platforms"
+# url = "https://creators.spotify.com/pod/profile/iot-forge/"
+# weight = 60
+# identifier = "spotify"
 
-[[menu.main]]
-name = "GitHub"
-url = "https://github.com/iot-forge"
-weight = 20
-identifier = "github"
-
-[[menu.main]]
-name = "YouTube"
+# Footer icons; the identifier picks the icon in layouts/partials/icon.html
+[[menu.social]]
+name = "YouTube channel"
 url = "https://www.youtube.com/@IoTForge"
-weight = 50
+weight = 10
 identifier = "youtube"
 
-[[menu.main]]
-name = "Podcast platforms"
+[[menu.social]]
+name = "Telegram channel"
+url = "https://t.me/IoTForge"
+weight = 20
+identifier = "telegram"
+
+[[menu.social]]
+name = "Podcast on Spotify"
 url = "https://creators.spotify.com/pod/profile/iot-forge/"
-weight = 60
+weight = 30
 identifier = "spotify"
+
+[[menu.social]]
+name = "GitHub"
+url = "https://github.com/iot-forge"
+weight = 40
+identifier = "github"
