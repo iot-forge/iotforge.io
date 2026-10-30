@@ -1,0 +1,45 @@
+{{- /* Share bar for one comic. Context: dict "page" Page "no" int "series" string.
+     Plain intent links only (no third-party widgets or trackers); the JS in assets/js/comic-share.js
+     adds copy-to-clipboard, the native share sheet and analytics events on top. */ -}}
+{{- $page := .page -}}
+{{- $no := printf "%03d" .no -}}
+{{- $series := .series | default "Comics" -}}
+{{- $url := $page.Permalink -}}
+{{- $label := printf "%s No. %s" $series $no -}}
+{{- $text := printf "“%s” — %s, a comic from %s" $page.Title $label site.Title -}}
+{{- $strip := $page.Resources.GetMatch "strip.png" -}}
+{{- $filename := printf "%s-%s-%s.png" ($series | urlize) $no $page.File.ContentBaseName -}}
+<div class="comic-share" role="group" aria-label="Share this comic"
+     data-url="{{ $url }}" data-title="{{ $page.Title }}" data-text="{{ $text }}" data-id="{{ $page.File.ContentBaseName }}"
+     {{- with $strip }} data-image="{{ .Permalink }}" data-filename="{{ $filename }}"{{ end }}>
+  <p class="designator">Share</p>
+  <ul class="share-list">
+    <li hidden data-share-native>
+      <button type="button" class="share-btn" data-share="native" title="Share using your device">{{ partial "icon.html" "share" }}<span>Share…</span></button>
+    </li>
+    <li>
+      <button type="button" class="share-btn" data-share="copy" title="Copy a link to this comic">{{ partial "icon.html" "link" }}<span data-label>Copy link</span></button>
+    </li>
+    <li>
+      <a class="share-btn" data-share="x" href="https://x.com/intent/post?{{ querify "text" $text "url" $url | safeURL }}" target="_blank" rel="noopener" title="Share on X">{{ partial "icon.html" "x" }}<span>X</span></a>
+    </li>
+    <li>
+      <a class="share-btn" data-share="bluesky" href="https://bsky.app/intent/compose?{{ querify "text" (printf "%s %s" $text $url) | safeURL }}" target="_blank" rel="noopener" title="Share on Bluesky">{{ partial "icon.html" "bluesky" }}<span>Bluesky</span></a>
+    </li>
+    <li>
+      <a class="share-btn" data-share="telegram" href="https://t.me/share/url?{{ querify "url" $url "text" $text | safeURL }}" target="_blank" rel="noopener" title="Share on Telegram">{{ partial "icon.html" "telegram" }}<span>Telegram</span></a>
+    </li>
+    <li>
+      <a class="share-btn" data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?{{ querify "url" $url | safeURL }}" target="_blank" rel="noopener" title="Share on LinkedIn">{{ partial "icon.html" "linkedin" }}<span>LinkedIn</span></a>
+    </li>
+    <li>
+      <a class="share-btn" data-share="reddit" href="https://www.reddit.com/submit?{{ querify "url" $url "title" (printf "%s (%s)" $page.Title $label) | safeURL }}" target="_blank" rel="noopener" title="Share on Reddit">{{ partial "icon.html" "reddit" }}<span>Reddit</span></a>
+    </li>
+    {{- with $strip }}
+    <li>
+      <a class="share-btn" data-share="download" href="{{ .RelPermalink }}" download="{{ $filename }}" title="Download the strip as a PNG image">{{ partial "icon.html" "download" }}<span>PNG</span></a>
+    </li>
+    {{- end }}
+  </ul>
+  <p class="share-status visually-hidden" role="status" aria-live="polite"></p>
+</div>

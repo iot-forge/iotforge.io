@@ -111,6 +111,24 @@
   display: none;
 }
 
+/* Strip render: opening a comic at #strip-render fills the viewport with the
+   whole strip, two panels per row, which render-covers.py screenshots as strip.png
+   (the image behind the "PNG" download and the native share sheet). */
+
+.comic-page:target .comic-strip {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin: 0;
+  background: #f8f6ef;
+}
+
+.comic-page:target .comic-panel {
+  border-radius: 0;
+}
+
 /* ---------- single comic ---------- */
 
 .comic-nav {
@@ -145,6 +163,77 @@
 .comic-nav span {
   color: var(--ink-dim);
   opacity: 0.5;
+}
+
+/* ---------- share bar ---------- */
+
+.comic-share {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  margin: 0 0 1.6rem;
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.comic-share .designator {
+  margin: 0 0.4em 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--copper);
+}
+
+.share-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  appearance: none;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--ink);
+  padding: 0.5em 0.75em;
+  font: inherit;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.share-btn svg {
+  width: 14px;
+  height: 14px;
+  flex: none;
+}
+
+.share-btn:hover,
+.share-btn:focus-visible {
+  border-color: var(--copper);
+  color: var(--copper);
+  text-decoration: none;
+  outline: none;
+}
+
+.share-btn.is-done {
+  border-color: var(--copper);
+  background: var(--copper);
+  color: var(--copper-ink);
 }
 
 .comic-note {
@@ -258,5 +347,9 @@
 
   .comic-nav {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .share-btn {
+    padding: 0.6em 0.7em;
   }
 }

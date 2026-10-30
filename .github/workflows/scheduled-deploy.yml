@@ -1,0 +1,23 @@
+# Rebuilds the site on Netlify every day so future-dated posts (weekly comics)
+# go live once their date passes, and the homepage YouTube feed stays fresh.
+name: Scheduled Netlify rebuild
+
+on:
+  schedule:
+    # 17:15 UTC = 9:15 PST / 10:15 PDT, so it always runs after the 9:00 Pacific comic time
+    - cron: "15 17 * * *"
+  workflow_dispatch: # allows a manual run from the Actions tab
+
+jobs:
+  trigger-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Netlify build hook
+        env:
+          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+        run: |
+          if [ -z "$NETLIFY_BUILD_HOOK" ]; then
+            echo "NETLIFY_BUILD_HOOK secret is not set" >&2
+            exit 1
+          fi
+          curl --fail -sS -X POST -d '{}' "$NETLIFY_BUILD_HOOK"

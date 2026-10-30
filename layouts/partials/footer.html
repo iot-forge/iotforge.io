@@ -19,6 +19,7 @@
 {{- $themeToggle := resources.Get "js/theme-toggle.js" }}
 {{- $backToTop := resources.Get "js/back-to-top.js" }}
 {{- $resourcesFilter := resources.Get "js/resources-filter.js" }}
-{{- $js := slice $themeToggle $backToTop $resourcesFilter | resources.Concat "js/site.js" }}
+{{- $comicShare := resources.Get "js/comic-share.js" }}
+{{- $js := slice $themeToggle $backToTop $resourcesFilter $comicShare | resources.Concat "js/site.js" }}
 {{- if hugo.IsProduction }}{{ $js = $js | minify | fingerprint }}{{ end }}
 <script src="{{ $js.RelPermalink }}" defer{{ if hugo.IsProduction }} integrity="{{ $js.Data.Integrity }}"{{ end }}></script>

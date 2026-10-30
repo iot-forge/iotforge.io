@@ -1,7 +1,11 @@
-"""Render cover.png (the social preview image) for each comic.
+"""Render cover.png and strip.png for each comic.
 
-The cover is the first two panels side by side at 1200x600. It is picked up
-automatically as og:image / twitter:image because it is named cover.*.
+cover.png is the social preview: the first two panels side by side at 1200x600.
+It is picked up automatically as og:image / twitter:image because it is named cover.*.
+
+strip.png is the whole strip, two panels per row at 1200px wide (1200x1200 for a
+four-panel comic). The share bar offers it as the "PNG" download and attaches it
+to the native share sheet on phones; the download only appears once the file exists.
 
 Usage, with the Hugo preview server running (hugo server -D -F):
 
@@ -12,7 +16,9 @@ Usage, with the Hugo preview server running (hugo server -D -F):
 Re-run it whenever a strip's art or text changes.
 """
 import argparse
+import math
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -39,6 +45,26 @@ def find_browser():
     sys.exit("No Chrome or Edge found; install one or add its path to BROWSERS.")
 
 
+def panel_count(slug):
+    """Number of panels in a comic, read from the `- art:` entries of its front matter."""
+    with open(os.path.join(COMICS, slug, "index.md"), encoding="utf-8") as f:
+        return len(re.findall(r"^\s*-\s*art:", f.read(), re.MULTILINE))
+
+
+def render(browser, url, out, width, height):
+    cmd = [browser, "--headless=new", "--disable-gpu", "--hide-scrollbars",
+           "--window-size=%d,%d" % (width, height), "--screenshot=" + out, url]
+    # Headless Chrome occasionally hangs on exit, so give it a time limit and one retry.
+    for attempt in (1, 2):
+        try:
+            subprocess.run(cmd, check=True, timeout=45,
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            return
+        except subprocess.TimeoutExpired:
+            if attempt == 2:
+                sys.exit("Timed out rendering %s" % url)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     parser.add_argument("slugs", nargs="*", help="comic folder names (default: all)")
@@ -49,21 +75,19 @@ def main():
         d for d in os.listdir(COMICS) if os.path.isfile(os.path.join(COMICS, d, "index.md"))
     )
     browser = find_browser()
+    base = args.base.rstrip("/")
     for slug in slugs:
-        out = os.path.join(COMICS, slug, "cover.png")
-        url = "%s/comics/%s/#cover-render" % (args.base.rstrip("/"), slug)
-        cmd = [browser, "--headless=new", "--disable-gpu", "--hide-scrollbars",
-               "--window-size=1200,600", "--screenshot=" + out, url]
-        # Headless Chrome occasionally hangs on exit, so give it a time limit and one retry.
-        for attempt in (1, 2):
-            try:
-                subprocess.run(cmd, check=True, timeout=45,
-                               stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                break
-            except subprocess.TimeoutExpired:
-                if attempt == 2:
-                    sys.exit("Timed out rendering %s" % slug)
-        print("%s -> %s" % (slug, os.path.relpath(out, ROOT)))
+        page = "%s/comics/%s/" % (base, slug)
+        folder = os.path.join(COMICS, slug)
+
+        cover = os.path.join(folder, "cover.png")
+        render(browser, page + "#cover-render", cover, 1200, 600)
+
+        rows = max(1, math.ceil(panel_count(slug) / 2))
+        strip = os.path.join(folder, "strip.png")
+        render(browser, page + "#strip-render", strip, 1200, 600 * rows)
+
+        print("%s -> %s, %s" % (slug, os.path.relpath(cover, ROOT), os.path.relpath(strip, ROOT)))
 
 
 if __name__ == "__main__":
