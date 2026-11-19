@@ -84,5 +84,5 @@ identifier = "github"
 [[menu.social]]
 name = "Medium publication"
 url = "https://medium.com/iot-forge"
-weight = 50
+weight = 35
 identifier = "medium"
