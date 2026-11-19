@@ -1,0 +1,16 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="-4" y="250" width="308" height="54" fill="#d8d3c3" stroke="#1b1e1a" stroke-width="3"/>
+  <path d="M142 210 V250 M278 210 V250" fill="none" stroke="#1b1e1a" stroke-width="4" stroke-linecap="round"/>
+  <rect x="130" y="200" width="160" height="10" fill="#caa56a" stroke="#1b1e1a" stroke-width="3"/>
+  <g transform="translate(170 158)">
+    <rect x="0" y="0" width="84" height="42" rx="3" fill="#2f6b3c" stroke="#1b1e1a" stroke-width="3"/>
+    <path d="M6 34 H30 L36 28 H44" fill="none" stroke="#4c9a5a" stroke-width="2.5"/>
+    <rect x="8" y="8" width="20" height="20" rx="2" fill="#262b28" stroke="#1b1e1a" stroke-width="2"/>
+    <rect x="44" y="6" width="34" height="24" rx="2" fill="#262b28" stroke="#1b1e1a" stroke-width="2"/>
+    <text x="61" y="22" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="10" fill="#7fd858"></text>
+    <rect x="-8" y="30" width="100" height="9" fill="#e9dcae" stroke="#b8a774" stroke-width="1.5" opacity="0.92" transform="rotate(-6 42 34)"/>
+    <rect x="30" y="-6" width="9" height="54" fill="#e9dcae" stroke="#b8a774" stroke-width="1.5" opacity="0.92" transform="rotate(8 34 20)"/>
+  </g>
+  <use href="#c-person" x="40" y="136" width="68" height="119"/>
+  <path d="M150 140 l6 8 M160 134 v10" fill="none" stroke="#1b1e1a" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

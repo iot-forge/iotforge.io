@@ -1,0 +1,6 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <use href="#c-pcb" x="0" y="250" width="300" height="50"/>
+  <g transform="translate(110 148)"><rect x="0" y="0" width="80" height="100" rx="18" fill="#d98b4a" stroke="#1b1e1a" stroke-width="3"/><rect x="10" y="10" width="60" height="56" rx="8" fill="#262b28" stroke="#1b1e1a" stroke-width="2.5"/><circle cx="40" cy="83" r="9" fill="#f3e3b3" stroke="#1b1e1a" stroke-width="2.5"/><use href="#c-ai" x="12" y="10" width="56" height="56"/></g>
+  <path d="M86 150 L89 158 L97 161 L89 164 L86 172 L83 164 L75 161 L83 158 Z M214 176 L217 184 L225 187 L217 190 L214 198 L211 190 L203 187 L211 184 Z M206 128 L208 133 L213 135 L208 137 L206 142 L204 137 L199 135 L204 133 Z" fill="#d98b4a"/>
+  <path d="M96 210 h-14 M204 222 h14 M100 236 l-10 6" stroke="#1b1e1a" stroke-width="3" stroke-linecap="round"/>
+</svg>

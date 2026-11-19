@@ -1,0 +1,17 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="-4" y="196" width="308" height="108" fill="#2f6b3c" stroke="#1b1e1a" stroke-width="3"/>
+  <path d="M-4 252 H50 L70 272 H170 M210 206 H260 L280 226 H304 M120 290 H220" fill="none" stroke="#4c9a5a" stroke-width="3"/>
+  <g fill="#d9b24a" stroke="#1b1e1a" stroke-width="1.5"><circle cx="170" cy="272" r="3.5"/><circle cx="120" cy="290" r="3.5"/></g>
+  <path d="M100 226 H124 M176 226 H200" stroke="#8d918b" stroke-width="3"/>
+  <rect x="124" y="218" width="52" height="16" rx="7" fill="#e3c27a" stroke="#1b1e1a" stroke-width="2.5"/>
+  <path d="M138 218 V234 M146 218 V234 M160 218 V234" stroke="#a8652e" stroke-width="3"/>
+  <g fill="#d9b24a" stroke="#1b1e1a" stroke-width="2"><circle cx="96" cy="226" r="8"/><circle cx="204" cy="226" r="8"/></g>
+  <use href="#c-pcb-face" x="196" y="252" width="66" height="44"/>
+  <path d="M318 6 L232 114" stroke="#1b1e1a" stroke-width="34" stroke-linecap="round"/>
+  <path d="M318 6 L232 114" stroke="#2f5f8a" stroke-width="28" stroke-linecap="round"/>
+  <path d="M262 64 l16 12 M274 50 l16 12 M286 36 l16 12" stroke="#1b1e1a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M232 114 L120 210" stroke="#1b1e1a" stroke-width="14" stroke-linecap="round"/>
+  <path d="M232 114 L120 210" stroke="#c9ccc6" stroke-width="9" stroke-linecap="round"/>
+  <path d="M120 210 L100 222" stroke="#1b1e1a" stroke-width="7" stroke-linecap="round"/>
+  <path d="M120 210 L100 222" stroke="#8d918b" stroke-width="3" stroke-linecap="round"/>
+</svg>

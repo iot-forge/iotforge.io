@@ -1,0 +1,24 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path d="M-4 250 V120 L150 40 L304 120 V250 Z" fill="#e7eee2" stroke="#8d918b" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M76 250 V79 M224 250 V79 M-4 160 H304" fill="none" stroke="#8d918b" stroke-width="2.5"/>
+  <rect x="-4" y="250" width="308" height="54" fill="#b88a5c" stroke="#1b1e1a" stroke-width="3"/>
+  <path d="M30 268 h6 M90 280 h6 M160 266 h6 M220 284 h6 M270 270 h6" stroke="#8a6440" stroke-width="3" stroke-linecap="round"/>
+  <use href="#c-person" x="160" y="108" width="80" height="140" style="--hoodie:#2f5f8a"/>
+  <path d="M182 128 Q184 106 200 106 Q216 106 218 128 Z" fill="#e3c27a" stroke="#1b1e1a" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M183 121 H217" stroke="#a8652e" stroke-width="4"/>
+  <ellipse cx="200" cy="128" rx="32" ry="6" fill="#e3c27a" stroke="#1b1e1a" stroke-width="3"/>
+  <rect x="24" y="196" width="252" height="56" fill="#caa56a" stroke="#1b1e1a" stroke-width="3"/>
+  <path d="M24 206 H276" stroke="#1b1e1a" stroke-width="2"/>
+  <use href="#c-laptop" x="58" y="137" width="80" height="60"/>
+  <path d="M176 188 C196 198 200 172 222 182 M150 192 C130 202 124 186 112 196" fill="none" stroke="#d83a34" stroke-width="2.5" stroke-linecap="round"/>
+  <use href="#c-sbc" x="140" y="166" width="36" height="30"/>
+  <g fill="#f3e3b3" stroke="#1b1e1a" stroke-width="2">
+    <rect x="232" y="150" width="26" height="24" transform="rotate(-6 245 162)"/>
+    <rect x="258" y="160" width="26" height="24" transform="rotate(5 271 172)"/>
+    <rect x="244" y="176" width="26" height="20" transform="rotate(-3 257 186)"/>
+  </g>
+  <path d="M10 166 H34 L32 196 H12 Z" fill="#d98b4a" stroke="#1b1e1a" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M22 166 C20 150 24 140 22 128" fill="none" stroke="#3f7d4a" stroke-width="3.5" stroke-linecap="round"/>
+  <ellipse cx="31" cy="144" rx="8" ry="4" fill="#4c9a5a" stroke="#1b1e1a" stroke-width="2"/>
+  <circle cx="15" cy="140" r="6" fill="#d83a34" stroke="#1b1e1a" stroke-width="2"/>
+</svg>

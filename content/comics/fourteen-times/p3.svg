@@ -1,0 +1,9 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <use href="#c-pcb" x="0" y="250" width="300" height="50"/>
+  <use href="#c-person" x="4" y="136" width="68" height="119"/>
+  <use href="#c-ai-meh" x="216" y="100" width="80" height="80"/>
+  <use href="#c-sbc" x="96" y="168" width="104" height="86.7"/>
+  <path d="M74 160 L100 182 M222 160 L196 182" fill="none" stroke="#8d918b" stroke-width="2.5" stroke-dasharray="4 5" stroke-linecap="round"/>
+  <g fill="#7fb9d6" stroke="#1b1e1a" stroke-width="1.5"><path d="M98 168 q-5 9 0 13 q5 -4 0 -13 Z"/><path d="M204 176 q-5 9 0 13 q5 -4 0 -13 Z"/><path d="M188 152 q-4 7 0 10 q4 -3 0 -10 Z"/></g>
+  <text x="148" y="150" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="22" fill="#1b1e1a">…</text>
+</svg>

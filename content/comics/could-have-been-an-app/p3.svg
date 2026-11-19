@@ -1,0 +1,12 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <use href="#c-pcb" x="0" y="250" width="300" height="50"/>
+  <use href="#c-person-body" x="110" y="131" width="68" height="119"/>
+  <use href="#c-person-face" x="110" y="131" width="68" height="119"/>
+  <path d="M131 192 L120 134 M157 192 L168 134" stroke="#1b1e1a" stroke-width="5" stroke-linecap="round"/>
+  <g transform="translate(128 92) rotate(12) scale(0.75) translate(-40 -50)" opacity="0.4"><rect x="0" y="0" width="80" height="100" rx="18" fill="none" stroke="#1b1e1a" stroke-width="3" stroke-dasharray="6 5"/></g>
+  <g transform="translate(160 92) rotate(-12) scale(0.75) translate(-40 -50)" opacity="0.4"><rect x="0" y="0" width="80" height="100" rx="18" fill="none" stroke="#1b1e1a" stroke-width="3" stroke-dasharray="6 5"/></g>
+  <g transform="translate(144 92) scale(0.75) translate(-40 -50)"><rect x="0" y="0" width="80" height="100" rx="18" fill="#d98b4a" stroke="#1b1e1a" stroke-width="3"/><rect x="10" y="10" width="60" height="56" rx="8" fill="#262b28" stroke="#1b1e1a" stroke-width="2.5"/><circle cx="40" cy="83" r="9" fill="#f3e3b3" stroke="#1b1e1a" stroke-width="2.5"/><use href="#c-ai-meh" x="12" y="10" width="56" height="56"/></g>
+  <path d="M80 62 l-14 -8 M76 88 h-18 M80 114 l-14 8 M208 62 l14 -8 M212 88 h18 M208 114 l14 8" stroke="#1b1e1a" stroke-width="3" stroke-linecap="round"/>
+  <text x="198" y="176" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="26" fill="#1b1e1a">?</text>
+  <text x="80" y="170" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="20" fill="#1b1e1a">?</text>
+</svg>

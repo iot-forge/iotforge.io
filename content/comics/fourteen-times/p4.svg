@@ -1,0 +1,6 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <use href="#c-pcb" x="0" y="250" width="300" height="50"/>
+  <use href="#c-sbc" x="60" y="164" width="110" height="91.7"/>
+  <g fill="#7fb9d6" stroke="#1b1e1a" stroke-width="1.5"><path d="M60 176 q-5 9 0 13 q5 -4 0 -13 Z"/><path d="M176 170 q-5 9 0 13 q5 -4 0 -13 Z"/></g>
+  <use href="#c-pcb-face" x="230" y="258" width="48" height="32"/>
+</svg>

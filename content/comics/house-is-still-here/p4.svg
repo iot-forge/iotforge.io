@@ -1,0 +1,15 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="-2" y="-2" width="304" height="304" fill="#f3e3b3"/>
+  <circle cx="248" cy="250" r="40" fill="#d98b4a"/>
+  <path d="M248 196 v-14 M210 212 l-10 -10 M286 212 l10 -10" stroke="#d98b4a" stroke-width="4" stroke-linecap="round"/>
+  <rect x="-4" y="250" width="308" height="54" fill="#d8d3c3" stroke="#1b1e1a" stroke-width="3"/>
+  <rect x="178" y="98" width="20" height="40" fill="#a8652e" stroke="#1b1e1a" stroke-width="3"/>
+  <rect x="70" y="150" width="140" height="100" fill="#f8f6ef" stroke="#1b1e1a" stroke-width="3"/>
+  <path d="M58 154 L140 88 L222 154 Z" fill="#a8652e" stroke="#1b1e1a" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="126" y="196" width="30" height="54" fill="#3f7d4a" stroke="#1b1e1a" stroke-width="3"/>
+  <circle cx="149" cy="224" r="2.5" fill="#d9b24a"/>
+  <rect x="82" y="168" width="34" height="32" fill="#fff6d6" stroke="#1b1e1a" stroke-width="3"/>
+  <use href="#c-mcu" x="86" y="171" width="26" height="26"/>
+  <rect x="166" y="168" width="34" height="32" fill="#fff6d6" stroke="#1b1e1a" stroke-width="3"/>
+  <path d="M183 168 v32 M166 184 h34" stroke="#1b1e1a" stroke-width="2.5"/>
+</svg>

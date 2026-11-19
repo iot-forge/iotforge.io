@@ -1,0 +1,25 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path d="M-4 250 V120 L150 40 L304 120 V250 Z" fill="#e7eee2" stroke="#8d918b" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M76 250 V79 M224 250 V79 M-4 160 H304" fill="none" stroke="#8d918b" stroke-width="2.5"/>
+  <rect x="-4" y="250" width="308" height="54" fill="#b88a5c" stroke="#1b1e1a" stroke-width="3"/>
+  <path d="M30 268 h6 M90 280 h6 M160 266 h6 M220 284 h6 M270 270 h6" stroke="#8a6440" stroke-width="3" stroke-linecap="round"/>
+  <rect x="6" y="226" width="44" height="24" fill="#caa56a" stroke="#1b1e1a" stroke-width="3"/>
+  <use href="#c-sbc" x="8" y="194" width="40" height="33.3"/>
+  <path d="M48 214 C70 214 70 246 92 246 C120 246 120 236 140 244 C160 252 170 236 190 244 C206 250 214 246 214 232 V178" fill="none" stroke="#262b28" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M58 222 H200 M58 216 V228 M200 216 V228 M64 218 l-6 4 l6 4 M194 218 l6 4 l-6 4" fill="none" stroke="#1b1e1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="111" y="212" width="40" height="18" fill="#e7eee2"/>
+  <text x="131" y="226" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="13" fill="#1b1e1a">30 m</text>
+  <path d="M232 170 V250" stroke="#a8652e" stroke-width="5" stroke-linecap="round"/>
+  <path d="M248 222 H292 L288 252 H252 Z" fill="#d98b4a" stroke="#1b1e1a" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M270 222 C266 190 276 170 268 140" fill="none" stroke="#3f7d4a" stroke-width="4" stroke-linecap="round"/>
+  <g fill="#4c9a5a" stroke="#1b1e1a" stroke-width="2.5"><ellipse cx="282" cy="186" rx="10" ry="5"/><ellipse cx="258" cy="160" rx="10" ry="5"/></g>
+  <g fill="#7fb04a" stroke="#1b1e1a" stroke-width="2"><circle cx="280" cy="200" r="6"/><circle cx="262" cy="176" r="5"/></g>
+  <g stroke="#1b1e1a" stroke-width="2.5" stroke-linecap="round"><path d="M200 176 v8 M208 176 v8 M216 176 v8 M224 176 v8"/></g>
+  <rect x="190" y="132" width="58" height="46" rx="5" fill="#2f5f8a" stroke="#1b1e1a" stroke-width="3"/>
+  <rect x="228" y="138" width="14" height="12" rx="2" fill="#c9ccc6" stroke="#1b1e1a" stroke-width="2"/>
+  <circle cx="204" cy="158" r="7" fill="#f8f6ef" stroke="#1b1e1a" stroke-width="2"/><circle cx="222" cy="158" r="7" fill="#f8f6ef" stroke="#1b1e1a" stroke-width="2"/>
+  <circle cx="202" cy="160" r="2.800" fill="#1b1e1a"/><circle cx="220" cy="160" r="2.800" fill="#1b1e1a"/>
+  <path d="M197 146 l9 3 M229 146 l-9 3" stroke="#1b1e1a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M204 171 q3 -3 6 0 t6 0 t6 0" fill="none" stroke="#f8f6ef" stroke-width="2" stroke-linecap="round"/>
+  <path d="M182 134 q-5 8 0 11 q5 -3 0 -11 Z" fill="#bfe3f5" stroke="#1b1e1a" stroke-width="1.5"/>
+</svg>

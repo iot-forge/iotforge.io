@@ -1,0 +1,18 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="-4" y="250" width="308" height="54" fill="#d8d3c3" stroke="#1b1e1a" stroke-width="3"/>
+  <polygon points="182,118 278,118 300,250 160,250" fill="#e07ad6" opacity="0.14"/>
+  <path d="M196 -4 V92 M264 -4 V92" stroke="#8d918b" stroke-width="2.5"/>
+  <rect x="172" y="92" width="116" height="24" rx="6" fill="#262b28" stroke="#1b1e1a" stroke-width="3"/>
+  <rect x="180" y="114" width="100" height="6" rx="2" fill="#e07ad6" stroke="#1b1e1a" stroke-width="2"/>
+  <circle cx="216" cy="104" r="7" fill="#ff9cf0" opacity="0.35"/><circle cx="244" cy="104" r="7" fill="#ff9cf0" opacity="0.35"/>
+  <circle cx="216" cy="104" r="4" fill="#ffd3f7"/><circle cx="244" cy="104" r="4" fill="#ffd3f7"/>
+  <path d="M212 226 H252 L246 250 H218 Z" fill="#a8652e" stroke="#1b1e1a" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M232 226 V200" stroke="#2f6b3c" stroke-width="3"/>
+  <g fill="#4c9a5a" stroke="#1b1e1a" stroke-width="2.5"><ellipse cx="220" cy="212" rx="12" ry="7" transform="rotate(-25 220 212)"/><ellipse cx="244" cy="212" rx="12" ry="7" transform="rotate(25 244 212)"/><ellipse cx="232" cy="196" rx="8" ry="12"/></g>
+  <use href="#c-person" x="30" y="136" width="68" height="119"/>
+  <g transform="translate(98 72) rotate(-6)"><rect x="0" y="0" width="66" height="18" rx="3" fill="#f3e3b3" stroke="#1b1e1a" stroke-width="2"/><text x="33" y="13" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="10" fill="#1b1e1a">WIFI_PASS</text></g>
+  <g transform="translate(120 98) rotate(5)"><rect x="0" y="0" width="46" height="18" rx="3" fill="#f3e3b3" stroke="#1b1e1a" stroke-width="2"/><text x="23" y="13" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="10" fill="#1b1e1a">PHONE</text></g>
+  <g transform="translate(102 124) rotate(-4)"><rect x="0" y="0" width="34" height="18" rx="3" fill="#f3e3b3" stroke="#1b1e1a" stroke-width="2"/><text x="17" y="13" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="10" fill="#1b1e1a">GPS</text></g>
+  <g transform="translate(146 128) rotate(4)"><rect x="0" y="0" width="46" height="18" rx="3" fill="#f3e3b3" stroke="#1b1e1a" stroke-width="2"/><text x="23" y="13" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="10" fill="#1b1e1a">EMAIL</text></g>
+  <g transform="translate(104 156) rotate(-3)"><rect x="0" y="0" width="70" height="18" rx="3" fill="#f3e3b3" stroke="#1b1e1a" stroke-width="2"/><text x="35" y="13" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="10" fill="#1b1e1a">HOME_ADDR</text></g>
+</svg>

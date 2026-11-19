@@ -1,0 +1,9 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="-4" y="250" width="308" height="54" fill="#d8d3c3" stroke="#1b1e1a" stroke-width="3"/>
+  <ellipse cx="150" cy="262" rx="96" ry="7" fill="#a8652e" opacity="0.35"/>
+  <rect x="216" y="24" width="70" height="32" rx="4" fill="#262b28" stroke="#1b1e1a" stroke-width="3"/>
+  <text x="251" y="46" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="17" fill="#7fd858">10:10</text>
+  <use href="#c-person" x="20" y="136" width="68" height="119"/>
+  <use href="#c-humanoid" x="170" y="109" width="79.4" height="150"/>
+  <path d="M196 106 A18 18 0 0 1 224 106 M186 96 A30 30 0 0 1 234 96 M176 86 A42 42 0 0 1 244 86" fill="none" stroke="#d98b4a" stroke-width="3" stroke-linecap="round"/>
+</svg>

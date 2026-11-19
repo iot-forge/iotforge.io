@@ -1,0 +1,12 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <use href="#c-pcb" x="0" y="250" width="300" height="50"/>
+  <g transform="translate(78 0)">
+  <rect x="26" y="168" width="96" height="82" rx="3" fill="#262b28" stroke="#1b1e1a" stroke-width="3"/>
+  <path d="M26 184 H122" stroke="#d98b4a" stroke-width="4"/>
+  <g font-family="IBM Plex Mono, monospace" font-weight="500" text-anchor="middle" fill="#f8f6ef"><text x="74" y="210" font-size="11">ROBOT</text><text x="74" y="224" font-size="11">BRAIN</text><text x="74" y="242" font-size="12" fill="#7fd858">7.5× AI</text></g>
+  <path d="M118 176 C130 180 134 190 140 196" fill="none" stroke="#1b1e1a" stroke-width="2" stroke-linecap="round"/>
+  <rect x="120" y="194" width="50" height="24" rx="3" fill="#f3e3b3" stroke="#1b1e1a" stroke-width="2.5"/><text x="145" y="211" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="13" fill="#d83a34">×14 $</text>
+  </g>
+  <use href="#c-person" x="14" y="136" width="68" height="119"/>
+  <use href="#c-ai-meh" x="226" y="100" width="66" height="66"/>
+</svg>

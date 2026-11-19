@@ -1,0 +1,6 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="-4" y="250" width="308" height="54" fill="#caa56a" stroke="#1b1e1a" stroke-width="3"/>
+  <rect x="166" y="120" width="120" height="128" rx="6" fill="#ece8dc" stroke="#1b1e1a" stroke-width="3"/>
+  <g transform="translate(176 130) scale(0.9)"><rect x="0" y="0" width="110" height="120" rx="18" fill="#f8f6ef" stroke="#1b1e1a" stroke-width="3"/><circle cx="94" cy="14" r="6" fill="#7fd858" stroke="#1b1e1a" stroke-width="2"/><rect x="17" y="24" width="76" height="76" rx="6" fill="#f8f6ef" stroke="#1b1e1a" stroke-width="2" stroke-dasharray="5 4"/><use href="#c-mcu" x="21" y="28" width="68" height="68"/></g>
+  <use href="#c-ai-meh" x="16" y="112" width="104" height="104"/>
+</svg>

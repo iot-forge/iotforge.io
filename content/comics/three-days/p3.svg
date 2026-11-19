@@ -1,0 +1,27 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="-4" y="250" width="308" height="54" fill="#d8d3c3" stroke="#1b1e1a" stroke-width="3"/>
+  <path d="M214 120 V158" stroke="#1b1e1a" stroke-width="4"/>
+  <rect x="146" y="44" width="136" height="78" rx="4" fill="#262b28" stroke="#1b1e1a" stroke-width="3"/>
+  <g font-family="IBM Plex Mono, monospace" font-weight="500" font-size="12" fill="#ff5a4d" text-anchor="middle"><text x="214" y="70">TOO MANY</text><text x="214" y="88">BLUETOOTH</text><text x="214" y="106">DEVICES</text></g>
+  <path d="M142 210 V250 M278 210 V250" fill="none" stroke="#1b1e1a" stroke-width="4" stroke-linecap="round"/>
+  <rect x="130" y="200" width="160" height="10" fill="#caa56a" stroke="#1b1e1a" stroke-width="3"/>
+  <g transform="translate(170 158)">
+    <rect x="0" y="0" width="84" height="42" rx="3" fill="#2f6b3c" stroke="#1b1e1a" stroke-width="3"/>
+    <path d="M6 34 H30 L36 28 H44" fill="none" stroke="#4c9a5a" stroke-width="2.5"/>
+    <rect x="8" y="8" width="20" height="20" rx="2" fill="#262b28" stroke="#1b1e1a" stroke-width="2"/>
+    <rect x="44" y="6" width="34" height="24" rx="2" fill="#262b28" stroke="#1b1e1a" stroke-width="2"/>
+    <text x="61" y="22" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="10" fill="#ff5a4d">ERR</text>
+    <rect x="-8" y="30" width="100" height="9" fill="#e9dcae" stroke="#b8a774" stroke-width="1.5" opacity="0.92" transform="rotate(-6 42 34)"/>
+    <rect x="30" y="-6" width="9" height="54" fill="#e9dcae" stroke="#b8a774" stroke-width="1.5" opacity="0.92" transform="rotate(8 34 20)"/>
+  </g>
+  <use href="#c-person" x="40" y="136" width="68" height="119"/>
+  <path d="M96 150 q-4 7 0 10 q4 -3 0 -10 Z" fill="#7fb9d6" stroke="#1b1e1a" stroke-width="1.5"/>
+  <path transform="translate(30 96) scale(1)" d="M-5 -5 L5 4 L0 9 V-9 L5 -4 L-5 5" fill="none" stroke="#2f5f8a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path transform="translate(120 70) scale(1.2)" d="M-5 -5 L5 4 L0 9 V-9 L5 -4 L-5 5" fill="none" stroke="#2f5f8a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path transform="translate(128 120) scale(0.9)" d="M-5 -5 L5 4 L0 9 V-9 L5 -4 L-5 5" fill="none" stroke="#2f5f8a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path transform="translate(20 140) scale(0.8)" d="M-5 -5 L5 4 L0 9 V-9 L5 -4 L-5 5" fill="none" stroke="#2f5f8a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path transform="translate(290 140) scale(1)" d="M-5 -5 L5 4 L0 9 V-9 L5 -4 L-5 5" fill="none" stroke="#2f5f8a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path transform="translate(120 170) scale(1)" d="M-5 -5 L5 4 L0 9 V-9 L5 -4 L-5 5" fill="none" stroke="#2f5f8a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path transform="translate(270 190) scale(0.8)" d="M-5 -5 L5 4 L0 9 V-9 L5 -4 L-5 5" fill="none" stroke="#2f5f8a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path transform="translate(70 76) scale(0.9)" d="M-5 -5 L5 4 L0 9 V-9 L5 -4 L-5 5" fill="none" stroke="#2f5f8a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

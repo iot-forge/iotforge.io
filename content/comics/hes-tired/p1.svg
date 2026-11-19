@@ -1,0 +1,10 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="-4" y="250" width="308" height="54" fill="#d8d3c3" stroke="#1b1e1a" stroke-width="3"/>
+  <rect x="150" y="40" width="156" height="212" fill="#ece8dc" stroke="#1b1e1a" stroke-width="3"/>
+  <rect x="184" y="64" width="106" height="30" rx="3" fill="#262b28" stroke="#1b1e1a" stroke-width="3"/>
+  <text x="237" y="84" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="500" font-size="14" fill="#f8f6ef">LIVE DEMO</text>
+  <use href="#h-leg" transform="translate(220 237) rotate(90)"/>
+  <use href="#h-leg" transform="translate(238 243) rotate(90)"/>
+  <g transform="rotate(-14 230 238) translate(185 140)"><use href="#h-arm" transform="translate(74 56) rotate(-6)"/><use href="#h-core"/><use href="#h-arm" transform="translate(18 58) rotate(10)"/><rect x="31" y="17" width="28" height="11" rx="5.5" fill="#262b28"/><path d="M35 22.5 h7 M48 22.5 h7" stroke="#8d918b" stroke-width="2" stroke-linecap="round"/></g>
+  <use href="#c-person" x="40" y="131" width="68" height="119" style="--hoodie:#2f5f8a"/>
+</svg>

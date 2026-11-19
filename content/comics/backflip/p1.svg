@@ -1,0 +1,13 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <use href="#c-pcb" x="0" y="250" width="300" height="50"/>
+  <path d="M196 246 C200 110 120 70 100 112" fill="none" stroke="#d98b4a" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 11"/>
+  <path d="M92 100 L100 114 L114 104" fill="none" stroke="#d98b4a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(30 109) scale(0.882)">
+    <use href="#h-leg" x="34" y="104"/><use href="#h-leg" x="56" y="104"/>
+    <use href="#h-arm" transform="translate(18 56) rotate(155)"/>
+    <use href="#h-arm" transform="translate(72 56) rotate(-155)"/>
+    <use href="#h-core"/>
+  </g>
+  <path d="M22 246 h-12 M28 236 l-10 -6 M112 246 h12 M106 236 l10 -6" fill="none" stroke="#1b1e1a" stroke-width="3" stroke-linecap="round"/>
+  <use href="#c-ai" x="212" y="140" width="80" height="80"/>
+</svg>
