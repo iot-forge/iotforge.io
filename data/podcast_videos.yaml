@@ -1,0 +1,9 @@
+# YouTube videos of the podcast episodes that get their page from the show's feed
+# (content/podcasts/_content.gotmpl). Key: the episode's page name, which is its publish
+# date as YYMMDD. Value: the YouTube video ID.
+#
+# Filled in by scripts/update_podcast_videos.py, which the daily workflow runs: it adds an
+# episode once a video with the same title is among the channel's 15 newest. Add or correct
+# a line by hand when the titles differ; the script never changes an existing line.
+"260908": "Ai9V-rBGr3A"
+"261116": "tgENnPTbCEk"

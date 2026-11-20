@@ -15,7 +15,10 @@
   </header>
 
   {{- with .Params.image }}
-  <img src="{{ . }}" alt="{{ $.Title }}" class="featured-image">
+  {{- $src := . }}
+  {{- /* Covers of feed episodes are only written to the site when their link is asked for */ -}}
+  {{- with $.Resources.Get . }}{{ $src = .RelPermalink }}{{ end }}
+  <img src="{{ $src }}" alt="{{ $.Title }}" class="featured-image">
   {{- end }}
 
   <div class="media-panel">
@@ -25,14 +28,28 @@
       Your browser does not support the audio element.
     </audio>
     {{- end }}
-    {{- with .Params.youtube_id }}
+    {{- if or .Params.youtube_id .Params.spotify_url }}
     <div class="media-links">
+      {{- with .Params.youtube_id }}
       <a href="https://www.youtube.com/watch?v={{ . }}" target="_blank" rel="noopener noreferrer">
         {{ partial "icon.html" "play" }} Watch on YouTube
       </a>
+      {{- end }}
+      {{- with .Params.spotify_url }}
+      <a href="{{ . }}" target="_blank" rel="noopener noreferrer">
+        {{ partial "icon.html" "spotify" }} Listen on Spotify
+      </a>
+      {{- end }}
     </div>
     {{- end }}
   </div>
+
+  {{- with .Content }}
+  <details class="field" open>
+    <summary>Show notes</summary>
+    <div class="field-body">{{ . }}</div>
+  </details>
+  {{- end }}
 
   {{- with .Params.sources }}
   {{- with $.Resources.GetMatch . }}
@@ -60,10 +77,10 @@
   {{- $next := .NextInSection }}
   {{- if or $prev $next }}
   <nav class="post-nav" aria-label="Episode navigation">
-    {{- with $next }}
+    {{- with $prev }}
     <a class="nav-prev" href="{{ .RelPermalink }}"><span class="nav-dir">&larr; Previous</span>{{ .Title }}</a>
     {{- end }}
-    {{- with $prev }}
+    {{- with $next }}
     <a class="nav-next" href="{{ .RelPermalink }}"><span class="nav-dir">Next &rarr;</span>{{ .Title }}</a>
     {{- end }}
   </nav>
@@ -96,10 +113,10 @@
   {{- $next := .NextInSection }}
   {{- if or $prev $next }}
   <nav class="post-nav" aria-label="Post navigation">
-    {{- with $next }}
+    {{- with $prev }}
     <a class="nav-prev" href="{{ .RelPermalink }}"><span class="nav-dir">&larr; Previous</span>{{ .Title }}</a>
     {{- end }}
-    {{- with $prev }}
+    {{- with $next }}
     <a class="nav-next" href="{{ .RelPermalink }}"><span class="nav-dir">Next &rarr;</span>{{ .Title }}</a>
     {{- end }}
   </nav>

@@ -1,5 +1,6 @@
 # Rebuilds the site on Netlify every day so future-dated posts (weekly comics)
-# go live once their date passes, and the homepage YouTube feed stays fresh.
+# go live once their date passes, and the homepage YouTube feed and the podcast
+# episodes read from the show's feed stay fresh.
 name: Scheduled Netlify rebuild
 
 on:
@@ -8,10 +9,30 @@ on:
     - cron: "15 17 * * *"
   workflow_dispatch: # allows a manual run from the Actions tab
 
+permissions:
+  contents: write # the job commits data/podcast_videos.yaml when a new episode gets its video
+
 jobs:
   trigger-build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
+      # Saves the YouTube link of each new episode while its video is still in the channel's
+      # feed. A failure here (a feed that is down) must not stop the rebuild below.
+      - name: Record YouTube videos of new podcast episodes
+        continue-on-error: true
+        run: |
+          python3 scripts/update_podcast_videos.py
+          if ! git diff --quiet -- data/podcast_videos.yaml; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Record YouTube videos of new podcast episodes" -- data/podcast_videos.yaml
+            git push
+          fi
+
+      # Always runs, also on the days the step above pushed a commit: the daily rebuild must
+      # not depend on that push, and the hook builds the latest commit either way.
       - name: Trigger Netlify build hook
         env:
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}

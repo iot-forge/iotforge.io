@@ -1,0 +1,112 @@
+{{- /* Episode pages built from the show's public RSS feed (Spotify for Creators) at build time.
+
+       An episode gets a page here only when no folder in content/podcasts already covers it.
+       A folder covers an episode when its index.md is not a draft and has the same season and
+       episode number, where the season is the year the episode was published (the site's
+       numbering; Spotify's own season number is not used). To add a script or sources to a feed
+       episode, create a folder for it with that season and episode and it replaces the feed page.
+
+       If the feed cannot be fetched the feed pages are skipped and the build carries on. */ -}}
+{{- with $.Site.Params.podcastFeed }}
+{{- $feedURL := . }}
+
+{{- /* Season-episode keys of the episodes that already have a folder */ -}}
+{{- $local := dict }}
+{{- range os.ReadDir "content/podcasts" }}
+  {{- $file := printf "content/podcasts/%s/index.md" .Name }}
+  {{- if and .IsDir (os.FileExists $file) }}
+    {{- with findRESubmatch `(?s)^\x{FEFF}?---\s*?\n(.*?)\n---` (os.ReadFile $file) 1 }}
+      {{- $fm := index . 0 1 | transform.Unmarshal }}
+      {{- if and $fm.season $fm.episode (not $fm.draft) }}
+        {{- $local = merge $local (dict (printf "%v-%v" $fm.season $fm.episode) true) }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+{{- $items := slice }}
+{{- with try (resources.GetRemote $feedURL) }}
+  {{- with .Err }}
+    {{- warnf "Podcast feed: could not fetch %s: %s" $feedURL . }}
+  {{- else with .Value }}
+    {{- with (.Content | transform.Unmarshal).channel.item }}
+      {{- if reflect.IsSlice . }}{{ $items = . }}{{ else }}{{ $items = slice . }}{{ end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+{{- /* Video IDs by lowercased title, from the channel's feed (same one the homepage row reads).
+       That feed only lists the 15 newest videos, so a match found here lasts a few months;
+       data/podcast_videos.yaml holds the links that have to stay. */ -}}
+{{- $videos := dict }}
+{{- with and $items $.Site.Params.youtubeChannelId }}
+  {{- $videoFeed := printf "https://www.youtube.com/feeds/videos.xml?playlist_id=UULF%s" (strings.TrimPrefix "UC" .) }}
+  {{- with try (resources.GetRemote $videoFeed) }}
+    {{- with .Err }}
+      {{- warnf "Podcast feed: could not fetch the YouTube feed: %s" . }}
+    {{- else with .Value }}
+      {{- with (. | transform.Unmarshal).entry }}
+        {{- $entries := . }}
+        {{- if not (reflect.IsSlice .) }}{{ $entries = slice . }}{{ end }}
+        {{- range $entries }}
+          {{- $videos = merge $videos (dict (.title | lower | strings.TrimSpace) .videoId) }}
+        {{- end }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+{{- range $items }}
+  {{- $date := (time.AsTime .pubDate).UTC }}
+  {{- $season := $date.Year }}
+  {{- $episode := int (.episode | default 0) }}
+  {{- if not (index $local (printf "%v-%v" $season $episode)) }}
+    {{- $path := $date.Format "060102" }}
+
+    {{- /* The first paragraph of the show notes is the description; the rest is the page body */ -}}
+    {{- /* Spotify's editor leaves empty paragraphs and splits one list into several; tidy both */ -}}
+    {{- $notes := .description | default "" | replaceRE `<p>(\s|<br\s*/?>)*</p>` "" | replaceRE `</ul>\s*<ul>` "" | strings.TrimSpace }}
+    {{- $summary := "" }}
+    {{- with findRESubmatch `(?s)^<p>(.*?)</p>` $notes 1 }}
+      {{- $summary = index . 0 1 | plainify | htmlUnescape }}
+      {{- $notes = replaceRE `(?s)^<p>.*?</p>` "" $notes 1 }}
+    {{- end }}
+
+    {{- $params := dict
+      "audio" (index .enclosure "-url")
+      "spotify_url" .link
+      "tags" (slice "podcast" "episode")
+      "categories" (slice "Podcasts")
+    }}
+    {{- with or (index ($.Site.Data.podcast_videos | default dict) $path) (index $videos (.title | lower | strings.TrimSpace)) }}
+      {{- $params = merge $params (dict "youtube_id" .) }}
+    {{- end }}
+    {{- if $episode }}
+      {{- $params = merge $params (dict "season" $season "episode" $episode) }}
+    {{- end }}
+
+    {{- /* Keep a copy of the cover with the page, so it does not depend on the feed's host */ -}}
+    {{- with .image }}
+      {{- with try (resources.GetRemote (index . "-href")) }}
+        {{- with .Value }}
+          {{- $cover := printf "cover.%s" (index .MediaType.Suffixes 0 | default "jpg") }}
+          {{- $.AddResource (dict
+            "path" (printf "%s/%s" $path $cover)
+            "content" (dict "mediaType" .MediaType.Type "value" (. | resources.Copy (printf "podcasts/%s/%s" $path $cover)))
+          ) }}
+          {{- $params = merge $params (dict "image" $cover) }}
+        {{- end }}
+      {{- end }}
+    {{- end }}
+
+    {{- $.AddPage (dict
+      "path" $path
+      "title" .title
+      "description" $summary
+      "dates" (dict "date" $date)
+      "content" (dict "mediaType" "text/html" "value" $notes)
+      "params" $params
+    ) }}
+  {{- end }}
+{{- end }}
+{{- end }}
